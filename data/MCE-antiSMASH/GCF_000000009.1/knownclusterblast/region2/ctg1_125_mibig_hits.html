@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QBQ12462.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002693.2">BGC0002693.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>83.2</td>
+              <td>165.0</td>
+              <td>1.43e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CAP12611.1</td>
+              <td>lipase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000219.4">BGC0000219.4</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>42.0</td>
+              <td>79.9</td>
+              <td>160.0</td>
+              <td>4.62e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ABX37376.1</td>
+              <td>Alpha/beta_hydrolase_fold-3_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000984.4">BGC0000984.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>81.2</td>
+              <td>159.0</td>
+              <td>1.74e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ADJ63843.1</td>
+              <td>esterase/lipase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000424.5">BGC0000424.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>79.2</td>
+              <td>158.0</td>
+              <td>4.37e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AFY40279.1</td>
+              <td>esterase/lipase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002633.2">BGC0002633.2</a></td>
+              <td>other:other</td>
+              <td>39.0</td>
+              <td>75.6</td>
+              <td>157.0</td>
+              <td>1.31e-45</td>
+          </tr>
+    
+          <tr>
+              <td>BAV56003.1</td>
+              <td>esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001597.4">BGC0001597.4</a></td>
+              <td>PKS</td>
+              <td>41.0</td>
+              <td>75.6</td>
+              <td>155.0</td>
+              <td>9.78e-45</td>
+          </tr>
+    
+          <tr>
+              <td>NAO96323.1</td>
+              <td>alpha/beta_hydrolase_fold_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002117.3">BGC0002117.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>80.2</td>
+              <td>154.0</td>
+              <td>1.84e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AJD47498.1</td>
+              <td>lipolytic_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002418.2">BGC0002418.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>81.5</td>
+              <td>153.0</td>
+              <td>2.99e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01058.1</td>
+              <td>esterase/lipase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>78.5</td>
+              <td>153.0</td>
+              <td>6.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>BAU98033.1</td>
+              <td>esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001386.5">BGC0001386.5</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>80.5</td>
+              <td>149.0</td>
+              <td>2.24e-42</td>
+          </tr>
+    
+          <tr>
+              <td>WP_198042327.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002536.3">BGC0002536.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>74.3</td>
+              <td>144.0</td>
+              <td>2.35e-40</td>
+          </tr>
+    
+          <tr>
+              <td>APR73630.1</td>
+              <td>esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001625.5">BGC0001625.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>87.8</td>
+              <td>140.0</td>
+              <td>3.25e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAK64648.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000135.5">BGC0000135.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>78.2</td>
+              <td>130.0</td>
+              <td>2.47e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAC01724.1</td>
+              <td>putative_esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000136.5">BGC0000136.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>77.9</td>
+              <td>126.0</td>
+              <td>7.86e-34</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11943.1</td>
+              <td>esterase_LipW</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001580.3">BGC0001580.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>70.6</td>
+              <td>87.0</td>
+              <td>3.42e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAC49197.1</td>
+              <td>putative_lipase/esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000152.3">BGC0000152.3</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>34.3</td>
+              <td>66.0</td>
+              <td>3.7e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAE71321.1</td>
+              <td>esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000004.3">BGC0000004.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>75.9</td>
+              <td>60.0</td>
+              <td>7.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAS90098.1</td>
+              <td>EstA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000006.3">BGC0000006.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>75.9</td>
+              <td>60.0</td>
+              <td>7.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAS90029.1</td>
+              <td>EstA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000008.3">BGC0000008.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>75.9</td>
+              <td>60.0</td>
+              <td>7.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAS90075.1</td>
+              <td>EstA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000010.3">BGC0000010.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>75.9</td>
+              <td>60.0</td>
+              <td>7.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAS90006.1</td>
+              <td>EstA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000007.3">BGC0000007.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>75.9</td>
+              <td>59.0</td>
+              <td>1.32e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAS90054.1</td>
+              <td>EstA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000009.3">BGC0000009.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>75.9</td>
+              <td>57.0</td>
+              <td>4.3e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CCP45173.1</td>
+              <td>Putative_acetyl_hydrolase_MbtJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001021.5">BGC0001021.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>39.3</td>
+              <td>52.0</td>
+              <td>2.52e-07</td>
+          </tr>
+    
+          <tr>
+              <td>KKP00968.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001854.4">BGC0001854.4</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>27.0</td>
+              <td>67.3</td>
+              <td>51.0</td>
+              <td>6.21e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

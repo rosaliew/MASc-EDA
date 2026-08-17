@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEE65503.1</td>
+              <td>galactoside_O-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000223.5">BGC0000223.5</a></td>
+              <td>PKS:Type II</td>
+              <td>40.0</td>
+              <td>89.6</td>
+              <td>146.0</td>
+              <td>1.93e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ARE72418.1</td>
+              <td>acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001510.5">BGC0001510.5</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>89.6</td>
+              <td>137.0</td>
+              <td>3.59e-40</td>
+          </tr>
+    
+          <tr>
+              <td>QVQ62864.1</td>
+              <td>sugar_O-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002373.3">BGC0002373.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>87.6</td>
+              <td>103.0</td>
+              <td>3.19e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40711.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>68.8</td>
+              <td>82.0</td>
+              <td>1.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40715.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>56.9</td>
+              <td>77.0</td>
+              <td>5.25e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90891.1</td>
+              <td>putative_O-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000787.3">BGC0000787.3</a></td>
+              <td>saccharide</td>
+              <td>57.0</td>
+              <td>25.2</td>
+              <td>61.0</td>
+              <td>5.92e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAK77314.1</td>
+              <td>putative_acetyltransferase_PssR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000762.3">BGC0000762.3</a></td>
+              <td>saccharide</td>
+              <td>49.0</td>
+              <td>25.2</td>
+              <td>60.0</td>
+              <td>3.14e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAS55721.1</td>
+              <td>dTDP-D-Fucp3N_acetylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000795.3">BGC0000795.3</a></td>
+              <td>saccharide</td>
+              <td>46.0</td>
+              <td>22.8</td>
+              <td>49.0</td>
+              <td>4.78e-07</td>
+          </tr>
+    
+          <tr>
+              <td>RAT94093.1</td>
+              <td>serine_O-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001469.5">BGC0001469.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>55.4</td>
+              <td>46.0</td>
+              <td>4.16e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AAM27542.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000784.3">BGC0000784.3</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>41.1</td>
+              <td>45.0</td>
+              <td>8.01e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

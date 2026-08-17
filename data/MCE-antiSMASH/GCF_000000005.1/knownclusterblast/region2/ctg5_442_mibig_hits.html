@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADA71977.1</td>
+              <td>aspartokinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000860.3">BGC0000860.3</a></td>
+              <td>other:other</td>
+              <td>78.0</td>
+              <td>95.5</td>
+              <td>716.0</td>
+              <td>4.99e-260</td>
+          </tr>
+    
+          <tr>
+              <td>AAY96773.1</td>
+              <td>aspartokinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000854.3">BGC0000854.3</a></td>
+              <td>other:other</td>
+              <td>51.0</td>
+              <td>95.9</td>
+              <td>451.0</td>
+              <td>1.19e-155</td>
+          </tr>
+    
+          <tr>
+              <td>ABY40747.1</td>
+              <td>aspartokinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000857.3">BGC0000857.3</a></td>
+              <td>other:other</td>
+              <td>52.0</td>
+              <td>87.6</td>
+              <td>421.0</td>
+              <td>1.8e-144</td>
+          </tr>
+    
+          <tr>
+              <td>ABY40742.1</td>
+              <td>aspartokinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000856.3">BGC0000856.3</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>87.6</td>
+              <td>400.0</td>
+              <td>3.67e-136</td>
+          </tr>
+    
+          <tr>
+              <td>ACB30333.1</td>
+              <td>aspartokinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000859.3">BGC0000859.3</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>43.3</td>
+              <td>212.0</td>
+              <td>6.44e-66</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

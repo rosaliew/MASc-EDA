@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QIE07121.1</td>
+              <td>OvmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001719.4">BGC0001719.4</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>97.3</td>
+              <td>86.0</td>
+              <td>3.06e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CCP20045.1</td>
+              <td>divI_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001119.5">BGC0001119.5</a></td>
+              <td>PKS:Type I</td>
+              <td>32.0</td>
+              <td>95.9</td>
+              <td>85.0</td>
+              <td>4.6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>QES95472.1</td>
+              <td>phosphatase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002453.2">BGC0002453.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>98.2</td>
+              <td>79.0</td>
+              <td>9.77e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AFV30270.1</td>
+              <td>phosphatase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000075.5">BGC0000075.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>58.6</td>
+              <td>73.0</td>
+              <td>2.7e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACF35450.1</td>
+              <td>MbcC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000090.4">BGC0000090.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>93.2</td>
+              <td>72.0</td>
+              <td>8.1e-15</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636842.1</td>
+              <td>HAD-IA_family_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>59.0</td>
+              <td>69.0</td>
+              <td>5.72e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79671.1</td>
+              <td>Phosphatase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>59.0</td>
+              <td>69.0</td>
+              <td>8.64e-14</td>
+          </tr>
+    
+          <tr>
+              <td>WP_011104623.1</td>
+              <td>HAD-IA_family_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002571.2">BGC0002571.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>88.3</td>
+              <td>49.0</td>
+              <td>7.83e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

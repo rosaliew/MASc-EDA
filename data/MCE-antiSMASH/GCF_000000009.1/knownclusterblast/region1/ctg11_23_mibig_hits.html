@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAW85347.1</td>
+              <td>phenylalanine_and_histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000837.4">BGC0000837.4</a></td>
+              <td>other:other</td>
+              <td>61.0</td>
+              <td>96.3</td>
+              <td>568.0</td>
+              <td>1.25e-200</td>
+          </tr>
+    
+          <tr>
+              <td>ERM18794.1</td>
+              <td>histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000172.5">BGC0000172.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>100.2</td>
+              <td>351.0</td>
+              <td>4.02e-115</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10277.1</td>
+              <td>tyrosine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001592.5">BGC0001592.5</a></td>
+              <td>other:other</td>
+              <td>42.0</td>
+              <td>100.0</td>
+              <td>338.0</td>
+              <td>2.64e-110</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73636.1</td>
+              <td>tyrosine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000889.5">BGC0000889.5</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>100.2</td>
+              <td>327.0</td>
+              <td>1.12e-105</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94450.1</td>
+              <td>MIO-dependent_tyrosine_2,3-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001584.5">BGC0001584.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>101.2</td>
+              <td>238.0</td>
+              <td>7.92e-72</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98442.1</td>
+              <td>tyrosine_2,3-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001397.5">BGC0001397.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>100.0</td>
+              <td>238.0</td>
+              <td>1.06e-71</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06680.1</td>
+              <td>putative_ammonia_lyase/transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000965.5">BGC0000965.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>34.0</td>
+              <td>100.0</td>
+              <td>238.0</td>
+              <td>1.11e-71</td>
+          </tr>
+    
+          <tr>
+              <td>CAL80815.1</td>
+              <td>histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000997.4">BGC0000997.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>80.5</td>
+              <td>228.0</td>
+              <td>2.83e-68</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52190.1</td>
+              <td>tyrosine_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>34.0</td>
+              <td>93.4</td>
+              <td>229.0</td>
+              <td>3.42e-68</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ46694.1</td>
+              <td>tyrosine_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000969.5">BGC0000969.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>35.0</td>
+              <td>89.5</td>
+              <td>227.0</td>
+              <td>1.12e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AAO39102.1</td>
+              <td>AdmH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000956.5">BGC0000956.5</a></td>
+              <td>NRPS:Type I+PKS:Type II</td>
+              <td>32.0</td>
+              <td>98.1</td>
+              <td>227.0</td>
+              <td>1.95e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81735.1</td>
+              <td>putative_phenylalanine_ammonia_lyase_EncP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000220.4">BGC0000220.4</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>99.2</td>
+              <td>225.0</td>
+              <td>6.96e-67</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ04142.1</td>
+              <td>Histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000838.3">BGC0000838.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>98.6</td>
+              <td>224.0</td>
+              <td>9.2e-67</td>
+          </tr>
+    
+          <tr>
+              <td>QIC03933.1</td>
+              <td>EncP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002366.2">BGC0002366.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>101.0</td>
+              <td>224.0</td>
+              <td>1.36e-66</td>
+          </tr>
+    
+          <tr>
+              <td>BAR73006.1</td>
+              <td>putative_phenylalanine-2,3-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001194.5">BGC0001194.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>100.2</td>
+              <td>217.0</td>
+              <td>4.9e-64</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66005.1</td>
+              <td>tyrosine_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001008.5">BGC0001008.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>34.0</td>
+              <td>99.8</td>
+              <td>216.0</td>
+              <td>2.88e-63</td>
+          </tr>
+    
+          <tr>
+              <td>WCB70652.1</td>
+              <td>Tyrosine_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002760.2">BGC0002760.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>99.8</td>
+              <td>209.0</td>
+              <td>8.04e-61</td>
+          </tr>
+    
+          <tr>
+              <td>ACC80688.1</td>
+              <td>phenylalanine/histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002711.2">BGC0002711.2</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>90.7</td>
+              <td>210.0</td>
+              <td>8.06e-61</td>
+          </tr>
+    
+          <tr>
+              <td>QBG38760.1</td>
+              <td>histidine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001975.4">BGC0001975.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>91.2</td>
+              <td>199.0</td>
+              <td>2.94e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AIU36110.1</td>
+              <td>LglK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000180.5">BGC0000180.5</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>32.0</td>
+              <td>96.5</td>
+              <td>186.0</td>
+              <td>4.28e-52</td>
+          </tr>
+    
+          <tr>
+              <td>ATV82120.1</td>
+              <td>PAL1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001909.3">BGC0001909.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>96.9</td>
+              <td>170.0</td>
+              <td>1.79e-45</td>
+          </tr>
+    
+          <tr>
+              <td>QJQ82465.1</td>
+              <td>BisK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002290.2">BGC0002290.2</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>100.2</td>
+              <td>169.0</td>
+              <td>5.25e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AMY15064.1</td>
+              <td>phenylalanine_ammonia-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001339.5">BGC0001339.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>28.0</td>
+              <td>94.4</td>
+              <td>167.0</td>
+              <td>2.18e-44</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

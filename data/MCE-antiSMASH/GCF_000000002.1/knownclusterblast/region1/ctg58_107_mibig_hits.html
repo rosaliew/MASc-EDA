@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABW71833.1</td>
+              <td>putative_aldehyde_dehydrogease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000303.5">BGC0000303.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>94.4</td>
+              <td>188.0</td>
+              <td>1.19e-53</td>
+          </tr>
+    
+          <tr>
+              <td>QCF28930.1</td>
+              <td>aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002308.2">BGC0002308.2</a></td>
+              <td>other:other+PKS</td>
+              <td>33.0</td>
+              <td>95.5</td>
+              <td>181.0</td>
+              <td>4.16e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AAS47555.1</td>
+              <td>putative_aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001108.5">BGC0001108.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>31.0</td>
+              <td>97.1</td>
+              <td>174.0</td>
+              <td>2.16e-48</td>
+          </tr>
+    
+          <tr>
+              <td>UHY14141.1</td>
+              <td>benzaldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002671.2">BGC0002671.2</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>91.8</td>
+              <td>172.0</td>
+              <td>6.53e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AIS24863.1</td>
+              <td>Dst3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001147.4">BGC0001147.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>95.7</td>
+              <td>171.0</td>
+              <td>1.97e-47</td>
+          </tr>
+    
+          <tr>
+              <td>QQZ01570.1</td>
+              <td>methylmalonate-semialdehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002498.3">BGC0002498.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>92.6</td>
+              <td>167.0</td>
+              <td>5.63e-46</td>
+          </tr>
+    
+          <tr>
+              <td>BAW35598.1</td>
+              <td>putative_methylmalonic_acid_semialdehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002357.3">BGC0002357.3</a></td>
+              <td>PKS+other:other</td>
+              <td>30.0</td>
+              <td>93.8</td>
+              <td>166.0</td>
+              <td>2.86e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AJQ95720.1</td>
+              <td>NAD-dependent_aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001644.4">BGC0001644.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>93.4</td>
+              <td>164.0</td>
+              <td>8.51e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AFL48539.1</td>
+              <td>putative_succinic_semialdehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000084.5">BGC0000084.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>91.4</td>
+              <td>148.0</td>
+              <td>4.84e-39</td>
+          </tr>
+    
+          <tr>
+              <td>WP_015031703.1</td>
+              <td>aldehyde_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001819.3">BGC0001819.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>91.4</td>
+              <td>145.0</td>
+              <td>5.94e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AFY23020.1</td>
+              <td>betaine_aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000274.5">BGC0000274.5</a></td>
+              <td>PKS:Type II</td>
+              <td>28.0</td>
+              <td>94.7</td>
+              <td>145.0</td>
+              <td>6.2e-38</td>
+          </tr>
+    
+          <tr>
+              <td>XP_001798914.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001865.4">BGC0001865.4</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>29.0</td>
+              <td>92.8</td>
+              <td>132.0</td>
+              <td>2.84e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88625.1</td>
+              <td>putative_aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000327.5">BGC0000327.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>83.1</td>
+              <td>131.0</td>
+              <td>6.5e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QEG98940.1</td>
+              <td>Ant3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002042.3">BGC0002042.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>79.8</td>
+              <td>127.0</td>
+              <td>1.1e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AMJ52086.1</td>
+              <td>lijG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002255.3">BGC0002255.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>90.1</td>
+              <td>123.0</td>
+              <td>2.83e-30</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

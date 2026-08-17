@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAL01055.1</td>
+              <td>putative_steroid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000865.3">BGC0000865.3</a></td>
+              <td>other:other</td>
+              <td>58.0</td>
+              <td>99.1</td>
+              <td>385.0</td>
+              <td>1.76e-133</td>
+          </tr>
+    
+          <tr>
+              <td>AAM27550.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000784.3">BGC0000784.3</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>100.6</td>
+              <td>65.0</td>
+              <td>1.51e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABB52541.1</td>
+              <td>hexose-4-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000047.5">BGC0000047.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.0</td>
+              <td>57.0</td>
+              <td>7.55e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94970.1</td>
+              <td>AlmEII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001396.5">BGC0001396.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.0</td>
+              <td>57.0</td>
+              <td>1.01e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAS79455.1</td>
+              <td>putative_4-ketoreductase_in_D-allose_pathway</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000035.5">BGC0000035.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.4</td>
+              <td>56.0</td>
+              <td>2.42e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAK57184.1</td>
+              <td>MxaA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001022.5">BGC0001022.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>84.6</td>
+              <td>55.0</td>
+              <td>6.45e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AQW44894.1</td>
+              <td>non-ribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001737.3">BGC0001737.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>81.6</td>
+              <td>54.0</td>
+              <td>1.51e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QOG08944.1</td>
+              <td>FfsA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002204.3">BGC0002204.3</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>26.0</td>
+              <td>80.1</td>
+              <td>50.0</td>
+              <td>3.63e-06</td>
+          </tr>
+    
+          <tr>
+              <td>QFF92409.1</td>
+              <td>UDP-glucose_4-epimerase_GalE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002553.2">BGC0002553.2</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>81.9</td>
+              <td>48.0</td>
+              <td>7.53e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

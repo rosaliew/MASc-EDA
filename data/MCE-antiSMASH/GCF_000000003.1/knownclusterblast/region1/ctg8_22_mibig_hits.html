@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFO93369.1</td>
+              <td>ABC_transporter,_extracellular_solute-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000932.5">BGC0000932.5</a></td>
+              <td>other:other</td>
+              <td>99.0</td>
+              <td>100.0</td>
+              <td>984.0</td>
+              <td>0.0</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29729.1</td>
+              <td>putative_peptide_transport_system_secreted_peptide_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000814.3">BGC0000814.3</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>89.5</td>
+              <td>114.0</td>
+              <td>1.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>SPE99796.1</td>
+              <td>Oligopeptide-binding_protein_AppA_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002567.2">BGC0002567.2</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>62.2</td>
+              <td>89.0</td>
+              <td>2.34e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AGM05557.1</td>
+              <td>peptide/nickel_transport_system_substrate-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002098.2">BGC0002098.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>86.9</td>
+              <td>86.0</td>
+              <td>1.65e-17</td>
+          </tr>
+    
+          <tr>
+              <td>BAC73331.1</td>
+              <td>putative_peptide_ABC_transporter_solute-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001587.5">BGC0001587.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>62.2</td>
+              <td>85.0</td>
+              <td>3.05e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CBG67725.1</td>
+              <td>putative_secreted_solute-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002568.2">BGC0002568.2</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>61.2</td>
+              <td>82.0</td>
+              <td>3e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85534.1</td>
+              <td>ABC_transporter_component,_periplasmic_oligopeptide_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>26.0</td>
+              <td>53.3</td>
+              <td>71.0</td>
+              <td>1.11e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

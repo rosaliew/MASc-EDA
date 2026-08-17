@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QZS07503.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002362.3">BGC0002362.3</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>107.7</td>
+              <td>525.0</td>
+              <td>2.5e-175</td>
+          </tr>
+    
+          <tr>
+              <td>CAH60133.1</td>
+              <td>putative_Clp-family_ATP-binding_protease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000700.5">BGC0000700.5</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>107.6</td>
+              <td>520.0</td>
+              <td>1.95e-173</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94782.1</td>
+              <td>CalR4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>102.7</td>
+              <td>509.0</td>
+              <td>4.1e-170</td>
+          </tr>
+    
+          <tr>
+              <td>ABX02680.1</td>
+              <td>ATPase_AAA-2_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001521.3">BGC0001521.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>107.6</td>
+              <td>510.0</td>
+              <td>4.3e-170</td>
+          </tr>
+    
+          <tr>
+              <td>AJW65403.1</td>
+              <td>ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001195.3">BGC0001195.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>108.0</td>
+              <td>509.0</td>
+              <td>5.26e-169</td>
+          </tr>
+    
+          <tr>
+              <td>AEQ20524.1</td>
+              <td>ATP-dependent_chaperone_ClpB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001591.4">BGC0001591.4</a></td>
+              <td>other:other</td>
+              <td>39.0</td>
+              <td>96.0</td>
+              <td>493.0</td>
+              <td>1.21e-162</td>
+          </tr>
+    
+          <tr>
+              <td>EAU38966.1</td>
+              <td>heat_shock_protein_78,_mitochondrial_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001122.4">BGC0001122.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>39.0</td>
+              <td>95.0</td>
+              <td>470.0</td>
+              <td>1.24e-154</td>
+          </tr>
+    
+          <tr>
+              <td>XP_011392712.1</td>
+              <td>putative_chaperone_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001281.3">BGC0001281.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>118.7</td>
+              <td>432.0</td>
+              <td>8.17e-139</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

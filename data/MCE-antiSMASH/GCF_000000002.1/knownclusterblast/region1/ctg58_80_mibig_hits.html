@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CBJ89293.1</td>
+              <td>Pyoverdine_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001757.3">BGC0001757.3</a></td>
+              <td>other:other</td>
+              <td>44.0</td>
+              <td>97.5</td>
+              <td>259.0</td>
+              <td>5.19e-86</td>
+          </tr>
+    
+          <tr>
+              <td>AAC21672.1</td>
+              <td>PvcB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000923.3">BGC0000923.3</a></td>
+              <td>other:other</td>
+              <td>43.0</td>
+              <td>95.3</td>
+              <td>256.0</td>
+              <td>1.02e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AHI58839.1</td>
+              <td>WelI3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000668.5">BGC0000668.5</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>214.0</td>
+              <td>1.18e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79617.1</td>
+              <td>FisH3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001595.3">BGC0001595.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>214.0</td>
+              <td>1.18e-68</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62773.1</td>
+              <td>AmbI3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001126.4">BGC0001126.4</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>212.0</td>
+              <td>6.71e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79596.1</td>
+              <td>FilH3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001501.5">BGC0001501.5</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>212.0</td>
+              <td>6.71e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79563.1</td>
+              <td>FimH3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001594.3">BGC0001594.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>212.0</td>
+              <td>6.71e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APB62259.1</td>
+              <td>Isonitrile_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001612.3">BGC0001612.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>212.0</td>
+              <td>6.71e-68</td>
+          </tr>
+    
+          <tr>
+              <td>KAF1061753.1</td>
+              <td>(5R)-carbapenem-3-carboxylate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002733.3">BGC0002733.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>98.9</td>
+              <td>111.0</td>
+              <td>2.22e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ACG70814.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000938.5">BGC0000938.5</a></td>
+              <td>other:aminocoumarin</td>
+              <td>24.0</td>
+              <td>83.5</td>
+              <td>53.0</td>
+              <td>1.11e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

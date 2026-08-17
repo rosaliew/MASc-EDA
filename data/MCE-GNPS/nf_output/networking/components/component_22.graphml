@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d49" for="edge" attr.name="component" attr.type="long" />
+  <key id="d48" for="edge" attr.name="scan2" attr.type="string" />
+  <key id="d47" for="edge" attr.name="scan1" attr.type="string" />
+  <key id="d46" for="edge" attr.name="matched_peaks" attr.type="string" />
+  <key id="d45" for="edge" attr.name="score" attr.type="double" />
+  <key id="d44" for="edge" attr.name="deltamz_int" attr.type="long" />
+  <key id="d43" for="edge" attr.name="deltamz" attr.type="double" />
+  <key id="d42" for="node" attr.name="library_npclassifier_pathway" attr.type="string" />
+  <key id="d41" for="node" attr.name="library_npclassifier_class" attr.type="string" />
+  <key id="d40" for="node" attr.name="library_npclassifier_superclass" attr.type="string" />
+  <key id="d39" for="node" attr.name="library_classyfire_subclass" attr.type="string" />
+  <key id="d38" for="node" attr.name="library_classyfire_class" attr.type="string" />
+  <key id="d37" for="node" attr.name="library_classyfire_superclass" attr.type="string" />
+  <key id="d36" for="node" attr.name="library_InChI" attr.type="string" />
+  <key id="d35" for="node" attr.name="library_SMILES" attr.type="string" />
+  <key id="d34" for="node" attr.name="library_compound_name" attr.type="string" />
+  <key id="d33" for="node" attr.name="component" attr.type="long" />
+  <key id="d32" for="node" attr.name="charge" attr.type="long" />
+  <key id="d31" for="node" attr.name="rt_min" attr.type="double" />
+  <key id="d30" for="node" attr.name="rt" attr.type="double" />
+  <key id="d29" for="node" attr.name="mz" attr.type="double" />
+  <key id="d28" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING" attr.type="string" />
+  <key id="d27" for="node" attr.name="ATTRIBUTE_ORGANISM" attr.type="string" />
+  <key id="d26" for="node" attr.name="ATTRIBUTE_GROUP" attr.type="string" />
+  <key id="d25" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:BKGRND-MARINE-BROTH.MZML" attr.type="double" />
+  <key id="d24" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:11-G1M02.MZML" attr.type="double" />
+  <key id="d23" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:10-D3M17.MZML" attr.type="double" />
+  <key id="d22" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:9-D3M06.MZML" attr.type="double" />
+  <key id="d21" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:8-C3M06.MZML" attr.type="double" />
+  <key id="d20" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:7-C2R07_2.MZML" attr.type="double" />
+  <key id="d19" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:6-C2M19.MZML" attr.type="double" />
+  <key id="d18" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:5-B2R09.MZML" attr.type="double" />
+  <key id="d17" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:4-B2R08.MZML" attr.type="double" />
+  <key id="d16" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:3-B2R04.MZML" attr.type="double" />
+  <key id="d15" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:2-6D03.MZML" attr.type="double" />
+  <key id="d14" for="node" attr.name="ATTRIBUTE_PERFILEGROUPING:GNPSGROUP:1-1A01.MZML" attr.type="double" />
+  <key id="d13" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:NAN" attr.type="double" />
+  <key id="d12" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:MOTILIMONAS_G1M02" attr.type="double" />
+  <key id="d11" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:ARENIBACTER_D3M17" attr.type="double" />
+  <key id="d10" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:ACINETOBACTER_D3M06" attr.type="double" />
+  <key id="d9" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:SALIPIGER_C3M06" attr.type="double" />
+  <key id="d8" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:PARACOCCUS_C2R07" attr.type="double" />
+  <key id="d7" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:COLWELLIA_C2M19" attr.type="double" />
+  <key id="d6" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:ROSEOVARIUS_B2R09" attr.type="double" />
+  <key id="d5" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:SHEWANELLA_B2R08" attr.type="double" />
+  <key id="d4" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:PHAEOBACTER_B2R04" attr.type="double" />
+  <key id="d3" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:VIBRIO_6D03" attr.type="double" />
+  <key id="d2" for="node" attr.name="ATTRIBUTE_ORGANISM:GNPSGROUP:VIBRIO_1A01" attr.type="double" />
+  <key id="d1" for="node" attr.name="ATTRIBUTE_GROUP:GNPSGROUP:G2" attr.type="double" />
+  <key id="d0" for="node" attr.name="ATTRIBUTE_GROUP:GNPSGROUP:G1" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="105">
+      <data key="d0">32.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">2.0</data>
+      <data key="d5">5.0</data>
+      <data key="d6">6.0</data>
+      <data key="d7">4.0</data>
+      <data key="d8">3.0</data>
+      <data key="d9">1.0</data>
+      <data key="d10">1.0</data>
+      <data key="d11">1.0</data>
+      <data key="d12">9.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">2.0</data>
+      <data key="d17">5.0</data>
+      <data key="d18">6.0</data>
+      <data key="d19">4.0</data>
+      <data key="d20">3.0</data>
+      <data key="d21">1.0</data>
+      <data key="d22">1.0</data>
+      <data key="d23">1.0</data>
+      <data key="d24">9.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML,11-G1M02.mzML</data>
+      <data key="d29">141.9581</data>
+      <data key="d30">366.89</data>
+      <data key="d31">366.89</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="126">
+      <data key="d0">13.0</data>
+      <data key="d1">6.0</data>
+      <data key="d2">6.0</data>
+      <data key="d3">5.0</data>
+      <data key="d4">1.0</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.0</data>
+      <data key="d7">0.0</data>
+      <data key="d8">1.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">0.0</data>
+      <data key="d12">0.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">6.0</data>
+      <data key="d15">5.0</data>
+      <data key="d16">1.0</data>
+      <data key="d17">0.0</data>
+      <data key="d18">0.0</data>
+      <data key="d19">0.0</data>
+      <data key="d20">1.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0.0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">6.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Vibrio_6D03,Phaeobacter_B2R04,Paracoccus_C2R07</data>
+      <data key="d28">1-1A01.mzML,2-6D03.mzML,3-B2R04.mzML,7-C2R07_2.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">155.0833</data>
+      <data key="d30">209.81</data>
+      <data key="d31">209.81</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+      <data key="d34">Massbank:PR300401 Cyclo-prolylglycine</data>
+      <data key="d35">OC1=NCC(=O)N2CCC[C@@H]12</data>
+      <data key="d36">1S/C7H10N2O2/c10-6-4-8-7(11)5-2-1-3-9(5)6/h5H,1-4H2,(H,8,11)/t5-/m0/s1</data>
+      <data key="d37">Organic acids and derivatives</data>
+      <data key="d38">Carboxylic acids and derivatives</data>
+      <data key="d39">Amino acids, peptides, and analogues</data>
+      <data key="d40">nan</data>
+      <data key="d41">nan</data>
+      <data key="d42">Alkaloids|Amino acids and Peptides</data>
+    </node>
+    <node id="129">
+      <data key="d0">25.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">1.0</data>
+      <data key="d4">3.0</data>
+      <data key="d5">3.0</data>
+      <data key="d6">3.0</data>
+      <data key="d7">3.0</data>
+      <data key="d8">3.0</data>
+      <data key="d9">3.0</data>
+      <data key="d10">3.0</data>
+      <data key="d11">3.0</data>
+      <data key="d12">0.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">1.0</data>
+      <data key="d16">3.0</data>
+      <data key="d17">3.0</data>
+      <data key="d18">3.0</data>
+      <data key="d19">3.0</data>
+      <data key="d20">3.0</data>
+      <data key="d21">3.0</data>
+      <data key="d22">3.0</data>
+      <data key="d23">3.0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Vibrio_6D03,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17</data>
+      <data key="d28">2-6D03.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML</data>
+      <data key="d29">155.0811</data>
+      <data key="d30">240.68</data>
+      <data key="d31">240.68</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="106">
+      <data key="d0">25.0</data>
+      <data key="d1">7.0</data>
+      <data key="d2">3.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">4.0</data>
+      <data key="d5">6.0</data>
+      <data key="d6">1.0</data>
+      <data key="d7">2.0</data>
+      <data key="d8">1.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">3.0</data>
+      <data key="d11">0.0</data>
+      <data key="d12">5.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">3.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">4.0</data>
+      <data key="d17">6.0</data>
+      <data key="d18">1.0</data>
+      <data key="d19">2.0</data>
+      <data key="d20">1.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">3.0</data>
+      <data key="d23">0.0</data>
+      <data key="d24">5.0</data>
+      <data key="d25">7.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Acinetobacter_D3M06,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,9-D3M06.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9586</data>
+      <data key="d30">336.19</data>
+      <data key="d31">336.19</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="104">
+      <data key="d0">43.0</data>
+      <data key="d1">5.0</data>
+      <data key="d2">1.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">5.0</data>
+      <data key="d5">4.0</data>
+      <data key="d6">7.0</data>
+      <data key="d7">7.0</data>
+      <data key="d8">6.0</data>
+      <data key="d9">1.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">1.0</data>
+      <data key="d12">11.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">1.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">5.0</data>
+      <data key="d17">4.0</data>
+      <data key="d18">7.0</data>
+      <data key="d19">7.0</data>
+      <data key="d20">6.0</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">1.0</data>
+      <data key="d24">11.0</data>
+      <data key="d25">5.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,10-D3M17.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9583</data>
+      <data key="d30">319.7</data>
+      <data key="d31">319.7</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="102">
+      <data key="d0">49.0</data>
+      <data key="d1">12.0</data>
+      <data key="d2">1.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">8.0</data>
+      <data key="d5">6.0</data>
+      <data key="d6">2.0</data>
+      <data key="d7">6.0</data>
+      <data key="d8">3.0</data>
+      <data key="d9">2.0</data>
+      <data key="d10">1.0</data>
+      <data key="d11">2.0</data>
+      <data key="d12">18.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">1.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">8.0</data>
+      <data key="d17">6.0</data>
+      <data key="d18">2.0</data>
+      <data key="d19">6.0</data>
+      <data key="d20">3.0</data>
+      <data key="d21">2.0</data>
+      <data key="d22">1.0</data>
+      <data key="d23">2.0</data>
+      <data key="d24">18.0</data>
+      <data key="d25">12.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9585</data>
+      <data key="d30">319.76</data>
+      <data key="d31">319.76</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="124">
+      <data key="d0">10.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">6.0</data>
+      <data key="d4">0.0</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.0</data>
+      <data key="d7">0.0</data>
+      <data key="d8">0.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">4.0</data>
+      <data key="d11">0.0</data>
+      <data key="d12">0.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">6.0</data>
+      <data key="d16">0.0</data>
+      <data key="d17">0.0</data>
+      <data key="d18">0.0</data>
+      <data key="d19">0.0</data>
+      <data key="d20">0.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">4.0</data>
+      <data key="d23">0.0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Vibrio_6D03,Acinetobacter_D3M06</data>
+      <data key="d28">2-6D03.mzML,9-D3M06.mzML</data>
+      <data key="d29">153.0416</data>
+      <data key="d30">205.16</data>
+      <data key="d31">205.16</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="125">
+      <data key="d0">52.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">8.0</data>
+      <data key="d5">6.0</data>
+      <data key="d6">6.0</data>
+      <data key="d7">6.0</data>
+      <data key="d8">5.0</data>
+      <data key="d9">6.0</data>
+      <data key="d10">6.0</data>
+      <data key="d11">6.0</data>
+      <data key="d12">3.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">8.0</data>
+      <data key="d17">6.0</data>
+      <data key="d18">6.0</data>
+      <data key="d19">6.0</data>
+      <data key="d20">5.0</data>
+      <data key="d21">6.0</data>
+      <data key="d22">6.0</data>
+      <data key="d23">6.0</data>
+      <data key="d24">3.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML,11-G1M02.mzML</data>
+      <data key="d29">155.0811</data>
+      <data key="d30">211.83</data>
+      <data key="d31">211.83</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+      <data key="d34">Massbank:PR300401 Cyclo-prolylglycine</data>
+      <data key="d35">OC1=NCC(=O)N2CCC[C@@H]12</data>
+      <data key="d36">1S/C7H10N2O2/c10-6-4-8-7(11)5-2-1-3-9(5)6/h5H,1-4H2,(H,8,11)/t5-/m0/s1</data>
+      <data key="d37">Organic acids and derivatives</data>
+      <data key="d38">Carboxylic acids and derivatives</data>
+      <data key="d39">Amino acids, peptides, and analogues</data>
+      <data key="d40">nan</data>
+      <data key="d41">nan</data>
+      <data key="d42">Alkaloids|Amino acids and Peptides</data>
+    </node>
+    <node id="128">
+      <data key="d0">12.0</data>
+      <data key="d1">6.0</data>
+      <data key="d2">5.0</data>
+      <data key="d3">5.0</data>
+      <data key="d4">1.0</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.0</data>
+      <data key="d7">0.0</data>
+      <data key="d8">1.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">0.0</data>
+      <data key="d12">0.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">5.0</data>
+      <data key="d15">5.0</data>
+      <data key="d16">1.0</data>
+      <data key="d17">0.0</data>
+      <data key="d18">0.0</data>
+      <data key="d19">0.0</data>
+      <data key="d20">1.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0.0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">6.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Vibrio_6D03,Phaeobacter_B2R04,Paracoccus_C2R07</data>
+      <data key="d28">1-1A01.mzML,2-6D03.mzML,3-B2R04.mzML,7-C2R07_2.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">155.0833</data>
+      <data key="d30">209.46</data>
+      <data key="d31">209.46</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="103">
+      <data key="d0">27.0</data>
+      <data key="d1">7.0</data>
+      <data key="d2">2.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">4.0</data>
+      <data key="d5">6.0</data>
+      <data key="d6">3.0</data>
+      <data key="d7">4.0</data>
+      <data key="d8">0.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">1.0</data>
+      <data key="d11">2.0</data>
+      <data key="d12">5.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">2.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">4.0</data>
+      <data key="d17">6.0</data>
+      <data key="d18">3.0</data>
+      <data key="d19">4.0</data>
+      <data key="d20">0.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">1.0</data>
+      <data key="d23">2.0</data>
+      <data key="d24">5.0</data>
+      <data key="d25">7.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Acinetobacter_D3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,9-D3M06.mzML,10-D3M17.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9585</data>
+      <data key="d30">321.01</data>
+      <data key="d31">321.01</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="127">
+      <data key="d0">51.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">8.0</data>
+      <data key="d5">6.0</data>
+      <data key="d6">6.0</data>
+      <data key="d7">6.0</data>
+      <data key="d8">5.0</data>
+      <data key="d9">6.0</data>
+      <data key="d10">6.0</data>
+      <data key="d11">5.0</data>
+      <data key="d12">3.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">8.0</data>
+      <data key="d17">6.0</data>
+      <data key="d18">6.0</data>
+      <data key="d19">6.0</data>
+      <data key="d20">5.0</data>
+      <data key="d21">6.0</data>
+      <data key="d22">6.0</data>
+      <data key="d23">5.0</data>
+      <data key="d24">3.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML,11-G1M02.mzML</data>
+      <data key="d29">155.0811</data>
+      <data key="d30">211.71</data>
+      <data key="d31">211.71</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="107">
+      <data key="d0">20.0</data>
+      <data key="d1">2.0</data>
+      <data key="d2">3.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">3.0</data>
+      <data key="d5">1.0</data>
+      <data key="d6">3.0</data>
+      <data key="d7">3.0</data>
+      <data key="d8">2.0</data>
+      <data key="d9">0.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">0.0</data>
+      <data key="d12">5.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">3.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">3.0</data>
+      <data key="d17">1.0</data>
+      <data key="d18">3.0</data>
+      <data key="d19">3.0</data>
+      <data key="d20">2.0</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0.0</data>
+      <data key="d24">5.0</data>
+      <data key="d25">2.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9585</data>
+      <data key="d30">336.33</data>
+      <data key="d31">336.33</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="100">
+      <data key="d0">14.0</data>
+      <data key="d1">0.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">4.0</data>
+      <data key="d5">3.0</data>
+      <data key="d6">1.0</data>
+      <data key="d7">1.0</data>
+      <data key="d8">1.0</data>
+      <data key="d9">1.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">1.0</data>
+      <data key="d12">2.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">4.0</data>
+      <data key="d17">3.0</data>
+      <data key="d18">1.0</data>
+      <data key="d19">1.0</data>
+      <data key="d20">1.0</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">1.0</data>
+      <data key="d24">2.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">G1</data>
+      <data key="d27">Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,10-D3M17.mzML,11-G1M02.mzML</data>
+      <data key="d29">141.958</data>
+      <data key="d30">352.7</data>
+      <data key="d31">352.7</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="123">
+      <data key="d0">36.0</data>
+      <data key="d1">6.0</data>
+      <data key="d2">0.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">0.0</data>
+      <data key="d5">0.0</data>
+      <data key="d6">12.0</data>
+      <data key="d7">0.0</data>
+      <data key="d8">0.0</data>
+      <data key="d9">6.0</data>
+      <data key="d10">12.0</data>
+      <data key="d11">6.0</data>
+      <data key="d12">0.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">0.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">0.0</data>
+      <data key="d17">0.0</data>
+      <data key="d18">12.0</data>
+      <data key="d19">0.0</data>
+      <data key="d20">0.0</data>
+      <data key="d21">6.0</data>
+      <data key="d22">12.0</data>
+      <data key="d23">6.0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">6.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Roseovarius_B2R09,Salipiger_C3M06,Acinetobacter_D3M06,Arenibacter_D3M17</data>
+      <data key="d28">5-B2R09.mzML,8-C3M06.mzML,9-D3M06.mzML,10-D3M17.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">152.0565</data>
+      <data key="d30">225.3</data>
+      <data key="d31">225.3</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <node id="101">
+      <data key="d0">73.0</data>
+      <data key="d1">9.0</data>
+      <data key="d2">2.0</data>
+      <data key="d3">0.0</data>
+      <data key="d4">12.0</data>
+      <data key="d5">11.0</data>
+      <data key="d6">8.0</data>
+      <data key="d7">7.0</data>
+      <data key="d8">2.0</data>
+      <data key="d9">3.0</data>
+      <data key="d10">0.0</data>
+      <data key="d11">5.0</data>
+      <data key="d12">23.0</data>
+      <data key="d13">0.0</data>
+      <data key="d14">2.0</data>
+      <data key="d15">0.0</data>
+      <data key="d16">12.0</data>
+      <data key="d17">11.0</data>
+      <data key="d18">8.0</data>
+      <data key="d19">7.0</data>
+      <data key="d20">2.0</data>
+      <data key="d21">3.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">5.0</data>
+      <data key="d24">23.0</data>
+      <data key="d25">9.0</data>
+      <data key="d26">G1,G2</data>
+      <data key="d27">Vibrio_1A01,Phaeobacter_B2R04,Shewanella_B2R08,Roseovarius_B2R09,Colwellia_C2M19,Paracoccus_C2R07,Salipiger_C3M06,Arenibacter_D3M17,Motilimonas_G1M02</data>
+      <data key="d28">1-1A01.mzML,3-B2R04.mzML,4-B2R08.mzML,5-B2R09.mzML,6-C2M19.mzML,7-C2R07_2.mzML,8-C3M06.mzML,10-D3M17.mzML,11-G1M02.mzML,bkgrnd-marine-broth.mzML</data>
+      <data key="d29">141.9583</data>
+      <data key="d30">340.31</data>
+      <data key="d31">340.31</data>
+      <data key="d32">0</data>
+      <data key="d33">22</data>
+    </node>
+    <edge source="105" target="107">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8612</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">105</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="105" target="103">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9005</data>
+      <data key="d46">0</data>
+      <data key="d47">103</data>
+      <data key="d48">105</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="105" target="100">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8729</data>
+      <data key="d46">0</data>
+      <data key="d47">100</data>
+      <data key="d48">105</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="105" target="102">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8541</data>
+      <data key="d46">0</data>
+      <data key="d47">102</data>
+      <data key="d48">105</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="124">
+      <data key="d43">-2.041</data>
+      <data key="d44">-2</data>
+      <data key="d45">0.9208</data>
+      <data key="d46">0</data>
+      <data key="d47">124</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="123">
+      <data key="d43">-3.027</data>
+      <data key="d44">-3</data>
+      <data key="d45">0.8779</data>
+      <data key="d46">0</data>
+      <data key="d47">123</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="128">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8688</data>
+      <data key="d46">0</data>
+      <data key="d47">128</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="127">
+      <data key="d43">0.002</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8705</data>
+      <data key="d46">0</data>
+      <data key="d47">127</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="129">
+      <data key="d43">0.002</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8427</data>
+      <data key="d46">0</data>
+      <data key="d47">129</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="126" target="125">
+      <data key="d43">-0.002</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9461</data>
+      <data key="d46">0</data>
+      <data key="d47">125</data>
+      <data key="d48">126</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="106" target="107">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8517</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">106</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="106" target="104">
+      <data key="d43">-0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9008</data>
+      <data key="d46">0</data>
+      <data key="d47">104</data>
+      <data key="d48">106</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="106" target="101">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9172</data>
+      <data key="d46">0</data>
+      <data key="d47">101</data>
+      <data key="d48">106</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="104" target="101">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8829</data>
+      <data key="d46">0</data>
+      <data key="d47">104</data>
+      <data key="d48">101</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="102" target="107">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8454</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">102</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="102" target="103">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8847</data>
+      <data key="d46">0</data>
+      <data key="d47">103</data>
+      <data key="d48">102</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="102" target="100">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8547</data>
+      <data key="d46">0</data>
+      <data key="d47">100</data>
+      <data key="d48">102</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="102" target="127">
+      <data key="d43">-13.123</data>
+      <data key="d44">-13</data>
+      <data key="d45">0.847</data>
+      <data key="d46">0</data>
+      <data key="d47">102</data>
+      <data key="d48">127</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="102" target="101">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8572</data>
+      <data key="d46">0</data>
+      <data key="d47">102</data>
+      <data key="d48">101</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="124" target="125">
+      <data key="d43">-2.038</data>
+      <data key="d44">-2</data>
+      <data key="d45">0.9385</data>
+      <data key="d46">0</data>
+      <data key="d47">124</data>
+      <data key="d48">125</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="124" target="127">
+      <data key="d43">-2.039</data>
+      <data key="d44">-2</data>
+      <data key="d45">0.8555</data>
+      <data key="d46">0</data>
+      <data key="d47">124</data>
+      <data key="d48">127</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="124" target="123">
+      <data key="d43">-0.986</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9218</data>
+      <data key="d46">0</data>
+      <data key="d47">124</data>
+      <data key="d48">123</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="124" target="128">
+      <data key="d43">-2.041</data>
+      <data key="d44">-2</data>
+      <data key="d45">0.8633</data>
+      <data key="d46">0</data>
+      <data key="d47">124</data>
+      <data key="d48">128</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="125" target="123">
+      <data key="d43">-3.025</data>
+      <data key="d44">-3</data>
+      <data key="d45">0.8594</data>
+      <data key="d46">0</data>
+      <data key="d47">123</data>
+      <data key="d48">125</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="125" target="128">
+      <data key="d43">-0.002</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8758</data>
+      <data key="d46">0</data>
+      <data key="d47">128</data>
+      <data key="d48">125</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="125" target="127">
+      <data key="d43">-0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8752</data>
+      <data key="d46">0</data>
+      <data key="d47">127</data>
+      <data key="d48">125</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="128" target="127">
+      <data key="d43">-0.002</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9432</data>
+      <data key="d46">0</data>
+      <data key="d47">128</data>
+      <data key="d48">127</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="103" target="107">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8814</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">103</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="103" target="100">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8814</data>
+      <data key="d46">0</data>
+      <data key="d47">103</data>
+      <data key="d48">100</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="103" target="101">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8452</data>
+      <data key="d46">0</data>
+      <data key="d47">103</data>
+      <data key="d48">101</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="107" target="100">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.9017</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">100</data>
+      <data key="d49">22</data>
+    </edge>
+    <edge source="107" target="101">
+      <data key="d43">0.0</data>
+      <data key="d44">0</data>
+      <data key="d45">0.8509</data>
+      <data key="d46">0</data>
+      <data key="d47">107</data>
+      <data key="d48">101</data>
+      <data key="d49">22</data>
+    </edge>
+  </graph>
+</graphml>

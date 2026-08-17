@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QKW93645.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002339.3">BGC0002339.3</a></td>
+              <td>terpene</td>
+              <td>35.0</td>
+              <td>97.9</td>
+              <td>652.0</td>
+              <td>3.24e-214</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76507.1</td>
+              <td>probable_5-methyltetrahydrofolate-homocysteine_S-methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000085.5">BGC0000085.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>96.4</td>
+              <td>552.0</td>
+              <td>1.52e-176</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22277.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>97.7</td>
+              <td>540.0</td>
+              <td>1.5e-171</td>
+          </tr>
+    
+          <tr>
+              <td>ABI22142.1</td>
+              <td>putative_methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000422.5">BGC0000422.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>94.7</td>
+              <td>535.0</td>
+              <td>6.36e-170</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71101.1</td>
+              <td>Lct18</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000238.5">BGC0000238.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>96.2</td>
+              <td>523.0</td>
+              <td>1.22e-165</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46706.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001177.4">BGC0001177.4</a></td>
+              <td>PKS:Type II</td>
+              <td>34.0</td>
+              <td>46.4</td>
+              <td>253.0</td>
+              <td>3.16e-72</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94773.1</td>
+              <td>CalE2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>25.9</td>
+              <td>73.0</td>
+              <td>3.12e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

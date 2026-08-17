@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGZ93910.1</td>
+              <td>amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000937.5">BGC0000937.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>101.7</td>
+              <td>159.0</td>
+              <td>6.4e-43</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078845181.1</td>
+              <td>amidase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001596.3">BGC0001596.3</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>32.0</td>
+              <td>102.8</td>
+              <td>150.0</td>
+              <td>4.04e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70881.1</td>
+              <td>amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001693.3">BGC0001693.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>95.0</td>
+              <td>132.0</td>
+              <td>1.17e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61867.1</td>
+              <td>Lom33</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000240.5">BGC0000240.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>99.6</td>
+              <td>130.0</td>
+              <td>5.62e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54656.1</td>
+              <td>Amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000241.5">BGC0000241.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>103.2</td>
+              <td>130.0</td>
+              <td>8.9e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ALJ99875.1</td>
+              <td>FlsN3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001904.2">BGC0001904.2</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>32.0</td>
+              <td>99.4</td>
+              <td>127.0</td>
+              <td>1.1e-31</td>
+          </tr>
+    
+          <tr>
+              <td>SKB24620.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002455.3">BGC0002455.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>105.8</td>
+              <td>126.0</td>
+              <td>1.66e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ76288.1</td>
+              <td>putative_amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000972.5">BGC0000972.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>23.0</td>
+              <td>109.1</td>
+              <td>90.0</td>
+              <td>5.22e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ34008.1</td>
+              <td>amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001442.5">BGC0001442.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>99.4</td>
+              <td>86.0</td>
+              <td>1.14e-17</td>
+          </tr>
+    
+          <tr>
+              <td>BBC83958.1</td>
+              <td>putative_amidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001636.4">BGC0001636.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>49.5</td>
+              <td>82.0</td>
+              <td>3.45e-16</td>
+          </tr>
+    
+          <tr>
+              <td>FAC38_08</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002198.3">BGC0002198.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>32.8</td>
+              <td>76.0</td>
+              <td>2.09e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QMS79051.1</td>
+              <td>acetamidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002198.3">BGC0002198.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>51.0</td>
+              <td>74.0</td>
+              <td>1.02e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ESU09200.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002594.2">BGC0002594.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>45.6</td>
+              <td>74.0</td>
+              <td>1.44e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CCM43858.1</td>
+              <td>amidase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001127.5">BGC0001127.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>28.1</td>
+              <td>68.0</td>
+              <td>7.37e-12</td>
+          </tr>
+    
+          <tr>
+              <td>EAU31932.1</td>
+              <td>predicted_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002267.2">BGC0002267.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.5</td>
+              <td>62.0</td>
+              <td>6.52e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAV32171.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001373.3">BGC0001373.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>45.8</td>
+              <td>56.0</td>
+              <td>7.95e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

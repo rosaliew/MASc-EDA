@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CDG12868.1</td>
+              <td>putative_drug_efflux_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001415.4">BGC0001415.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>78.4</td>
+              <td>112.0</td>
+              <td>3.08e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ALS30797.1</td>
+              <td>itaconate_transport_protein_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001286.3">BGC0001286.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>41.4</td>
+              <td>81.0</td>
+              <td>3.34e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35077.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>39.3</td>
+              <td>61.0</td>
+              <td>1.03e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37888.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001979.4">BGC0001979.4</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>35.1</td>
+              <td>53.0</td>
+              <td>2.82e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QOG08945.1</td>
+              <td>FfsH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002204.3">BGC0002204.3</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>31.0</td>
+              <td>30.8</td>
+              <td>51.0</td>
+              <td>1.28e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74287.1</td>
+              <td>TxnRr2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>38.8</td>
+              <td>50.0</td>
+              <td>2.78e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAE53341.1</td>
+              <td>putative_short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000440.5">BGC0000440.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>99.6</td>
+              <td>154.0</td>
+              <td>4.48e-46</td>
+          </tr>
+    
+          <tr>
+              <td>CAG15000.1</td>
+              <td>short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000441.4">BGC0000441.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>99.6</td>
+              <td>154.0</td>
+              <td>4.48e-46</td>
+          </tr>
+    
+          <tr>
+              <td>CUX79054.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_reductase_FabG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001715.4">BGC0001715.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>100.4</td>
+              <td>150.0</td>
+              <td>1.9e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64681.1</td>
+              <td>2-deoxy-D-gluconate_3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000379.5">BGC0000379.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>101.6</td>
+              <td>149.0</td>
+              <td>7.29e-44</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37883.1</td>
+              <td>putative_3-oxoacyl-[acyl-carrier_protein]_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000038.5">BGC0000038.5</a></td>
+              <td>PKS:Type I</td>
+              <td>37.0</td>
+              <td>102.1</td>
+              <td>144.0</td>
+              <td>8.51e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AAK57530.1</td>
+              <td>PgaM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000262.5">BGC0000262.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>101.6</td>
+              <td>150.0</td>
+              <td>4.06e-41</td>
+          </tr>
+    
+          <tr>
+              <td>WP_035850920.1</td>
+              <td>glucose_1-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002536.3">BGC0002536.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>104.9</td>
+              <td>141.0</td>
+              <td>5.71e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAT12286.1</td>
+              <td>LtxD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000384.6">BGC0000384.6</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>98.8</td>
+              <td>141.0</td>
+              <td>5.72e-41</td>
+          </tr>
+    
+          <tr>
+              <td>WP_010875298.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001605.3">BGC0001605.3</a></td>
+              <td>terpene</td>
+              <td>40.0</td>
+              <td>100.8</td>
+              <td>141.0</td>
+              <td>1.3e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AKA54637.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001216.5">BGC0001216.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>37.0</td>
+              <td>101.2</td>
+              <td>140.0</td>
+              <td>1.56e-40</td>
+          </tr>
+    
+          <tr>
+              <td>WP_010639249.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000958.5">BGC0000958.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>38.0</td>
+              <td>101.2</td>
+              <td>140.0</td>
+              <td>2.19e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68923.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001083.5">BGC0001083.5</a></td>
+              <td>PKS:Type III+terpene:Sesquiterpene</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>139.0</td>
+              <td>5.53e-40</td>
+          </tr>
+    
+          <tr>
+              <td>EHM27510.1</td>
+              <td>monooxygenase_FAD-binding</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000235.5">BGC0000235.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>103.3</td>
+              <td>145.0</td>
+              <td>7.49e-40</td>
+          </tr>
+    
+          <tr>
+              <td>BAF85836.1</td>
+              <td>C5-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000109.5">BGC0000109.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>105.3</td>
+              <td>139.0</td>
+              <td>7.7e-40</td>
+          </tr>
+    
+          <tr>
+              <td>OOH83075.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001987.2">BGC0001987.2</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>100.0</td>
+              <td>137.0</td>
+              <td>1.22e-39</td>
+          </tr>
+    
+          <tr>
+              <td>QDG00821.1</td>
+              <td>oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002028.4">BGC0002028.4</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>145.0</td>
+              <td>2.32e-39</td>
+          </tr>
+    
+          <tr>
+              <td>OKI59857.1</td>
+              <td>monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002477.3">BGC0002477.3</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>103.3</td>
+              <td>144.0</td>
+              <td>3.69e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAV17004.1</td>
+              <td>putative_oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001384.5">BGC0001384.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>102.1</td>
+              <td>143.0</td>
+              <td>5.25e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BCN28648.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002441.2">BGC0002441.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>38.0</td>
+              <td>100.0</td>
+              <td>136.0</td>
+              <td>5.93e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65299.1</td>
+              <td>Cal37</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001297.4">BGC0001297.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>99.2</td>
+              <td>135.0</td>
+              <td>7.35e-39</td>
+          </tr>
+    
+          <tr>
+              <td>QBG38776.1</td>
+              <td>Atr15</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001975.4">BGC0001975.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>135.0</td>
+              <td>7.35e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AFO85456.1</td>
+              <td>reductase/oxidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000391.5">BGC0000391.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>98.8</td>
+              <td>135.0</td>
+              <td>1.53e-38</td>
+          </tr>
+    
+          <tr>
+              <td>MBW8699688.1</td>
+              <td>Anhydrotetracycline_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002140.2">BGC0002140.2</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>102.1</td>
+              <td>142.0</td>
+              <td>1.9e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50168.1</td>
+              <td>putative_ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000213.4">BGC0000213.4</a></td>
+              <td>PKS:Type II</td>
+              <td>39.0</td>
+              <td>99.2</td>
+              <td>134.0</td>
+              <td>1.95e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44645.1</td>
+              <td>monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001769.5">BGC0001769.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>102.1</td>
+              <td>141.0</td>
+              <td>2.61e-38</td>
+          </tr>
+    
+          <tr>
+              <td>TRO56982.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002361.3">BGC0002361.3</a></td>
+              <td>PKS+saccharide</td>
+              <td>38.0</td>
+              <td>102.9</td>
+              <td>141.0</td>
+              <td>2.61e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AAX57196.2</td>
+              <td>auricin_polyketide_oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000201.5">BGC0000201.5</a></td>
+              <td>PKS+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>141.0</td>
+              <td>3.8e-38</td>
+          </tr>
+    
+          <tr>
+              <td>QBA57755.1</td>
+              <td>3-oxoacyl-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002377.2">BGC0002377.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>99.2</td>
+              <td>134.0</td>
+              <td>4.07e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10112.1</td>
+              <td>putative_oxidase-reducatse</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000268.5">BGC0000268.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>103.3</td>
+              <td>140.0</td>
+              <td>4.72e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AMX23331.1</td>
+              <td>putative_acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001500.3">BGC0001500.3</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>98.8</td>
+              <td>133.0</td>
+              <td>5.31e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AMK51286.1</td>
+              <td>Hex29</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001376.5">BGC0001376.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>133.0</td>
+              <td>5.45e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52686.1</td>
+              <td>putative_3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000222.5">BGC0000222.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>101.6</td>
+              <td>133.0</td>
+              <td>8.28e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ07846.1</td>
+              <td>putative_oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000232.5">BGC0000232.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>104.1</td>
+              <td>140.0</td>
+              <td>9.92e-38</td>
+          </tr>
+    
+          <tr>
+              <td>antaM</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001455.6">BGC0001455.6</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>103.3</td>
+              <td>133.0</td>
+              <td>1.18e-37</td>
+          </tr>
+    
+          <tr>
+              <td>QHB92595.1</td>
+              <td>YsfH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002547.2">BGC0002547.2</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>132.0</td>
+              <td>1.26e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ08912.1</td>
+              <td>putative_3-ketoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000224.4">BGC0000224.4</a></td>
+              <td>PKS:Type II</td>
+              <td>36.0</td>
+              <td>100.8</td>
+              <td>133.0</td>
+              <td>1.27e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58630.1</td>
+              <td>AsuB3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000187.5">BGC0000187.5</a></td>
+              <td>PKS:Type II</td>
+              <td>37.0</td>
+              <td>100.8</td>
+              <td>132.0</td>
+              <td>2.33e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52172.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>40.0</td>
+              <td>98.8</td>
+              <td>131.0</td>
+              <td>3.02e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ACZ87049.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002732.3">BGC0002732.3</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>99.6</td>
+              <td>131.0</td>
+              <td>4.25e-37</td>
+          </tr>
+    
+          <tr>
+              <td>WP_008704360.1</td>
+              <td>SDR_family_NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001575.4">BGC0001575.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>102.5</td>
+              <td>131.0</td>
+              <td>4.82e-37</td>
+          </tr>
+    
+          <tr>
+              <td>QNH67547.1</td>
+              <td>Cip19</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002108.3">BGC0002108.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>100.0</td>
+              <td>130.0</td>
+              <td>8.85e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AGO50615.1</td>
+              <td>oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000229.5">BGC0000229.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>137.0</td>
+              <td>1.14e-36</td>
+          </tr>
+    
+          <tr>
+              <td>UPN68086.1</td>
+              <td>putative_SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002672.2">BGC0002672.2</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>104.1</td>
+              <td>136.0</td>
+              <td>1.4e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AHX24712.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000200.5">BGC0000200.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>98.8</td>
+              <td>129.0</td>
+              <td>2.29e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ADG86311.1</td>
+              <td>3-ketoacyl_ACP-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000190.5">BGC0000190.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>100.0</td>
+              <td>128.0</td>
+              <td>6.54e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ADB23387.1</td>
+              <td>dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001062.5">BGC0001062.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>98.8</td>
+              <td>127.0</td>
+              <td>1.78e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15586.1</td>
+              <td>Sim8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000270.5">BGC0000270.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>126.0</td>
+              <td>3.12e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAK06790.1</td>
+              <td>putative_reductase_SimA9</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001072.5">BGC0001072.5</a></td>
+              <td>PKS:Type I+saccharide+other:aminocoumarin</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>126.0</td>
+              <td>4.39e-35</td>
+          </tr>
+    
+          <tr>
+              <td>CEG06579.1</td>
+              <td>short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001928.2">BGC0001928.2</a></td>
+              <td>other:other</td>
+              <td>39.0</td>
+              <td>101.6</td>
+              <td>126.0</td>
+              <td>5.2e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ84160.1</td>
+              <td>ChcA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000123.5">BGC0000123.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>126.0</td>
+              <td>5.77e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAD13552.1</td>
+              <td>reductase_homolog</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000239.5">BGC0000239.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>103.3</td>
+              <td>125.0</td>
+              <td>6.03e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22321.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>99.2</td>
+              <td>124.0</td>
+              <td>2.24e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ08926.1</td>
+              <td>putative_3-ketoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000224.4">BGC0000224.4</a></td>
+              <td>PKS:Type II</td>
+              <td>34.0</td>
+              <td>98.8</td>
+              <td>124.0</td>
+              <td>3.01e-34</td>
+          </tr>
+    
+          <tr>
+              <td>QED93108.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002556.2">BGC0002556.2</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>100.0</td>
+              <td>123.0</td>
+              <td>6.09e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21753.1</td>
+              <td>PdmG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000256.3">BGC0000256.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>98.8</td>
+              <td>122.0</td>
+              <td>7.76e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAG03071.1</td>
+              <td>putative_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000266.5">BGC0000266.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>122.0</td>
+              <td>8.35e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAP13848.2</td>
+              <td>C5-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>32.0</td>
+              <td>106.6</td>
+              <td>122.0</td>
+              <td>1.37e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AHH25583.1</td>
+              <td>1-cyclohexenylcarbonyl_CoA_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000957.5">BGC0000957.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>35.0</td>
+              <td>101.6</td>
+              <td>122.0</td>
+              <td>1.68e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69757.1</td>
+              <td>PlaU</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>121.0</td>
+              <td>2.89e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ADG86325.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000190.5">BGC0000190.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>100.8</td>
+              <td>121.0</td>
+              <td>3.26e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71448.1</td>
+              <td>putative_oxygenase-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000203.3">BGC0000203.3</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>103.3</td>
+              <td>127.0</td>
+              <td>3.88e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52708.1</td>
+              <td>putative_3-ketoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000222.5">BGC0000222.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>99.2</td>
+              <td>120.0</td>
+              <td>4.06e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABW11827.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001197.5">BGC0001197.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>98.8</td>
+              <td>120.0</td>
+              <td>4.16e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QDJ74266.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002109.3">BGC0002109.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>100.0</td>
+              <td>120.0</td>
+              <td>4.47e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QED88053.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001967.4">BGC0001967.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>37.0</td>
+              <td>100.4</td>
+              <td>120.0</td>
+              <td>6.07e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BBC20651.1</td>
+              <td>enoyl-(acyl_carrier_protein)_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001917.4">BGC0001917.4</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>100.4</td>
+              <td>120.0</td>
+              <td>6.28e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71123.1</td>
+              <td>Lct40</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000238.5">BGC0000238.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>120.0</td>
+              <td>9.7e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ACP19359.1</td>
+              <td>SaqN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000267.5">BGC0000267.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>119.0</td>
+              <td>1.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ADB23395.1</td>
+              <td>dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001062.5">BGC0001062.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>100.4</td>
+              <td>119.0</td>
+              <td>1.78e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44188.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001193.5">BGC0001193.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>100.4</td>
+              <td>119.0</td>
+              <td>2.25e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CAE45661.1</td>
+              <td>putative_ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000031.5">BGC0000031.5</a></td>
+              <td>PKS:Type I</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>119.0</td>
+              <td>3.63e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82322.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001533.5">BGC0001533.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>119.0</td>
+              <td>3.63e-32</td>
+          </tr>
+    
+          <tr>
+              <td>WP_029025960.1</td>
+              <td>SDR_family_NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000198.5">BGC0000198.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>97.9</td>
+              <td>117.0</td>
+              <td>8.07e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ADB02849.1</td>
+              <td>AzicF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000202.5">BGC0000202.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>100.0</td>
+              <td>117.0</td>
+              <td>9.75e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74904.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000459.5">BGC0000459.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>33.0</td>
+              <td>101.6</td>
+              <td>117.0</td>
+              <td>1.09e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15605.1</td>
+              <td>SimJ2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000270.5">BGC0000270.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>99.2</td>
+              <td>116.0</td>
+              <td>1.79e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAK06809.1</td>
+              <td>putative_3-keto-acyl-reductase_SimD4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001072.5">BGC0001072.5</a></td>
+              <td>PKS:Type I+saccharide+other:aminocoumarin</td>
+              <td>36.0</td>
+              <td>99.2</td>
+              <td>116.0</td>
+              <td>1.79e-31</td>
+          </tr>
+    
+          <tr>
+              <td>WP_054234634.1</td>
+              <td>3-oxoacyl-ACP_reductase_FabG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002014.3">BGC0002014.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>99.6</td>
+              <td>116.0</td>
+              <td>2.64e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ADD83006.1</td>
+              <td>PtnO8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001156.5">BGC0001156.5</a></td>
+              <td>terpene:Diterpene</td>
+              <td>35.0</td>
+              <td>102.5</td>
+              <td>116.0</td>
+              <td>5.15e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ACO31295.1</td>
+              <td>PtmO8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001140.5">BGC0001140.5</a></td>
+              <td>terpene:Diterpene</td>
+              <td>35.0</td>
+              <td>102.5</td>
+              <td>114.0</td>
+              <td>1.98e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30269.1</td>
+              <td>putative_3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000429.4">BGC0000429.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>100.0</td>
+              <td>113.0</td>
+              <td>2.83e-30</td>
+          </tr>
+    
+          <tr>
+              <td>BAV56004.1</td>
+              <td>short-chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001597.4">BGC0001597.4</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>113.0</td>
+              <td>3.24e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAW85354.1</td>
+              <td>3-oxoacyl-(acyl-carrier-protein)_reductase,_putative</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000837.4">BGC0000837.4</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>112.0</td>
+              <td>4.74e-30</td>
+          </tr>
+    
+          <tr>
+              <td>QYA95685.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002676.2">BGC0002676.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>100.0</td>
+              <td>112.0</td>
+              <td>5.56e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABS75236.1</td>
+              <td>DhbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001185.5">BGC0001185.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>103.7</td>
+              <td>112.0</td>
+              <td>1.31e-29</td>
+          </tr>
+    
+          <tr>
+              <td>QED93096.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002556.2">BGC0002556.2</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>101.6</td>
+              <td>111.0</td>
+              <td>1.43e-29</td>
+          </tr>
+    
+          <tr>
+              <td>EAU35434.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002734.2">BGC0002734.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>100.0</td>
+              <td>110.0</td>
+              <td>5.55e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BAE60009.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001518.3">BGC0001518.3</a></td>
+              <td>terpene</td>
+              <td>32.0</td>
+              <td>101.6</td>
+              <td>109.0</td>
+              <td>1.1e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54248.1</td>
+              <td>PauY28</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>102.1</td>
+              <td>108.0</td>
+              <td>1.9e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54195.1</td>
+              <td>Pau28</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>102.1</td>
+              <td>107.0</td>
+              <td>7.33e-28</td>
+          </tr>
+    
+          <tr>
+              <td>QWT72311.1</td>
+              <td>glucose_1-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002430.3">BGC0002430.3</a></td>
+              <td>NRPS:Type I+saccharide</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>107.0</td>
+              <td>1.05e-27</td>
+          </tr>
+    
+          <tr>
+              <td>KDQ70111.1</td>
+              <td>2,3-dihydroxybenzoate-2,3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001444.5">BGC0001444.5</a></td>
+              <td>other:shikimate-derived</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>106.0</td>
+              <td>2.05e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAN79649.1</td>
+              <td>3-oxoacyl-[acyl-carrier_protein]_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000836.5">BGC0000836.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>100.8</td>
+              <td>105.0</td>
+              <td>2.17e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAG23976.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000176.5">BGC0000176.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>99.6</td>
+              <td>105.0</td>
+              <td>3.18e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AEH42481.1</td>
+              <td>2,3-dihydroxybenzoate-2,3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000032.5">BGC0000032.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>103.7</td>
+              <td>105.0</td>
+              <td>3.83e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35180.1</td>
+              <td>23-dihydro-23-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001848.4">BGC0001848.4</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>104.5</td>
+              <td>105.0</td>
+              <td>4.46e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ANY57970.1</td>
+              <td>Short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001369.3">BGC0001369.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.1</td>
+              <td>105.0</td>
+              <td>4.65e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABP73642.1</td>
+              <td>SalM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000145.5">BGC0000145.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>105.0</td>
+              <td>5.51e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53501.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>105.0</td>
+              <td>5.51e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAG03070.2</td>
+              <td>RubF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000266.5">BGC0000266.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>100.0</td>
+              <td>107.0</td>
+              <td>5.52e-27</td>
+          </tr>
+    
+          <tr>
+              <td>WP_045972731.1</td>
+              <td>3-ketoacyl-ACP_reductase_FabG2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002008.3">BGC0002008.3</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>100.8</td>
+              <td>102.0</td>
+              <td>3.21e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ALE27507.1</td>
+              <td>2,3-dihydro-3-hydroxyanthranilic_acid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001292.5">BGC0001292.5</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>107.0</td>
+              <td>103.0</td>
+              <td>4.39e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAM58804.1</td>
+              <td>BenL_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000204.5">BGC0000204.5</a></td>
+              <td>PKS:Type II</td>
+              <td>29.0</td>
+              <td>99.2</td>
+              <td>102.0</td>
+              <td>5.1e-26</td>
+          </tr>
+    
+          <tr>
+              <td>NHN68323.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002719.2">BGC0002719.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>102.1</td>
+              <td>102.0</td>
+              <td>8.92e-26</td>
+          </tr>
+    
+          <tr>
+              <td>NPC94430.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002695.2">BGC0002695.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>103.7</td>
+              <td>101.0</td>
+              <td>1.15e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AFW04566.1</td>
+              <td>2,3-dihydroxybenzoate-2,3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001783.5">BGC0001783.5</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>105.3</td>
+              <td>102.0</td>
+              <td>1.44e-25</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63056.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000679.5">BGC0000679.5</a></td>
+              <td>terpene</td>
+              <td>34.0</td>
+              <td>104.5</td>
+              <td>100.0</td>
+              <td>2.48e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98625.1</td>
+              <td>putative_2,3-dihydro-2,3-dihydroxy_benzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000651.5">BGC0000651.5</a></td>
+              <td>terpene</td>
+              <td>32.0</td>
+              <td>103.3</td>
+              <td>100.0</td>
+              <td>4.56e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AEI70241.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000401.5">BGC0000401.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>103.7</td>
+              <td>99.0</td>
+              <td>1.32e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ABF88980.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002492.3">BGC0002492.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>103.3</td>
+              <td>98.0</td>
+              <td>3.32e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ARE72413.1</td>
+              <td>short-chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001510.5">BGC0001510.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>109.9</td>
+              <td>98.0</td>
+              <td>3.33e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAU79605.1</td>
+              <td>short-chain_dehydrogenase/reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001810.3">BGC0001810.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>101.6</td>
+              <td>98.0</td>
+              <td>3.79e-24</td>
+          </tr>
+    
+          <tr>
+              <td>QFS19048.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002506.3">BGC0002506.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>100.0</td>
+              <td>97.0</td>
+              <td>5.1e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AAM97360.1</td>
+              <td>RubJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000266.5">BGC0000266.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>104.1</td>
+              <td>95.0</td>
+              <td>3.41e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAO39097.1</td>
+              <td>AdmC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000956.5">BGC0000956.5</a></td>
+              <td>NRPS:Type I+PKS:Type II</td>
+              <td>31.0</td>
+              <td>102.9</td>
+              <td>94.0</td>
+              <td>5.69e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AFO59869.1</td>
+              <td>ChxH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000175.5">BGC0000175.5</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>93.0</td>
+              <td>1.96e-22</td>
+          </tr>
+    
+          <tr>
+              <td>QLQ40537.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002097.3">BGC0002097.3</a></td>
+              <td>NRPS:Type I+PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>92.0</td>
+              <td>3.73e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AGK13423.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase,_short-chain_dehydrogenase/reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002528.3">BGC0002528.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>105.8</td>
+              <td>92.0</td>
+              <td>7.76e-22</td>
+          </tr>
+    
+          <tr>
+              <td>QVQ68783.1</td>
+              <td>mmyTII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002129.4">BGC0002129.4</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>101.6</td>
+              <td>91.0</td>
+              <td>1.22e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34373.1</td>
+              <td>putative_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000242.5">BGC0000242.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>105.3</td>
+              <td>91.0</td>
+              <td>1.26e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46681.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001177.4">BGC0001177.4</a></td>
+              <td>PKS:Type II</td>
+              <td>31.0</td>
+              <td>101.2</td>
+              <td>91.0</td>
+              <td>1.54e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABL70474.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002493.3">BGC0002493.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>104.5</td>
+              <td>90.0</td>
+              <td>3.45e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ANY57882.1</td>
+              <td>PenD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001372.3">BGC0001372.3</a></td>
+              <td>terpene</td>
+              <td>33.0</td>
+              <td>104.1</td>
+              <td>89.0</td>
+              <td>6.81e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABC42563.1</td>
+              <td>putative_short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000698.5">BGC0000698.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>108.6</td>
+              <td>89.0</td>
+              <td>1.19e-20</td>
+          </tr>
+    
+          <tr>
+              <td>EEF48747.1</td>
+              <td>short_chain_alcohol_dehydrogenase,_putative</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002393.2">BGC0002393.2</a></td>
+              <td>terpene</td>
+              <td>30.0</td>
+              <td>105.8</td>
+              <td>88.0</td>
+              <td>1.99e-20</td>
+          </tr>
+    
+          <tr>
+              <td>BCJ07580.1</td>
+              <td>3-ketoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002379.3">BGC0002379.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>100.8</td>
+              <td>87.0</td>
+              <td>3.41e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64852.1</td>
+              <td>PokT2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001061.4">BGC0001061.4</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>31.0</td>
+              <td>102.1</td>
+              <td>87.0</td>
+              <td>4.42e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34504.1</td>
+              <td>SsfK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000269.5">BGC0000269.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>102.1</td>
+              <td>85.0</td>
+              <td>1.51e-19</td>
+          </tr>
+    
+          <tr>
+              <td>EEF48735.1</td>
+              <td>short_chain_alcohol_dehydrogenase,_putative</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002393.2">BGC0002393.2</a></td>
+              <td>terpene</td>
+              <td>32.0</td>
+              <td>105.8</td>
+              <td>85.0</td>
+              <td>3.79e-19</td>
+          </tr>
+    
+          <tr>
+              <td>WP_037817213.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002137.3">BGC0002137.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>101.6</td>
+              <td>83.0</td>
+              <td>1.18e-18</td>
+          </tr>
+    
+          <tr>
+              <td>WP_005009570.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002473.3">BGC0002473.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>105.3</td>
+              <td>82.0</td>
+              <td>3.45e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50780.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000247.5">BGC0000247.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>30.0</td>
+              <td>101.6</td>
+              <td>81.0</td>
+              <td>4.56e-18</td>
+          </tr>
+    
+          <tr>
+              <td>KJY85281.1</td>
+              <td>2,3-dihydroxybenzoate-2,3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002491.3">BGC0002491.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>103.3</td>
+              <td>79.0</td>
+              <td>4.63e-17</td>
+          </tr>
+    
+          <tr>
+              <td>QED90622.1</td>
+              <td>short-chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002081.3">BGC0002081.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>98.8</td>
+              <td>77.0</td>
+              <td>1.33e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAC16760.1</td>
+              <td>probable_2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002474.2">BGC0002474.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>104.9</td>
+              <td>72.0</td>
+              <td>1.02e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAG69518.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000352.5">BGC0000352.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>105.3</td>
+              <td>67.0</td>
+              <td>7.1e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57059.1</td>
+              <td>short-chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001514.5">BGC0001514.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>79.8</td>
+              <td>66.0</td>
+              <td>1.16e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAC45924.1</td>
+              <td>2,3-dihydro-2,3-dihydroxybenzoate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002494.3">BGC0002494.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>106.2</td>
+              <td>65.0</td>
+              <td>4.71e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BBF25320.1</td>
+              <td>dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001924.3">BGC0001924.3</a></td>
+              <td>terpene</td>
+              <td>29.0</td>
+              <td>105.8</td>
+              <td>64.0</td>
+              <td>8.47e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AHG26146.1</td>
+              <td>quinone_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000812.3">BGC0000812.3</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>65.0</td>
+              <td>60.0</td>
+              <td>2.29e-10</td>
+          </tr>
+    
+          <tr>
+              <td>SCF06575.1</td>
+              <td>3-oxoacyl-[acyl-carrier_protein]_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002435.3">BGC0002435.3</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>77.8</td>
+              <td>55.0</td>
+              <td>9.59e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAE62225.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002237.3">BGC0002237.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>81.9</td>
+              <td>51.0</td>
+              <td>2.46e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

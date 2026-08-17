@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Download the genome FASTA/GBK files that pair with the verified BGC-MS2 MS2 downloads.
+"""Download the genome GBK files that pair with the verified BGC-MS2 MS2 downloads.
 
 Each verified BGC-MS2 link is matched to exactly one genome via
 `genome_metabolome_links` (see podp_online_file_locator.collect_verified_bgc_ms2_genome_links),
 so this script:
 
-1. Downloads one FASTA + GBK per unique (project_id, genome_accession) into
-   data/PoDP/verified_bgc_ms2_downloads/<project_id>/genes/<accession>.{fasta,gbk}
+1. Downloads one GBK per unique (project_id, genome_accession) into
+   data/PoDP/verified_bgc_ms2_downloads/<project_id>/genes/<accession>.gbk
    -- next to that project's MS2 files, downloaded by download_verified_bgc_ms2.py.
 2. Writes data/PoDP/verified_bgc_ms2_downloads/genome_ms2_link_manifest.csv, a
    flat table with one row per verified BGC-MS2 link giving the exact MS2 file
@@ -92,30 +92,21 @@ def download_ncbi_sequence(accession: str, out_dir: Path) -> dict[str, str]:
             f"db=nuccore&id={id_value}&rettype={rettype}&retmode=text"
         )
 
-    fasta_file = out_dir / f"{safe_filename(accession)}.fasta"
     gbk_file = out_dir / f"{safe_filename(accession)}.gbk"
 
-    fasta_ok, fasta_err = download_url(efetch_url(accession, "fasta"), fasta_file)
-    time.sleep(NCBI_DELAY_SECONDS)
     gbk_ok, gbk_err = download_url(efetch_url(accession, "gb"), gbk_file)
     time.sleep(NCBI_DELAY_SECONDS)
 
     # Some accessions (e.g. WGS master records for multi-contig assemblies) aren't
     # resolvable by accession directly but resolve fine once translated to a UID.
-    if not fasta_ok or not gbk_ok:
+    if not gbk_ok:
         uid = resolve_ncbi_uid(accession)
         time.sleep(NCBI_DELAY_SECONDS)
         if uid:
-            if not fasta_ok:
-                fasta_ok, fasta_err = download_url(efetch_url(uid, "fasta"), fasta_file)
-                time.sleep(NCBI_DELAY_SECONDS)
-            if not gbk_ok:
-                gbk_ok, gbk_err = download_url(efetch_url(uid, "gb"), gbk_file)
-                time.sleep(NCBI_DELAY_SECONDS)
+            gbk_ok, gbk_err = download_url(efetch_url(uid, "gb"), gbk_file)
+            time.sleep(NCBI_DELAY_SECONDS)
 
     return {
-        "fasta_path": str(fasta_file) if fasta_ok else "",
-        "fasta_error": fasta_err or "",
         "gbk_path": str(gbk_file) if gbk_ok else "",
         "gbk_error": gbk_err or "",
     }
@@ -141,15 +132,13 @@ def main() -> int:
             genome_label = link.get("genome_label") or ""
             mibig_number = (link.get("BGC_ID") or {}).get("MIBiG_number") or ""
 
-            fasta_path = gbk_path = fasta_error = gbk_error = ""
+            gbk_path = gbk_error = ""
             if accession:
                 cache_key = (project_id, accession)
                 if cache_key not in genome_cache:
                     print(f"Fetching genome {accession} for project {project_id} ...")
                     genome_cache[cache_key] = download_ncbi_sequence(accession, genes_dir)
                 result = genome_cache[cache_key]
-                fasta_path = result["fasta_path"]
-                fasta_error = result["fasta_error"]
                 gbk_path = result["gbk_path"]
                 gbk_error = result["gbk_error"]
 
@@ -161,9 +150,7 @@ def main() -> int:
                 "ms2_local_path": ms2_local_path,
                 "genome_label": genome_label,
                 "genome_accession": accession or "",
-                "genome_fasta_path": fasta_path,
                 "genome_gbk_path": gbk_path,
-                "fasta_error": fasta_error,
                 "gbk_error": gbk_error,
             })
 
@@ -171,13 +158,12 @@ def main() -> int:
     with LINK_MANIFEST_PATH.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=[
             "project_id", "mibig_number", "link_type", "ms2_filename", "ms2_local_path",
-            "genome_label", "genome_accession", "genome_fasta_path", "genome_gbk_path",
-            "fasta_error", "gbk_error",
+            "genome_label", "genome_accession", "genome_gbk_path", "gbk_error",
         ])
         writer.writeheader()
         writer.writerows(link_rows)
 
-    n_ok = sum(1 for r in link_rows if r["genome_fasta_path"] or r["genome_gbk_path"])
+    n_ok = sum(1 for r in link_rows if r["genome_gbk_path"])
     print(json.dumps({
         "unique_genomes_fetched": len(genome_cache),
         "verified_bgc_ms2_links": len(link_rows),

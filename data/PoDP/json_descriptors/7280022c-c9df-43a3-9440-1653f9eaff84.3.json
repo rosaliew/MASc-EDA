@@ -1,0 +1,459 @@
+{
+    "version": "3",
+    "personal": {
+        "submitter_name": "Doris van Bergeijk",
+        "submitter_orcid": "https://orcid.org/0000-0002-2316-920X",
+        "submitter_email": "dorisvanbergeijk@gmail.com",
+        "submitter_name_secondary": "Chao Du",
+        "PI_name": "Gilles van Wezel",
+        "PI_institution": "Leiden University",
+        "submitter_email_secondary": "c.du@biology.leidenuniv.nl",
+        "PI_email": "g.wezel@biology.leidenuniv.nl"
+    },
+    "metabolomics": {
+        "project": {
+            "GNPSMassIVE_ID": "MSV000087784",
+            "molecular_network": "78cfa392f9c94ac0a110dc682a2d8e6f",
+            "MaSSIVE_URL": "https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=0ebe425a6a9b4296a1a447de7e619feb&view=advanced_view"
+        },
+        "publications": "10.1038/s42004-022-00632-4"
+    },
+    "experimental": {
+        "sample_preparation": [
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "https://openwetware.org/wiki/M9_medium/minimal"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 30,
+                    "growth_duration": 120
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "other_growth_conditions": "Minimal medium + 1% glycerol + 0.5% mannitol + 25 mM TES, \nstrain was grown confluently",
+                "sample_preparation_method": "MM + Streptomyces sp. MBT84"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "https://openwetware.org/wiki/M9_medium/minimal"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 30,
+                    "growth_duration": 120
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "other_growth_conditions": "Minimal medium + 1% glycerol + 0.5% mannitol + 25 mM TES + 100 µM catechol,\nstrain was grown confluently",
+                "sample_preparation_method": "MM + 100 µM catechol + Streptomyces sp. MBT84"
+            }
+        ],
+        "extraction_methods": [
+            {
+                "solvents": [
+                    {
+                        "ratio": 1,
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_27750"
+                    }
+                ],
+                "extracted_material": "cells",
+                "other_extraction_parameters": "Agar was cut into small pieces and soaked overnight. Dried extract was dissolved in MeOH",
+                "extraction_method": "EtOAc"
+            }
+        ],
+        "instrumentation_methods": [
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000084"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "collision_energy": "20 eV",
+                "buffering": "0.1% formic acid",
+                "other_instrumentation": "The column was maintained at 30 °C, and run at a flow rate of 0.5 mL/min, using 0.1% formic acid in H2O, and 0.1% formic acid in acetonitrile (ACN) as solvents A and B, respectively. The gradient used was 5% B for 1 min, 5–85% B for 9 min, 85–100% B for 1 min, and 100% B for 4 min. ",
+                "instrumentation_method": "to Shimadzu 9030 QTOF ",
+                "range": "100–1700 Da"
+            },
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000443",
+                    "other_instrument": "Waters Synapt G2-Si HDMS"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "50-2000 Da",
+                "collision_energy": "drift-time-specific",
+                "buffering": "0.1% formic acid",
+                "instrumentation_method": "Synapt G2-Si proteomics",
+                "other_instrumentation": "In UDMSe mode."
+            }
+        ]
+    },
+    "genomes": [
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "JAHTGP000000000.1",
+                "RefSeq_accession": "JAHTGP000000000.1"
+            },
+            "BioSample_accession": "SAMN19969507",
+            "publications": "10.1038/s42004-022-00632-4",
+            "genome_label": "Streptomyces sp. MBT84"
+        }
+    ],
+    "genome_metabolome_links": [
+        {
+            "genome_label": "Streptomyces sp. MBT84",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB172.mzML",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "genome_label": "Streptomyces sp. MBT84",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB173.mzML",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB174.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB175.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB176.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB177.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Control"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB178.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB179.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB180.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB181.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB182.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087784/peak/20200129_DVB183.mzML",
+            "genome_label": "Streptomyces sp. MBT84",
+            "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "to Shimadzu 9030 QTOF ",
+            "proteome_label": "Catechol"
+        }
+    ],
+    "proteomes": [
+        {
+            "proteome_ID": {
+                "proteome_type": "Full proteome"
+            },
+            "raw_data": {
+                "database": {
+                    "database_name": "ProteomeXchange"
+                },
+                "proteome_data_link": "https://www.ebi.ac.uk/pride/archive/projects/PXD030319"
+            },
+            "method": {
+                "peptide_labelling": "None",
+                "analysis_mode": "Data-dependent acquisition (DDA)"
+            },
+            "identification": {
+                "genome_database": "Streptomyces sp. MBT84"
+            },
+            "experimental_details": {
+                "sample_preparation_label": "MM + Streptomyces sp. MBT84",
+                "instrumentation_method_label": "Synapt G2-Si proteomics"
+            },
+            "more_info": {
+                "publications": "10.1038/s42004-022-00632-4"
+            },
+            "proteome_label": "Control"
+        },
+        {
+            "proteome_ID": {
+                "proteome_type": "Full proteome"
+            },
+            "raw_data": {
+                "database": {
+                    "database_name": "ProteomeXchange"
+                },
+                "proteome_data_link": "https://www.ebi.ac.uk/pride/archive/projects/PXD030319"
+            },
+            "method": {
+                "peptide_labelling": "None",
+                "analysis_mode": "Data-dependent acquisition (DDA)"
+            },
+            "identification": {
+                "genome_database": "Streptomyces sp. MBT84"
+            },
+            "experimental_details": {
+                "sample_preparation_label": "MM + 100 µM catechol + Streptomyces sp. MBT84",
+                "instrumentation_method_label": "Synapt G2-Si proteomics"
+            },
+            "more_info": {
+                "publications": "10.1038/s42004-022-00632-4"
+            },
+            "proteome_label": "Catechol"
+        }
+    ],
+    "BGC_MS2_links": [
+        {
+            "omics_based_evidence": {
+                "omics_based_evidence_type": "Quantitative proteomics experiment",
+                "quantitative_proteomics_experiment": {
+                    "evidences": "Only the biosynthetic proteins of the cluster from MBT84_08725 to MBT84_08905 were mostly significantly up regulated in catechol-grown cultures, which provided validation of the involvement of this BGC in the observed change in bioactivity induced by catechol.",
+                    "comparison_groups": [
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699677"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699678"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.7
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699687"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.5
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699688"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.5
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699690"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699691"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699693"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 1
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699696"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.6
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699697"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699699"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.9
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "protein_identifier": "MBW8699700",
+                                "genome": "Streptomyces sp. MBT84"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        },
+                        {
+                            "protein_id": {
+                                "protein_database": "refseq",
+                                "genome": "Streptomyces sp. MBT84",
+                                "protein_identifier": "MBW8699705"
+                            },
+                            "protein_fold": {
+                                "quantitation_type": "Peak area",
+                                "protein_fold_change": 0.8
+                            },
+                            "control_group": "Control",
+                            "experimental_group": "Catechol",
+                            "metabolite_concentration": "increased"
+                        }
+                    ]
+                }
+            },
+            "BGC_ID": {
+                "BGC": "MIBiG number of a similar BGC from a closely related strain",
+                "similar_MIBiG_number": "BGC0001769",
+                "strain": "JAHTGP010000001",
+                "coordinates": "1882327-1923787"
+            },
+            "link": "GNPS molecular family",
+            "verification": [
+                "Experimentally validated with knockouts, heterologous expression, or other gene cluster manipulation",
+                "Bioinformatically inferred through comparative analysis with another experimentally defined gene cluster",
+                "Experimentally validated with NMR and/or detailed MS/MS analysis"
+            ],
+            "known_link": "The gene cluster from MBT84_08725 to MBT84_08905 are confirmed to be induced by catechol. Only the biosynthetic proteins of this cluster were mostly significantly up regulated in catechol-grown cultures, which provided validation of the involvement of this BGC in the observed change in bioactivity induced by catechol. To confirm that BGC4 was indeed responsible for the production of the angucycline glycosides, we knocked down transcription of the gene for the KSβ (MBT84_08755) of the minimal PKS using CRISPR-dCas9 interference. Metabolomics analysis revealed that the production of the angucycline glycosides was significantly reduced when the expression of KSβ was inhibited.",
+            "network_nodes_URL": "https://gnps.ucsd.edu/ProteoSAFe/result.jsp?view=cluster_info_sliced&componentindex=1&show=true&task=78cfa392f9c94ac0a110dc682a2d8e6f#%7B%7D"
+        }
+    ]
+}

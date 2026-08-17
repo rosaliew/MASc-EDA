@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_036055457.1</td>
+              <td>M20_aminoacylase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002087.3">BGC0002087.3</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>41.0</td>
+              <td>101.3</td>
+              <td>284.0</td>
+              <td>5.34e-93</td>
+          </tr>
+    
+          <tr>
+              <td>NSC23517.1</td>
+              <td>amidohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002359.3">BGC0002359.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>105.1</td>
+              <td>179.0</td>
+              <td>5.26e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AEM00622.1</td>
+              <td>aminohydrolase/peptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000605.5">BGC0000605.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>35.0</td>
+              <td>70.9</td>
+              <td>147.0</td>
+              <td>5.2e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ADG87283.1</td>
+              <td>amidohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001860.4">BGC0001860.4</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>36.0</td>
+              <td>75.5</td>
+              <td>143.0</td>
+              <td>2.4e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ACS83788.1</td>
+              <td>peptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000613.5">BGC0000613.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>35.0</td>
+              <td>83.2</td>
+              <td>139.0</td>
+              <td>6.47e-37</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

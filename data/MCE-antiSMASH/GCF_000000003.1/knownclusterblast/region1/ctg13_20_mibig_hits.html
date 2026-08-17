@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAY37661.1</td>
+              <td>Acriflavin_resistance_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000437.5">BGC0000437.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>98.3</td>
+              <td>248.0</td>
+              <td>4.65e-68</td>
+          </tr>
+    
+          <tr>
+              <td>WP_015143119.1</td>
+              <td>efflux_RND_transporter_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001733.3">BGC0001733.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>23.0</td>
+              <td>96.8</td>
+              <td>247.0</td>
+              <td>1.33e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AJF34462.1</td>
+              <td>acriflavin_resistance_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001207.5">BGC0001207.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>97.3</td>
+              <td>247.0</td>
+              <td>1.43e-67</td>
+          </tr>
+    
+          <tr>
+              <td>ACV88181.1</td>
+              <td>PcoC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000329.5">BGC0000329.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>97.3</td>
+              <td>244.0</td>
+              <td>7.63e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AEH59105.1</td>
+              <td>RND_superfamily_protein/acriflavin_resistance_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000385.5">BGC0000385.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>103.5</td>
+              <td>241.0</td>
+              <td>1.16e-65</td>
+          </tr>
+    
+          <tr>
+              <td>QWP75299.1</td>
+              <td>efflux_RND_transporter_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002126.3">BGC0002126.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>97.8</td>
+              <td>236.0</td>
+              <td>3.87e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ34246.1</td>
+              <td>PseC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001389.5">BGC0001389.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>97.2</td>
+              <td>235.0</td>
+              <td>1.14e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AAY90315.1</td>
+              <td>RND_transporter,_HAE1_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002152.2">BGC0002152.2</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>99.4</td>
+              <td>202.0</td>
+              <td>7.67e-53</td>
+          </tr>
+    
+          <tr>
+              <td>ACR11213.1</td>
+              <td>RND_transporter,_HAE1_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000451.5">BGC0000451.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>100.0</td>
+              <td>164.0</td>
+              <td>5.53e-41</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

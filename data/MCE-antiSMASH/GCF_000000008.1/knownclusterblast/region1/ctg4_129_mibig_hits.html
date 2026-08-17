@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAO62580.1</td>
+              <td>phosphoglycerate_dehydrogenase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001016.5">BGC0001016.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>99.4</td>
+              <td>121.0</td>
+              <td>1.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ATP76237.1</td>
+              <td>NdaH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001705.4">BGC0001705.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>94.2</td>
+              <td>120.0</td>
+              <td>2.47e-31</td>
+          </tr>
+    
+          <tr>
+              <td>BAK64657.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000135.5">BGC0000135.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>102.1</td>
+              <td>120.0</td>
+              <td>5.13e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AQH32479.1</td>
+              <td>phosphoglycerate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001667.4">BGC0001667.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>98.5</td>
+              <td>118.0</td>
+              <td>1.98e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAF00955.1</td>
+              <td>McyI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001017.5">BGC0001017.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>97.9</td>
+              <td>118.0</td>
+              <td>2.51e-30</td>
+          </tr>
+    
+          <tr>
+              <td>BBC83963.1</td>
+              <td>putative_d-lactate_dehydrogenase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001636.4">BGC0001636.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>89.3</td>
+              <td>114.0</td>
+              <td>5.78e-29</td>
+          </tr>
+    
+          <tr>
+              <td>QCQ67873.1</td>
+              <td>O-methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002297.2">BGC0002297.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>98.5</td>
+              <td>114.0</td>
+              <td>9.08e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AJT38686.1</td>
+              <td>Ind5</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001206.5">BGC0001206.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>75.3</td>
+              <td>102.0</td>
+              <td>8.5e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BBA21079.1</td>
+              <td>putative_D-isomer_specific_2-hydroxyacid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001740.5">BGC0001740.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>70.4</td>
+              <td>71.0</td>
+              <td>9.92e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

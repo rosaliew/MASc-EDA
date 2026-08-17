@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAK95842.1</td>
+              <td>putative_cytoplasmic_permease_PhuD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002495.2">BGC0002495.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>68.0</td>
+              <td>90.9</td>
+              <td>407.0</td>
+              <td>1.64e-142</td>
+          </tr>
+    
+          <tr>
+              <td>AAD48882.1</td>
+              <td>cytoplasmic_membrane_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002494.3">BGC0002494.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>60.0</td>
+              <td>95.5</td>
+              <td>370.0</td>
+              <td>1.04e-127</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202946.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>96.3</td>
+              <td>252.0</td>
+              <td>4.53e-81</td>
+          </tr>
+    
+          <tr>
+              <td>WP_039795885.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001211.5">BGC0001211.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>45.0</td>
+              <td>94.1</td>
+              <td>249.0</td>
+              <td>1.85e-80</td>
+          </tr>
+    
+          <tr>
+              <td>ATW47203.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002466.3">BGC0002466.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>95.2</td>
+              <td>248.0</td>
+              <td>1.04e-79</td>
+          </tr>
+    
+          <tr>
+              <td>KGA48636.1</td>
+              <td>fecCD_transport_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002413.3">BGC0002413.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>45.0</td>
+              <td>93.8</td>
+              <td>246.0</td>
+              <td>4.42e-79</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf1271</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001752.4">BGC0001752.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>92.9</td>
+              <td>233.0</td>
+              <td>1.62e-73</td>
+          </tr>
+    
+          <tr>
+              <td>EET76298.1</td>
+              <td>ferric_enterobactin_transport_system_permease_protein_FepG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002685.2">BGC0002685.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>94.3</td>
+              <td>228.0</td>
+              <td>6.39e-72</td>
+          </tr>
+    
+          <tr>
+              <td>QIE08747.1</td>
+              <td>transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002544.3">BGC0002544.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>46.0</td>
+              <td>85.0</td>
+              <td>226.0</td>
+              <td>3.01e-71</td>
+          </tr>
+    
+          <tr>
+              <td>MBX9445649.1</td>
+              <td>iron-enterobactin_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002414.3">BGC0002414.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>86.4</td>
+              <td>224.0</td>
+              <td>1.42e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ59907.1</td>
+              <td>enterobactin-iron_transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002680.2">BGC0002680.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>46.0</td>
+              <td>87.0</td>
+              <td>223.0</td>
+              <td>4.35e-70</td>
+          </tr>
+    
+          <tr>
+              <td>WP_141576287.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>95.2</td>
+              <td>223.0</td>
+              <td>4.74e-70</td>
+          </tr>
+    
+          <tr>
+              <td>EFL06873.1</td>
+              <td>predicted_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000300.5">BGC0000300.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>88.4</td>
+              <td>222.0</td>
+              <td>6.85e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AAC73690.1</td>
+              <td>ferric_enterobactin_ABC_transporter_membrane_subunit_FepG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002476.2">BGC0002476.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>46.0</td>
+              <td>85.3</td>
+              <td>216.0</td>
+              <td>1.31e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AMK48236.1</td>
+              <td>iron_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001351.3">BGC0001351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>85.3</td>
+              <td>214.0</td>
+              <td>1e-66</td>
+          </tr>
+    
+          <tr>
+              <td>AGE11896.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000366.5">BGC0000366.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>92.4</td>
+              <td>194.0</td>
+              <td>6.84e-59</td>
+          </tr>
+    
+          <tr>
+              <td>CBG75494.1</td>
+              <td>putative_siderophore_transport_system_integral_membrane_component,_FecCD_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000423.5">BGC0000423.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>92.4</td>
+              <td>191.0</td>
+              <td>1.29e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACU36656.1</td>
+              <td>transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000392.5">BGC0000392.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>94.9</td>
+              <td>184.0</td>
+              <td>2.68e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAB53326.1</td>
+              <td>putative_iron-siderophore_permease_transmembrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000325.5">BGC0000325.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>97.2</td>
+              <td>179.0</td>
+              <td>4.83e-53</td>
+          </tr>
+    
+          <tr>
+              <td>RUP78897.1</td>
+              <td>iron_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002073.3">BGC0002073.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>97.7</td>
+              <td>179.0</td>
+              <td>9.75e-53</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29816.1</td>
+              <td>putative_ferrichrome_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001870.3">BGC0001870.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>77.9</td>
+              <td>156.0</td>
+              <td>2.05e-44</td>
+          </tr>
+    
+          <tr>
+              <td>WP_068925917.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002688.2">BGC0002688.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>87.0</td>
+              <td>145.0</td>
+              <td>3.88e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CBA63668.1</td>
+              <td>siderophore_uptake_membrane_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000368.5">BGC0000368.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>89.8</td>
+              <td>141.0</td>
+              <td>1.09e-36</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38694.1</td>
+              <td>transport_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000708.5">BGC0000708.5</a></td>
+              <td>saccharide</td>
+              <td>32.0</td>
+              <td>92.6</td>
+              <td>136.0</td>
+              <td>3.42e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAK89712.2</td>
+              <td>ABC_transporter,_membrane_spanning_protein_(iron_(III)_dicitrate)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002107.3">BGC0002107.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>87.0</td>
+              <td>119.0</td>
+              <td>1.72e-30</td>
+          </tr>
+    
+          <tr>
+              <td>BAD02216.1</td>
+              <td>membrane_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002682.2">BGC0002682.2</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>85.6</td>
+              <td>112.0</td>
+              <td>9.5e-27</td>
+          </tr>
+    
+          <tr>
+              <td>KGA48736.1</td>
+              <td>ferric_enterobactin_transport_system_permease_protein_fepD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002413.3">BGC0002413.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>90.7</td>
+              <td>104.0</td>
+              <td>4.12e-25</td>
+          </tr>
+    
+          <tr>
+              <td>RUP78898.1</td>
+              <td>iron_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002073.3">BGC0002073.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>81.0</td>
+              <td>101.0</td>
+              <td>5.63e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ABE35426.1</td>
+              <td>ABC_Fe3+-siderophore_transporter,_inner_membrane_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002421.2">BGC0002421.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>76.8</td>
+              <td>99.0</td>
+              <td>1.92e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31833.1</td>
+              <td>putative_iron_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000699.5">BGC0000699.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>75.9</td>
+              <td>97.0</td>
+              <td>2.34e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ATW47204.1</td>
+              <td>Fe(3+)-siderophore_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002466.3">BGC0002466.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>81.6</td>
+              <td>97.0</td>
+              <td>2.56e-22</td>
+          </tr>
+    
+          <tr>
+              <td>NKI69291.1</td>
+              <td>Fe(3+)-hydroxamate_ABC_transporter_permease_FhuB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002408.3">BGC0002408.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>78.8</td>
+              <td>97.0</td>
+              <td>8.45e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAC73691.1</td>
+              <td>ferric_enterobactin_ABC_transporter_membrane_subunit_FebD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002476.2">BGC0002476.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>93.2</td>
+              <td>95.0</td>
+              <td>9.46e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ59908.1</td>
+              <td>enterobactin-iron_transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002680.2">BGC0002680.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>87.0</td>
+              <td>95.0</td>
+              <td>9.96e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAD48881.1</td>
+              <td>cytoplasmic_membrane_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002494.3">BGC0002494.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>87.3</td>
+              <td>95.0</td>
+              <td>1.58e-21</td>
+          </tr>
+    
+          <tr>
+              <td>WP_141576288.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>88.1</td>
+              <td>93.0</td>
+              <td>5.46e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABC38164.1</td>
+              <td>iron_compound_ABC_transporter,_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000386.5">BGC0000386.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>79.9</td>
+              <td>93.0</td>
+              <td>2.13e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AUD11998.1</td>
+              <td>OrbD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001721.3">BGC0001721.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>83.0</td>
+              <td>93.0</td>
+              <td>2.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAR51990.1</td>
+              <td>putative_iron_transport-related_membrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002569.3">BGC0002569.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>78.8</td>
+              <td>93.0</td>
+              <td>2.96e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ABI87091.1</td>
+              <td>transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002531.3">BGC0002531.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>80.2</td>
+              <td>92.0</td>
+              <td>7.18e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CBG75493.1</td>
+              <td>putative_siderophore_transport_system_integral_membrane_component,_FecCD_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000423.5">BGC0000423.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>94.1</td>
+              <td>89.0</td>
+              <td>1.19e-19</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020635025.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001211.5">BGC0001211.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>80.7</td>
+              <td>87.0</td>
+              <td>7.67e-19</td>
+          </tr>
+    
+          <tr>
+              <td>NPC94433.1</td>
+              <td>iron_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002695.2">BGC0002695.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>84.7</td>
+              <td>83.0</td>
+              <td>1.46e-17</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202947.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>81.0</td>
+              <td>68.0</td>
+              <td>2.85e-12</td>
+          </tr>
+    
+          <tr>
+              <td>DSB67_23675</td>
+              <td>Fe(3+)-siderophore_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002415.2">BGC0002415.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>20.1</td>
+              <td>45.0</td>
+              <td>7.85e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

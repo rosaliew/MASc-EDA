@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AKQ52533.1</td>
+              <td>Putative_reductase_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002533.2">BGC0002533.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>95.0</td>
+              <td>100.0</td>
+              <td>687.0</td>
+              <td>1.01e-252</td>
+          </tr>
+    
+          <tr>
+              <td>MBN3579114.1</td>
+              <td>Gfo/Idh/MocA_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002613.2">BGC0002613.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>74.0</td>
+              <td>100.0</td>
+              <td>544.0</td>
+              <td>4.63e-196</td>
+          </tr>
+    
+          <tr>
+              <td>AAO56103.1</td>
+              <td>yersiniabactin_synthetase,_thiazolinyl_reductase_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002570.2">BGC0002570.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>44.0</td>
+              <td>96.1</td>
+              <td>289.0</td>
+              <td>1.7e-95</td>
+          </tr>
+    
+          <tr>
+              <td>AXG47412.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002715.2">BGC0002715.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>44.0</td>
+              <td>94.2</td>
+              <td>288.0</td>
+              <td>3.99e-95</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ87592.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001055.5">BGC0001055.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>42.0</td>
+              <td>95.0</td>
+              <td>261.0</td>
+              <td>1.41e-84</td>
+          </tr>
+    
+          <tr>
+              <td>CAA73128.1</td>
+              <td>Irp3_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000467.5">BGC0000467.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>42.0</td>
+              <td>95.0</td>
+              <td>260.0</td>
+              <td>2.73e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AKU20506.1</td>
+              <td>siderophore_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002687.2">BGC0002687.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>38.0</td>
+              <td>78.7</td>
+              <td>172.0</td>
+              <td>3.58e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CAD15507.1</td>
+              <td>putative_siderophore-like_synthase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001014.5">BGC0001014.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>38.0</td>
+              <td>75.3</td>
+              <td>163.0</td>
+              <td>1.91e-46</td>
+          </tr>
+    
+          <tr>
+              <td>WP_069848006.1</td>
+              <td>bifunctional_Gfo/Idh/MocA_family_oxidoreductase/class_I_SAM-dependent_methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002472.2">BGC0002472.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>93.4</td>
+              <td>131.0</td>
+              <td>3.6e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAC17502.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000324.5">BGC0000324.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>70.9</td>
+              <td>125.0</td>
+              <td>3.86e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ALK21571.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002678.2">BGC0002678.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>71.2</td>
+              <td>91.0</td>
+              <td>3.98e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

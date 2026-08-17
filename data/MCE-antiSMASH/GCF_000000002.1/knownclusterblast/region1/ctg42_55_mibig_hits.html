@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QNH85833.1</td>
+              <td>BolA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002327.3">BGC0002327.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>100.7</td>
+              <td>153.0</td>
+              <td>5.64e-44</td>
+          </tr>
+    
+          <tr>
+              <td>WP_105850350.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002336.2">BGC0002336.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>100.7</td>
+              <td>152.0</td>
+              <td>1.73e-43</td>
+          </tr>
+    
+          <tr>
+              <td>UUQ64554.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002768.2">BGC0002768.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>101.3</td>
+              <td>140.0</td>
+              <td>2.35e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CCM43853.1</td>
+              <td>bacterial_regulatory,_Fis_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001127.5">BGC0001127.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>61.3</td>
+              <td>68.0</td>
+              <td>9.48e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AZM57013.1</td>
+              <td>LysR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002314.3">BGC0002314.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>67.7</td>
+              <td>57.0</td>
+              <td>5.06e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AJQ95673.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002046.3">BGC0002046.3</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>27.0</td>
+              <td>47.7</td>
+              <td>52.0</td>
+              <td>3.12e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QHZ99334.1</td>
+              <td>HTH-type_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001875.4">BGC0001875.4</a></td>
+              <td>PKS:Type I</td>
+              <td>35.0</td>
+              <td>28.0</td>
+              <td>50.0</td>
+              <td>9.65e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AXG22418.1</td>
+              <td>LysR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002024.3">BGC0002024.3</a></td>
+              <td>PKS:Type I</td>
+              <td>36.0</td>
+              <td>28.0</td>
+              <td>49.0</td>
+              <td>3.5e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

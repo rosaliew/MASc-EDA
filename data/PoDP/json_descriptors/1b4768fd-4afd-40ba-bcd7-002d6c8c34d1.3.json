@@ -1,0 +1,530 @@
+{
+    "version": "3",
+    "personal": {
+        "submitter_name": "Jingyu Liu",
+        "submitter_orcid": "https://orcid.org/0000-0002-7910-320X",
+        "submitter_email": "jingyul@mun.ca",
+        "PI_name": "Kapil Tahlan",
+        "PI_institution": "Memorial University of Newfoundland",
+        "PI_email": "ktahlan@mun.ca"
+    },
+    "metabolomics": {
+        "project": {
+            "GNPSMassIVE_ID": "MSV000083835",
+            "molecular_network": "8943515e7a6348e99c6a84393f2bc034",
+            "MaSSIVE_URL": "https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=c7520debe3e84611b0a9eefcee5d17fa&view=advanced_view"
+        },
+        "related_GNPSMassIVE_ID": "MSV000085619,MSV000085858",
+        "publications": "31787949"
+    },
+    "experimental": {
+        "sample_preparation": [
+            {
+                "medium_details": {
+                    "medium_type": "liquid",
+                    "medium": "http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium545.pdf"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 168
+                },
+                "aeration": {
+                    "aeration_type": "shaking",
+                    "aeration_rpm": 200,
+                    "aeration_vessel": "Erlenmeyer flask"
+                },
+                "sample_preparation_method": "TSB"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "liquid",
+                    "medium": "other",
+                    "Other_medium": "GSPG"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 168
+                },
+                "aeration": {
+                    "aeration_type": "shaking",
+                    "aeration_rpm": 200,
+                    "aeration_vessel": "Erlenmeyer flask"
+                },
+                "sample_preparation_method": "GSPG"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "liquid",
+                    "medium": "other",
+                    "Other_medium": "SA"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 168
+                },
+                "aeration": {
+                    "aeration_type": "shaking",
+                    "aeration_vessel": "Erlenmeyer flask",
+                    "aeration_rpm": 200
+                },
+                "sample_preparation_method": "SA"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "other",
+                    "Other_medium": "SA, SOY,ISP4,GSPG,MYE"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 168
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "sample_preparation_method": "5 Media"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "other",
+                    "Other_medium": "MYMM"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 336
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "sample_preparation_method": "MYMM"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "other",
+                    "Other_medium": "YMSM"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 336
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "sample_preparation_method": "YMSM"
+            },
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "other",
+                    "Other_medium": "OBA"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 28,
+                    "growth_duration": 336
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "sample_preparation_method": "OBA"
+            }
+        ],
+        "extraction_methods": [
+            {
+                "solvents": [
+                    {
+                        "ratio": 1,
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_17790"
+                    }
+                ],
+                "extracted_material": "complex",
+                "extraction_method": "Methanol"
+            },
+            {
+                "solvents": [
+                    {
+                        "ratio": 1,
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_27750"
+                    }
+                ],
+                "extracted_material": "complex",
+                "extraction_method": "Ethyl acetate"
+            }
+        ],
+        "instrumentation_methods": [
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000484"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "100 Da to 1500 Da",
+                "collision_energy": "20 keV",
+                "buffering": "(A) 0.1% formic acid in water and (B) 0.1% formic acid in acetonitrile",
+                "instrumentation_method": "Orbitrap positive",
+                "other_instrumentation": "0–5 min, 98% A; 5–8 min, gradient of 98–50% A (or 50% B); 8–13 min, gradient 50–100% B; 13–14.00 min, 100% B; 14–14.10 min, 100–2% B; 14.10–18 min, 2% B."
+            },
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000484"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000129",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "100 Da to 1500 Da",
+                "collision_energy": "20 keV",
+                "buffering": "(A) 0.1% formic acid in water and (B) 0.1% formic acid in acetonitrile",
+                "other_instrumentation": "0–5 min, 98% A; 5–8 min, gradient of 98–50% A (or 50% B); 8–13 min, gradient 50–100% B; 13–14.00 min, 100% B; 14–14.10 min, 100–2% B; 14.10–18 min, 2% B.",
+                "instrumentation_method": "Orbitrap negative"
+            }
+        ]
+    },
+    "genomes": [
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "GCA_000163875.1",
+                "RefSeq_accession": "GCF_000163875.1"
+            },
+            "BioSample_accession": "SAMN02471788",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "GCA_009600885.1",
+                "RefSeq_accession": "GCF_009600885.1"
+            },
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "BioSample_accession": "SAMN11619524"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "GCA_009600895.1",
+                "RefSeq_accession": "GCF_009600895.1 "
+            },
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "BioSample_accession": "SAMN11620976"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "GCA_000091305.1",
+                "RefSeq_accession": "GCF_000091305.1"
+            },
+            "genome_label": "Streptomyces scabiei 87.22",
+            "BioSample_accession": "SAMEA2272773"
+        }
+    ],
+    "genome_metabolome_links": [
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/6%20SK%20onTSB%20meth-pos.mzXML",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/6%20SK%20on%20TSB%20meth-neg.mzXML",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SC/1%20SC%20on%20SA%20meth-pos.mzXML",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SC/1%20SC%20on%20SA%20meth-neg.mzXML",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SC/2%20SC%20on%20GSPG%20meth-pos.mzXML",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SC/2%20SC%20on%20GSPG%20meth-neg.mzXML",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative"
+        },
+        {
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/15%20SC%20on%20TSB%20EthAc-pos.mzXML"
+        },
+        {
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/15%20SC%20on%20TSB%20EthAc-neg.mzXML"
+        },
+        {
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/14%20SC%20on%20GSPG%20EthAc-pos.mzXML"
+        },
+        {
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/14%20SC%20on%20GSPG%20EthAc-neg.mzXML"
+        },
+        {
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/13%20SC%20on%20SA%20EthAc-pos.mzXML"
+        },
+        {
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SC/13%20SC%20on%20SA%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/9%20SJ%20on%20TSB%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/9%20SJ%20on%20TSB%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/8%20SJ%20on%20GSPG%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/8%20SJ%20on%20GSPG%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/7%20SJ%20onSA%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SJ/7%20SJ%20on%20SA%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/21%20SJ%20on%20TSB%20EthAc-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/21%20SJ%20on%20TSB%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/20%20SJ%20on%20GSPG%20EthAc-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/20%20SJ%20on%20GSPG%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/19%20SJ%20on%20SA%20EthAc-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces jumonjinensis  NRRL 5741",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SJ/19%20SJ%20on%20SA%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/6%20SK%20onTSB%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/6%20SK%20on%20TSB%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/5%20SK%20on%20GSPG%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/5%20SK%20on%20GSPG%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/4%20SK%20on%20SA%20meth-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Methanol",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Methanol/SK/4%20SK%20on%20SA%20meth-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SK/18%20SK%20on%20TSB%20EthAc-pos.mzXML&forceDownload=true"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "TSB",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SK/18%20SK%20on%20TSB%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "GSPG",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SK/17%20SK%20on%20GSPG%20EthAc-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SK/16%20SK%20on%20SA%20EthAc-pos.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces katsurahamanus T-272",
+            "sample_preparation_label": "SA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000083835/updates/2019-05-21_lfnothias_ad043d61/peak/Ethyl%20Acetate/SK/16%20SK%20on%20SA%20EthAc-neg.mzXML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "MYMM",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/22_2_scab_M_SAMPLE_WT_MYM_14_B10.mzML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "MYMM",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/22_2_scab_M_SAMPLE_WT_MYM_14_B10_Neg.mzML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "YMSM",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/25_2_scab_M_SAMPLE_WT_YMS_14_C1.mzML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "YMSM",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/25_2_scab_M_SAMPLE_WT_YMS_14_C1_Neg.mzML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "OBA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/28_2_scab_M_SAMPLE_WT_OBA_14_C4.mzML"
+        },
+        {
+            "genome_label": "Streptomyces scabiei 87.22",
+            "sample_preparation_label": "OBA",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085858/ccms_peak/28_2_scab_M_SAMPLE_WT_OBA_14_C4_Neg.mzML"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "sample_preparation_label": "5 Media",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap positive",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085619/ccms_peak/Raw/2_1_clavu_M_SAMPLE_WT_5-Media_7_A2.mzML"
+        },
+        {
+            "genome_label": "Streptomyces clavuligerus ATCC 27064",
+            "sample_preparation_label": "5 Media",
+            "extraction_method_label": "Ethyl acetate",
+            "instrumentation_method_label": "Orbitrap negative",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000085619/ccms_peak/Raw/2_1_clavu_M_SAMPLE_WT_5-Media_7_A2_Neg.mzML"
+        }
+    ],
+    "proteomes": []
+}

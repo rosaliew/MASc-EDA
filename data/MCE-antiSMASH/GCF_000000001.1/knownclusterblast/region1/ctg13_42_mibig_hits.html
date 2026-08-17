@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAW85344.1</td>
+              <td>AMP-(fatty)acid_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000837.4">BGC0000837.4</a></td>
+              <td>other:other</td>
+              <td>52.0</td>
+              <td>98.0</td>
+              <td>431.0</td>
+              <td>4.63e-148</td>
+          </tr>
+    
+          <tr>
+              <td>WP_052705732.1</td>
+              <td>AMP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002008.3">BGC0002008.3</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>98.7</td>
+              <td>235.0</td>
+              <td>4.07e-72</td>
+          </tr>
+    
+          <tr>
+              <td>AAN79659.1</td>
+              <td>Putative_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000836.5">BGC0000836.5</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>94.3</td>
+              <td>221.0</td>
+              <td>9.15e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AEF16051.1</td>
+              <td>benzoate-CoA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000953.5">BGC0000953.5</a></td>
+              <td>saccharide:aminoglycoside</td>
+              <td>23.0</td>
+              <td>80.2</td>
+              <td>72.0</td>
+              <td>3.83e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ04424.1</td>
+              <td>aureobasidin_A1_biosynthesis_complex</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000307.4">BGC0000307.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>21.0</td>
+              <td>89.3</td>
+              <td>57.0</td>
+              <td>2.98e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

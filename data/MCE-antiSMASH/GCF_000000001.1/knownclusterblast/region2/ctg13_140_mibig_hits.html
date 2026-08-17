@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAL01061.1</td>
+              <td>omega-3_polyunsaturated_fatty_acid_synthase_PfaB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000865.3">BGC0000865.3</a></td>
+              <td>other:other</td>
+              <td>65.0</td>
+              <td>102.0</td>
+              <td>835.0</td>
+              <td>5.65e-300</td>
+          </tr>
+    
+          <tr>
+              <td>AAB81124.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000862.3">BGC0000862.3</a></td>
+              <td>other:other</td>
+              <td>46.0</td>
+              <td>110.7</td>
+              <td>578.0</td>
+              <td>7.13e-198</td>
+          </tr>
+    
+          <tr>
+              <td>MCI2961729.1</td>
+              <td>PfaB_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002648.2">BGC0002648.2</a></td>
+              <td>PKS</td>
+              <td>48.0</td>
+              <td>96.9</td>
+              <td>503.0</td>
+              <td>7.15e-169</td>
+          </tr>
+    
+          <tr>
+              <td>ACI12949.1</td>
+              <td>PfaB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000861.5">BGC0000861.5</a></td>
+              <td>other:other</td>
+              <td>47.0</td>
+              <td>99.9</td>
+              <td>485.0</td>
+              <td>1.24e-162</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAH10102.1</td>
+              <td>glucose-6-phosphate_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000268.5">BGC0000268.5</a></td>
+              <td>PKS</td>
+              <td>52.0</td>
+              <td>86.0</td>
+              <td>451.0</td>
+              <td>1.48e-154</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83842.1</td>
+              <td>Gpi</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>46.0</td>
+              <td>99.8</td>
+              <td>450.0</td>
+              <td>5.37e-153</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57211.1</td>
+              <td>putative_phosphoglucose_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000760.5">BGC0000760.5</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>101.1</td>
+              <td>450.0</td>
+              <td>5.73e-153</td>
+          </tr>
+    
+          <tr>
+              <td>CAB65205.1</td>
+              <td>Gpi_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000775.3">BGC0000775.3</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>95.6</td>
+              <td>342.0</td>
+              <td>7.1e-112</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

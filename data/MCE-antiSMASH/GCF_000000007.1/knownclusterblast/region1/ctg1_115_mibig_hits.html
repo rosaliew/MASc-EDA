@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EWG54273.1</td>
+              <td>O-acetylhomoserine_(thiol)-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001190.3">BGC0001190.3</a></td>
+              <td>PKS</td>
+              <td>49.0</td>
+              <td>99.5</td>
+              <td>398.0</td>
+              <td>2.51e-136</td>
+          </tr>
+    
+          <tr>
+              <td>AAV68703.1</td>
+              <td>LolC-1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000815.4">BGC0000815.4</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>97.4</td>
+              <td>305.0</td>
+              <td>1.76e-99</td>
+          </tr>
+    
+          <tr>
+              <td>CAY48793.1</td>
+              <td>methionine_gamma-lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001312.5">BGC0001312.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>98.4</td>
+              <td>259.0</td>
+              <td>3.66e-82</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53484.1</td>
+              <td>cystathionine_gamma-synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000774.4">BGC0000774.4</a></td>
+              <td>saccharide:lipopolysaccharide</td>
+              <td>37.0</td>
+              <td>97.0</td>
+              <td>223.0</td>
+              <td>1.27e-68</td>
+          </tr>
+    
+          <tr>
+              <td>ADG39435.1</td>
+              <td>AllM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000886.4">BGC0000886.4</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>100.5</td>
+              <td>158.0</td>
+              <td>6.93e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AJF34467.1</td>
+              <td>cystathione_beta_lyase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001207.5">BGC0001207.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>93.7</td>
+              <td>152.0</td>
+              <td>1.07e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94792.1</td>
+              <td>CalE6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>98.8</td>
+              <td>150.0</td>
+              <td>6.73e-41</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

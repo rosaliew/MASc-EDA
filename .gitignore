@@ -1,11 +1,4 @@
 # Ignore large dataset and Pfam HMM files (>100MB limit on GitHub)
-data/
-*.hmm
-*.hmm.*
-*.h3f
-*.h3m
-*.h3p
-*.h3i
 
 # Python and system cache
 __pycache__/
@@ -15,3 +8,18 @@ __pycache__/
 env/
 venv/
 .DS_Store
+
+# Ignore Windows WSL Zone.Identifier metadata files
+*:Zone.Identifier
+*Zone.Identifier*
+
+# Data folders dominated by files >50MB (too large for GitHub over plain git)
+data/MCE-GNPS/nf_output/librarysummary/
+data/PoDP/verified_bgc_ms2_downloads/1af59f37-c518-448c-9536-734b663eb21b/
+data/PoDP/verified_bgc_ms2_downloads/1b0dccac-5212-4dfd-a9f2-6fa953ab16bd/
+data/PoDP/verified_bgc_ms2_downloads/79eae50e-004d-42ba-8a81-f6d620e7052a/
+data/PoDP/verified_bgc_ms2_downloads/7ac37e93-a737-4746-b121-0993adccf178/
+data/PoDP/verified_bgc_ms2_downloads/84b56cd3-218b-4e57-906f-a9003615ed07/
+data/PoDP/verified_bgc_ms2_downloads/a4837d37-1df1-4153-b365-c06841574235/
+data/PoDP/verified_bgc_ms2_downloads/f05276c1-3c19-4fc4-95ee-412817ec35bd/
+data/PoDP/verified_bgc_ms2_downloads/ff49073b-5f8d-4153-8414-9f8f01b24585/

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_024483802.1</td>
+              <td>PhzF_family_phenazine_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002002.3">BGC0002002.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>57.0</td>
+              <td>99.3</td>
+              <td>311.0</td>
+              <td>8.69e-107</td>
+          </tr>
+    
+          <tr>
+              <td>CAX48668.1</td>
+              <td>putative_trans-2,3-dihydro-3-hydroxyanthranilate_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001080.5">BGC0001080.5</a></td>
+              <td>other:phenazine</td>
+              <td>51.0</td>
+              <td>99.3</td>
+              <td>275.0</td>
+              <td>2.07e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AAC64492.1</td>
+              <td>PhzF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000936.5">BGC0000936.5</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>98.9</td>
+              <td>267.0</td>
+              <td>3.04e-89</td>
+          </tr>
+    
+          <tr>
+              <td>QJS40193.1</td>
+              <td>Phenazine_biosynthesis_protein_PhzF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002439.3">BGC0002439.3</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>99.3</td>
+              <td>263.0</td>
+              <td>9.94e-88</td>
+          </tr>
+    
+          <tr>
+              <td>QDJ94211.1</td>
+              <td>SpzF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002561.3">BGC0002561.3</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>100.0</td>
+              <td>266.0</td>
+              <td>1.95e-87</td>
+          </tr>
+    
+          <tr>
+              <td>AHW81471.1</td>
+              <td>EpaL</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000934.4">BGC0000934.4</a></td>
+              <td>other:phenazine</td>
+              <td>49.0</td>
+              <td>99.3</td>
+              <td>259.0</td>
+              <td>4.6e-86</td>
+          </tr>
+    
+          <tr>
+              <td>AKC91616.1</td>
+              <td>2,3-dihydro-3-hydroxyanthranilateisomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001302.5">BGC0001302.5</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>98.9</td>
+              <td>258.0</td>
+              <td>6.31e-86</td>
+          </tr>
+    
+          <tr>
+              <td>AIT42117.1</td>
+              <td>putative_trans-2,3-dihydro-3-hydroxyanthranilate_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001221.5">BGC0001221.5</a></td>
+              <td>other:phenazine</td>
+              <td>47.0</td>
+              <td>98.9</td>
+              <td>254.0</td>
+              <td>3.11e-84</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018960028.1</td>
+              <td>PhzF_family_phenazine_biosynthesis_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002010.4">BGC0002010.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>48.0</td>
+              <td>100.7</td>
+              <td>247.0</td>
+              <td>1.86e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35622.1</td>
+              <td>EsmA3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000935.5">BGC0000935.5</a></td>
+              <td>other:aminocoumarin+PKS</td>
+              <td>49.0</td>
+              <td>87.2</td>
+              <td>229.0</td>
+              <td>7.06e-75</td>
+          </tr>
+    
+          <tr>
+              <td>PHM31517.1</td>
+              <td>putative_phenazine_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001868.4">BGC0001868.4</a></td>
+              <td>other:phenazine</td>
+              <td>40.0</td>
+              <td>98.9</td>
+              <td>201.0</td>
+              <td>3.29e-63</td>
+          </tr>
+    
+          <tr>
+              <td>CBW54667.1</td>
+              <td>phenazine_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000971.5">BGC0000971.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>94.7</td>
+              <td>75.0</td>
+              <td>2.94e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53517.1</td>
+              <td>phenazine_biosynthesis_protein_PhzF_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>46.0</td>
+              <td>28.1</td>
+              <td>69.0</td>
+              <td>3.09e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

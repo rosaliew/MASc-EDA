@@ -187,7 +187,7 @@ def extract_project_links(project_json: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_download_plan(project_json: dict[str, Any], project_id: str | None = None, output_dir: str | Path | None = None) -> dict[str, Any]:
-    """Build a list of FASTA/GBK and MS2 download actions for a PoDP project."""
+    """Build a list of GBK and MS2 download actions for a PoDP project."""
     links = extract_project_links(project_json)
     if project_id is None:
         project_id = project_json.get("project_id") or "PoDP_project"
@@ -201,12 +201,6 @@ def build_download_plan(project_json: dict[str, Any], project_id: str | None = N
                 continue
             safe_accession = str(accession).strip().replace("/", "_").replace(" ", "_")
             genome_dir = base_dir / "genomes" / safe_accession
-            genome_requests.append({
-                "accession": str(accession).strip(),
-                "kind": "fasta",
-                "url": f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={accession}&rettype=fasta&retmode=text",
-                "output_path": str(genome_dir / f"{safe_accession}.fasta"),
-            })
             genome_requests.append({
                 "accession": str(accession).strip(),
                 "kind": "gbk",
@@ -244,7 +238,7 @@ def download_url(url: str, output_path: str | Path) -> str:
 
 
 def download_project_data(project_json: dict[str, Any], project_id: str | None = None, output_dir: str | Path | None = None) -> dict[str, Any]:
-    """Download the FASTA/GBK and MS2 files for one PoDP project."""
+    """Download the GBK and MS2 files for one PoDP project."""
     plan = build_download_plan(project_json, project_id=project_id, output_dir=output_dir)
     downloaded: list[dict[str, str]] = []
     for req in plan["genome_requests"]:
@@ -528,12 +522,12 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         default="data/downloads",
-        help="Base folder for downloaded FASTA/GBK and MS2 outputs (default: data/downloads)",
+        help="Base folder for downloaded GBK and MS2 outputs (default: data/downloads)",
     )
     parser.add_argument(
         "--download",
         action="store_true",
-        help="Download the genome FASTA/GBK files and MS2 files into the output folder.",
+        help="Download the genome GBK files and MS2 files into the output folder.",
     )
     parser.add_argument(
         "--paired-only",

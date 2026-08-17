@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_037568388.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002656.2">BGC0002656.2</a></td>
+              <td>PKS</td>
+              <td>41.0</td>
+              <td>96.5</td>
+              <td>207.0</td>
+              <td>1.14e-64</td>
+          </tr>
+    
+          <tr>
+              <td>QEV63712.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002657.2">BGC0002657.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>37.0</td>
+              <td>95.3</td>
+              <td>165.0</td>
+              <td>1.38e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29730.1</td>
+              <td>putative_peptide_transport_system_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000814.3">BGC0000814.3</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>101.9</td>
+              <td>162.0</td>
+              <td>3.3e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AMK48240.1</td>
+              <td>putative_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001351.3">BGC0001351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>93.4</td>
+              <td>159.0</td>
+              <td>2.72e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ARE67847.1</td>
+              <td>AbsF2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001492.5">BGC0001492.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>96.8</td>
+              <td>159.0</td>
+              <td>3.47e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85533.1</td>
+              <td>ABC_transporter_component,_membrane_spanning_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>37.0</td>
+              <td>98.1</td>
+              <td>157.0</td>
+              <td>1.99e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AEK75509.1</td>
+              <td>ABC_transporter_oligopeptide_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000001.5">BGC0000001.5</a></td>
+              <td>PKS:Type I</td>
+              <td>37.0</td>
+              <td>99.7</td>
+              <td>155.0</td>
+              <td>1.19e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45594.1</td>
+              <td>transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>34.0</td>
+              <td>96.5</td>
+              <td>148.0</td>
+              <td>4.5e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AVI57418.1</td>
+              <td>AbnF2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001694.4">BGC0001694.4</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>96.5</td>
+              <td>146.0</td>
+              <td>2.17e-41</td>
+          </tr>
+    
+          <tr>
+              <td>CBG67724.1</td>
+              <td>putative_metal_transport_integral_membrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002568.2">BGC0002568.2</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>87.7</td>
+              <td>139.0</td>
+              <td>1.58e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAC73332.1</td>
+              <td>putative_peptide_ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001587.5">BGC0001587.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>92.4</td>
+              <td>138.0</td>
+              <td>1.75e-38</td>
+          </tr>
+    
+          <tr>
+              <td>SPE99797.1</td>
+              <td>Glutathione_transport_system_permease_protein_GsiC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002567.2">BGC0002567.2</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>87.4</td>
+              <td>129.0</td>
+              <td>1.44e-34</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

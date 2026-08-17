@@ -1,0 +1,90 @@
+{
+    "version": "3",
+    "personal": {
+        "submitter_name": "Bailey Bell",
+        "submitter_orcid": "https://orcid.org/0000-0003-2955-734X",
+        "submitter_email": "bbell9@wisc.edu",
+        "PI_name": "Tim Bugni",
+        "PI_institution": "University of Wisconsin-Madison",
+        "PI_email": "tim.bugni@wisc.edu"
+    },
+    "metabolomics": {
+        "project": {
+            "GNPSMassIVE_ID": "MSV000090193",
+            "MaSSIVE_URL": "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=26034e3fe5784e0fb642dc9c1b10e34e",
+            "molecular_network": "28bd72b1a287436a8cbd5343bafc628b"
+        }
+    },
+    "experimental": {
+        "sample_preparation": [
+            {
+                "medium_details": {
+                    "medium_type": "liquid",
+                    "medium": "other",
+                    "Other_medium": "ASW-A",
+                    "Other_medium_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6941472/"
+                },
+                "growth_parameters": {
+                    "growth_duration": 336,
+                    "growth_temperature": 28
+                },
+                "aeration": {
+                    "aeration_type": "shaking",
+                    "aeration_vessel": "baffled flask",
+                    "aeration_rpm": 200
+                },
+                "sample_preparation_method": "Isolation"
+            }
+        ],
+        "extraction_methods": [
+            {
+                "solvents": [
+                    {
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_15347",
+                        "ratio": 1
+                    }
+                ],
+                "extracted_material": "cells_supernatant",
+                "extraction_method": "Acetone",
+                "resins": "Diaion HP20"
+            }
+        ],
+        "instrumentation_methods": [
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000084"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "50-1500",
+                "buffering": "0.1% Formic Acid",
+                "instrumentation_method": "QToF",
+                "other_instrumentation": "Column: Phenomenex Kinetex C18 2.6 μm, 2.1 mm × 100 mm\nGradient: solution A - water; solution B - ACN; gradient from 90 % to 3 % A over 10 min; flow rate of 0.3 mL/min"
+            }
+        ]
+    },
+    "genomes": [
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "GCA_019038635.1",
+                "RefSeq_accession": "GCF_019038635.1"
+            },
+            "genome_label": "Whole Genome"
+        }
+    ],
+    "proteomes": [],
+    "genome_metabolome_links": [
+        {
+            "sample_preparation_label": "Isolation",
+            "extraction_method_label": "Acetone",
+            "instrumentation_method_label": "QToF",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000090193/peak/MSMS_B482_ASWA_1-F,5_01_20040.mzML",
+            "genome_label": "Whole Genome"
+        }
+    ],
+    "BGC_MS2_links": []
+}

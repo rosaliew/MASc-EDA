@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AXM43064.1</td>
+              <td>AMP-dependent_synthetase_and_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001945.3">BGC0001945.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>93.7</td>
+              <td>219.0</td>
+              <td>3.49e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AEA35027.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002502.3">BGC0002502.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>100.7</td>
+              <td>165.0</td>
+              <td>2.93e-43</td>
+          </tr>
+    
+          <tr>
+              <td>QKW94281.1</td>
+              <td>long-chain-fatty-acid--CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002342.3">BGC0002342.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>76.9</td>
+              <td>102.0</td>
+              <td>1.36e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ATY12791.1</td>
+              <td>long-chain_fatty_acid--CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001504.4">BGC0001504.4</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>81.2</td>
+              <td>101.0</td>
+              <td>2.37e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50779.1</td>
+              <td>acyl_CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000247.5">BGC0000247.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>26.0</td>
+              <td>57.3</td>
+              <td>99.0</td>
+              <td>1.69e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98151.1</td>
+              <td>putative_AMP-binding_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000339.5">BGC0000339.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>83.4</td>
+              <td>93.0</td>
+              <td>1.74e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50792.1</td>
+              <td>putative_acyl-CoA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000163.5">BGC0000163.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>77.2</td>
+              <td>92.0</td>
+              <td>2.25e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAE17553.1</td>
+              <td>acyl_CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000210.5">BGC0000210.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>26.0</td>
+              <td>57.8</td>
+              <td>91.0</td>
+              <td>5.45e-19</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051729283.1</td>
+              <td>AMP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002137.3">BGC0002137.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>62.3</td>
+              <td>91.0</td>
+              <td>9.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>BAI63284.1</td>
+              <td>putative_peptide_arylation_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000434.5">BGC0000434.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>22.0</td>
+              <td>75.6</td>
+              <td>88.0</td>
+              <td>7e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43499.1</td>
+              <td>Acyl-CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001409.5">BGC0001409.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>57.0</td>
+              <td>87.0</td>
+              <td>1.44e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AYU66239.1</td>
+              <td>TjhA5</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002461.2">BGC0002461.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>57.0</td>
+              <td>86.0</td>
+              <td>3.78e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AGM05527.1</td>
+              <td>AMP-dependent_synthetase_and_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002098.2">BGC0002098.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>57.8</td>
+              <td>82.0</td>
+              <td>3.58e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42922.1</td>
+              <td>AMP-dependent_synthetase_and_ligase/heterocyclase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001940.3">BGC0001940.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>58.0</td>
+              <td>82.0</td>
+              <td>6.69e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ATY72527.1</td>
+              <td>AMP-ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001574.5">BGC0001574.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>82.2</td>
+              <td>81.0</td>
+              <td>1.51e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AFU65902.1</td>
+              <td>DacH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000216.5">BGC0000216.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>53.2</td>
+              <td>78.0</td>
+              <td>1.07e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QSJ20135.1</td>
+              <td>non-ribosomal_peptide_synthase/polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002572.3">BGC0002572.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>22.0</td>
+              <td>79.6</td>
+              <td>71.0</td>
+              <td>2.63e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AZY91996.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002022.4">BGC0002022.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>40.2</td>
+              <td>67.0</td>
+              <td>2.08e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AWX24488.1</td>
+              <td>acyl-CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001695.5">BGC0001695.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>82.9</td>
+              <td>63.0</td>
+              <td>5.53e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AXL88825.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001895.4">BGC0001895.4</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>50.7</td>
+              <td>62.0</td>
+              <td>8.05e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABC35922.1</td>
+              <td>AMP-binding_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001102.5">BGC0001102.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>26.0</td>
+              <td>57.1</td>
+              <td>62.0</td>
+              <td>1.52e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CBF87076.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001290.4">BGC0001290.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>26.7</td>
+              <td>60.0</td>
+              <td>5.71e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BCB17035.1</td>
+              <td>acyl-CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002523.2">BGC0002523.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>51.5</td>
+              <td>59.0</td>
+              <td>6.6e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAY02137.1</td>
+              <td>amino_acid_adenylation_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002532.3">BGC0002532.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>58.3</td>
+              <td>60.0</td>
+              <td>6.7e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EGX96626.1</td>
+              <td>AMP_dependent_CoA_ligase,_putative</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002259.2">BGC0002259.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>28.0</td>
+              <td>29.2</td>
+              <td>59.0</td>
+              <td>8.11e-09</td>
+          </tr>
+    
+          <tr>
+              <td>NHN68324.1</td>
+              <td>amino_acid_adenylation_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002719.2">BGC0002719.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>42.4</td>
+              <td>59.0</td>
+              <td>1.17e-08</td>
+          </tr>
+    
+          <tr>
+              <td>EHA53213.1</td>
+              <td>D-alanine-poly(phosphoribitol)_ligase_subunit_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002158.2">BGC0002158.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>60.6</td>
+              <td>58.0</td>
+              <td>2.49e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65342.1</td>
+              <td>Var7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002416.3">BGC0002416.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>33.6</td>
+              <td>57.0</td>
+              <td>5.89e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAX98201.1</td>
+              <td>acyl_CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000052.5">BGC0000052.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>54.8</td>
+              <td>56.0</td>
+              <td>6.06e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABX37383.1</td>
+              <td>amino_acid_adenylation_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000984.4">BGC0000984.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>22.0</td>
+              <td>81.2</td>
+              <td>57.0</td>
+              <td>7.95e-08</td>
+          </tr>
+    
+          <tr>
+              <td>QVN48190.1</td>
+              <td>nonribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002765.2">BGC0002765.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>50.5</td>
+              <td>55.0</td>
+              <td>2.41e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ADQ55476.1</td>
+              <td>non-ribosomal_peptide_synthase_dimodule</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000350.5">BGC0000350.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>53.7</td>
+              <td>54.0</td>
+              <td>6.64e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAW85355.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000837.4">BGC0000837.4</a></td>
+              <td>other:other</td>
+              <td>84.0</td>
+              <td>100.0</td>
+              <td>692.0</td>
+              <td>4.29e-253</td>
+          </tr>
+    
+          <tr>
+              <td>AAN79648.1</td>
+              <td>Putative_beta-ketoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000836.5">BGC0000836.5</a></td>
+              <td>other:other</td>
+              <td>72.0</td>
+              <td>100.0</td>
+              <td>593.0</td>
+              <td>7.53e-214</td>
+          </tr>
+    
+          <tr>
+              <td>WP_045972733.1</td>
+              <td>beta-ketoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002008.3">BGC0002008.3</a></td>
+              <td>other:other</td>
+              <td>71.0</td>
+              <td>99.5</td>
+              <td>586.0</td>
+              <td>5.93e-211</td>
+          </tr>
+    
+          <tr>
+              <td>ACC80690.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002711.2">BGC0002711.2</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>101.0</td>
+              <td>224.0</td>
+              <td>6.31e-69</td>
+          </tr>
+    
+          <tr>
+              <td>QEF99667.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002080.3">BGC0002080.3</a></td>
+              <td>other:trna-derived</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>221.0</td>
+              <td>9.93e-68</td>
+          </tr>
+    
+          <tr>
+              <td>QED93112.1</td>
+              <td>Beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002556.2">BGC0002556.2</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>104.2</td>
+              <td>220.0</td>
+              <td>2.69e-67</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37910.1</td>
+              <td>lldA1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001979.4">BGC0001979.4</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>102.5</td>
+              <td>216.0</td>
+              <td>1.08e-65</td>
+          </tr>
+    
+          <tr>
+              <td>QFS19044.1</td>
+              <td>ketosynthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002506.3">BGC0002506.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.4</td>
+              <td>213.0</td>
+              <td>1.24e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81728.1</td>
+              <td>putative_keto_synthase_alpha_EncA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000220.4">BGC0000220.4</a></td>
+              <td>PKS:Type II</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>212.0</td>
+              <td>2.5e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AAP85362.1</td>
+              <td>putative_keto_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000233.5">BGC0000233.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>103.4</td>
+              <td>211.0</td>
+              <td>6.76e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74262.1</td>
+              <td>TxnA1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>102.9</td>
+              <td>210.0</td>
+              <td>1.27e-63</td>
+          </tr>
+    
+          <tr>
+              <td>QIC03940.1</td>
+              <td>EncA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002366.2">BGC0002366.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>209.0</td>
+              <td>4.12e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46710.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001179.5">BGC0001179.5</a></td>
+              <td>PKS:Type II</td>
+              <td>33.0</td>
+              <td>103.4</td>
+              <td>207.0</td>
+              <td>1.44e-62</td>
+          </tr>
+    
+          <tr>
+              <td>QKO28696.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002315.2">BGC0002315.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>207.0</td>
+              <td>3.14e-62</td>
+          </tr>
+    
+          <tr>
+              <td>APR73637.1</td>
+              <td>beta-ketoacyl_synthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001625.5">BGC0001625.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.7</td>
+              <td>205.0</td>
+              <td>1.1e-61</td>
+          </tr>
+    
+          <tr>
+              <td>UPN68081.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002672.2">BGC0002672.2</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>103.2</td>
+              <td>204.0</td>
+              <td>2.23e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AQP25565.1</td>
+              <td>KSA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001590.5">BGC0001590.5</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>34.0</td>
+              <td>103.9</td>
+              <td>204.0</td>
+              <td>2.9e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42927.1</td>
+              <td>beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001940.3">BGC0001940.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.5</td>
+              <td>204.0</td>
+              <td>3.37e-61</td>
+          </tr>
+    
+          <tr>
+              <td>OOH83072.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001987.2">BGC0001987.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>105.7</td>
+              <td>204.0</td>
+              <td>5.34e-61</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32088.1</td>
+              <td>putative_ketoacyl_synthase_(KSa)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000211.5">BGC0000211.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>104.4</td>
+              <td>203.0</td>
+              <td>6.01e-61</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051729294.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002137.3">BGC0002137.3</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>102.5</td>
+              <td>203.0</td>
+              <td>7.31e-61</td>
+          </tr>
+    
+          <tr>
+              <td>CAM58798.1</td>
+              <td>BenA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000204.5">BGC0000204.5</a></td>
+              <td>PKS:Type II</td>
+              <td>33.0</td>
+              <td>101.7</td>
+              <td>203.0</td>
+              <td>8.65e-61</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54674.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000241.5">BGC0000241.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>102.5</td>
+              <td>203.0</td>
+              <td>8.65e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AFY23044.1</td>
+              <td>TamM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000274.5">BGC0000274.5</a></td>
+              <td>PKS:Type II</td>
+              <td>33.0</td>
+              <td>104.9</td>
+              <td>202.0</td>
+              <td>1.07e-60</td>
+          </tr>
+    
+          <tr>
+              <td>BAL90263.1</td>
+              <td>putative_beta-ketoacyl_synthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002021.3">BGC0002021.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.7</td>
+              <td>202.0</td>
+              <td>1.66e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AGO50610.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000229.5">BGC0000229.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>103.7</td>
+              <td>201.0</td>
+              <td>5.06e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30189.1</td>
+              <td>beta-ketoacylsynthase_I</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000261.5">BGC0000261.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.0</td>
+              <td>201.0</td>
+              <td>5.7e-60</td>
+          </tr>
+    
+          <tr>
+              <td>SEG87439.1</td>
+              <td>act_minimal_PKS_ketosynthase_(KS/KS_alpha)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002712.2">BGC0002712.2</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>103.2</td>
+              <td>201.0</td>
+              <td>6.61e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35058.1</td>
+              <td>KS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>101.7</td>
+              <td>200.0</td>
+              <td>8e-60</td>
+          </tr>
+    
+          <tr>
+              <td>ARG41911.1</td>
+              <td>IstH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001622.5">BGC0001622.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>103.2</td>
+              <td>200.0</td>
+              <td>8.41e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46686.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001177.4">BGC0001177.4</a></td>
+              <td>PKS:Type II</td>
+              <td>33.0</td>
+              <td>103.4</td>
+              <td>200.0</td>
+              <td>1.24e-59</td>
+          </tr>
+    
+          <tr>
+              <td>CAA44380.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000215.5">BGC0000215.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.7</td>
+              <td>200.0</td>
+              <td>1.27e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AHX24701.1</td>
+              <td>beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000200.5">BGC0000200.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>199.0</td>
+              <td>1.78e-59</td>
+          </tr>
+    
+          <tr>
+              <td>CAE17527.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000210.5">BGC0000210.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>34.0</td>
+              <td>102.2</td>
+              <td>199.0</td>
+              <td>1.78e-59</td>
+          </tr>
+    
+          <tr>
+              <td>MBW8699683.1</td>
+              <td>Actinorhodin_polyketide_putative_beta-ketoacyl_synthase_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002140.2">BGC0002140.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.7</td>
+              <td>199.0</td>
+              <td>1.96e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AHD25926.1</td>
+              <td>putative_keto-acyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000208.5">BGC0000208.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.0</td>
+              <td>199.0</td>
+              <td>2.27e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AUO15560.1</td>
+              <td>beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001513.3">BGC0001513.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>96.6</td>
+              <td>199.0</td>
+              <td>2.55e-59</td>
+          </tr>
+    
+          <tr>
+              <td>ALJ99855.1</td>
+              <td>FlsA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001904.2">BGC0001904.2</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>34.0</td>
+              <td>102.0</td>
+              <td>198.0</td>
+              <td>4.91e-59</td>
+          </tr>
+    
+          <tr>
+              <td>BAV16999.1</td>
+              <td>putative_ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001384.5">BGC0001384.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.7</td>
+              <td>198.0</td>
+              <td>7.59e-59</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71443.1</td>
+              <td>putative_ketosynthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000203.3">BGC0000203.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>104.9</td>
+              <td>197.0</td>
+              <td>9.67e-59</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46637.1</td>
+              <td>HrsM1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001960.2">BGC0001960.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>104.2</td>
+              <td>197.0</td>
+              <td>9.67e-59</td>
+          </tr>
+    
+          <tr>
+              <td>TRO56977.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002361.3">BGC0002361.3</a></td>
+              <td>PKS+saccharide</td>
+              <td>34.0</td>
+              <td>103.7</td>
+              <td>197.0</td>
+              <td>1.6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAK06784.1</td>
+              <td>putative_ketosynthase_SimA1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001072.5">BGC0001072.5</a></td>
+              <td>PKS:Type I+saccharide+other:aminocoumarin</td>
+              <td>33.0</td>
+              <td>104.2</td>
+              <td>196.0</td>
+              <td>2.67e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AMK51281.1</td>
+              <td>Hex24</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001376.5">BGC0001376.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>196.0</td>
+              <td>2.67e-58</td>
+          </tr>
+    
+          <tr>
+              <td>QDG00826.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002028.4">BGC0002028.4</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>104.4</td>
+              <td>196.0</td>
+              <td>3.74e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ACZ87054.1</td>
+              <td>3-oxoacyl-(acyl-carrier-protein)_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002732.3">BGC0002732.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>196.0</td>
+              <td>3.74e-58</td>
+          </tr>
+    
+          <tr>
+              <td>WP_037658548.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002000.4">BGC0002000.4</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>101.7</td>
+              <td>196.0</td>
+              <td>5.37e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22315.1</td>
+              <td>putative_polyketide_beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>196.0</td>
+              <td>5.63e-58</td>
+          </tr>
+    
+          <tr>
+              <td>QED90637.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002081.3">BGC0002081.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>195.0</td>
+              <td>7.53e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAG03067.1</td>
+              <td>ketosynthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000266.5">BGC0000266.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>102.5</td>
+              <td>195.0</td>
+              <td>8.48e-58</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34345.1</td>
+              <td>putative_polyketide_beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000242.5">BGC0000242.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.0</td>
+              <td>195.0</td>
+              <td>8.68e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAA65206.1</td>
+              <td>daunorubicin-doxorubicin_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000218.5">BGC0000218.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.4</td>
+              <td>195.0</td>
+              <td>9.6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf7</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001366.5">BGC0001366.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>195.0</td>
+              <td>1.01e-57</td>
+          </tr>
+    
+          <tr>
+              <td>QTA30604.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002143.2">BGC0002143.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.2</td>
+              <td>195.0</td>
+              <td>1.01e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ42320.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000273.5">BGC0000273.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>195.0</td>
+              <td>1.03e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70901.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001693.3">BGC0001693.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.5</td>
+              <td>195.0</td>
+              <td>1.06e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61892.1</td>
+              <td>Lom58</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000240.5">BGC0000240.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>33.0</td>
+              <td>102.5</td>
+              <td>194.0</td>
+              <td>1.48e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ61212.1</td>
+              <td>beta-ketoacylsynthase_I</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001762.3">BGC0001762.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>93.6</td>
+              <td>194.0</td>
+              <td>1.48e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52176.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>31.0</td>
+              <td>98.8</td>
+              <td>194.0</td>
+              <td>1.71e-57</td>
+          </tr>
+    
+          <tr>
+              <td>MCG7203820.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000248.5">BGC0000248.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>102.9</td>
+              <td>194.0</td>
+              <td>1.98e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AHA81977.1</td>
+              <td>Arm7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000199.5">BGC0000199.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>103.2</td>
+              <td>194.0</td>
+              <td>2.03e-57</td>
+          </tr>
+    
+          <tr>
+              <td>BAU98041.1</td>
+              <td>ketosynthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001386.5">BGC0001386.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>104.9</td>
+              <td>194.0</td>
+              <td>2.03e-57</td>
+          </tr>
+    
+          <tr>
+              <td>OWA25245.1</td>
+              <td>beta-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001438.5">BGC0001438.5</a></td>
+              <td>PKS+saccharide:hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>194.0</td>
+              <td>2.69e-57</td>
+          </tr>
+    
+          <tr>
+              <td>BAC79044.1</td>
+              <td>ketosynthase_(KS)_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000245.5">BGC0000245.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>194.0</td>
+              <td>2.84e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AYU66233.1</td>
+              <td>TjhA1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002461.2">BGC0002461.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>104.2</td>
+              <td>194.0</td>
+              <td>2.98e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACI88861.1</td>
+              <td>AlnL_ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000195.5">BGC0000195.5</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>193.0</td>
+              <td>3.89e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACP19353.1</td>
+              <td>SaqA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000267.5">BGC0000267.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>34.0</td>
+              <td>102.9</td>
+              <td>193.0</td>
+              <td>3.98e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64834.1</td>
+              <td>PokP1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001061.4">BGC0001061.4</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>193.0</td>
+              <td>3.98e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44655.1</td>
+              <td>ketoacyl_synthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001769.5">BGC0001769.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>193.0</td>
+              <td>4.96e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ADB02843.1</td>
+              <td>AzicA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000202.5">BGC0000202.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>101.7</td>
+              <td>193.0</td>
+              <td>5.58e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CAA09653.1</td>
+              <td>polyketide_synthase_keto-acyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000227.5">BGC0000227.5</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>192.0</td>
+              <td>7.64e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52674.1</td>
+              <td>ketoacyl_synthase_alpha-subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001073.5">BGC0001073.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>192.0</td>
+              <td>7.82e-57</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69165.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_synthase_I</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000271.5">BGC0000271.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>104.7</td>
+              <td>192.0</td>
+              <td>1.07e-56</td>
+          </tr>
+    
+          <tr>
+              <td>ABL09959.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000197.5">BGC0000197.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>33.0</td>
+              <td>103.7</td>
+              <td>192.0</td>
+              <td>1.57e-56</td>
+          </tr>
+    
+          <tr>
+              <td>BBA97250.1</td>
+              <td>putative_beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002383.3">BGC0002383.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>192.0</td>
+              <td>1.69e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AAA87618.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000217.5">BGC0000217.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.2</td>
+              <td>191.0</td>
+              <td>1.96e-56</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10117.1</td>
+              <td>putative_ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000268.5">BGC0000268.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>191.0</td>
+              <td>2.05e-56</td>
+          </tr>
+    
+          <tr>
+              <td>ABC00726.1</td>
+              <td>CosB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000214.5">BGC0000214.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>191.0</td>
+              <td>2.15e-56</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80064.1</td>
+              <td>beta-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001074.5">BGC0001074.5</a></td>
+              <td>saccharide+PKS</td>
+              <td>33.0</td>
+              <td>102.9</td>
+              <td>191.0</td>
+              <td>2.15e-56</td>
+          </tr>
+    
+          <tr>
+              <td>CAA61989.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000247.5">BGC0000247.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>33.0</td>
+              <td>102.7</td>
+              <td>191.0</td>
+              <td>3.02e-56</td>
+          </tr>
+    
+          <tr>
+              <td>QHZ32173.1</td>
+              <td>polyketide_putative_beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002047.2">BGC0002047.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.4</td>
+              <td>191.0</td>
+              <td>3.09e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AAK57525.1</td>
+              <td>PgaA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000262.5">BGC0000262.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>104.2</td>
+              <td>191.0</td>
+              <td>4.23e-56</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32809.1</td>
+              <td>putative_ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000263.5">BGC0000263.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>103.9</td>
+              <td>190.0</td>
+              <td>6.06e-56</td>
+          </tr>
+    
+          <tr>
+              <td>QXL90837.1</td>
+              <td>polyketide_beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002426.3">BGC0002426.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>189.0</td>
+              <td>1.14e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ACX83617.1</td>
+              <td>keto-acyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000221.5">BGC0000221.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>103.2</td>
+              <td>189.0</td>
+              <td>1.4e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ABW11825.1</td>
+              <td>Beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001197.5">BGC0001197.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>103.7</td>
+              <td>190.0</td>
+              <td>1.57e-55</td>
+          </tr>
+    
+          <tr>
+              <td>QNL10613.1</td>
+              <td>Beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002514.3">BGC0002514.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.7</td>
+              <td>189.0</td>
+              <td>1.67e-55</td>
+          </tr>
+    
+          <tr>
+              <td>WP_017947381.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001558.5">BGC0001558.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>104.4</td>
+              <td>189.0</td>
+              <td>2.28e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00755.1</td>
+              <td>beta-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001568.5">BGC0001568.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>104.4</td>
+              <td>189.0</td>
+              <td>2.28e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AAC18107.1</td>
+              <td>ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000225.5">BGC0000225.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>189.0</td>
+              <td>2.45e-55</td>
+          </tr>
+    
+          <tr>
+              <td>MUL41473.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002045.3">BGC0002045.3</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>188.0</td>
+              <td>3.43e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AHA12083.1</td>
+              <td>3-oxoacyl-acyl_carrier_protein_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001172.5">BGC0001172.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>34.0</td>
+              <td>101.2</td>
+              <td>188.0</td>
+              <td>3.59e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAC44200.1</td>
+              <td>actinorhodin_polyketide_beta-ketoacyl_synthase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000194.5">BGC0000194.5</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>30.0</td>
+              <td>103.7</td>
+              <td>189.0</td>
+              <td>4.46e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AHF22848.1</td>
+              <td>MarR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000091.5">BGC0000091.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>99.3</td>
+              <td>187.0</td>
+              <td>4.62e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ACA34361.1</td>
+              <td>3-oxoacyl-acyl_carrier_protein_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001152.5">BGC0001152.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>86.7</td>
+              <td>186.0</td>
+              <td>6.09e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CCH32745.1</td>
+              <td>Polyketide_ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002070.3">BGC0002070.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>187.0</td>
+              <td>6.42e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ78325.1</td>
+              <td>OxyA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000254.5">BGC0000254.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.2</td>
+              <td>187.0</td>
+              <td>1.32e-54</td>
+          </tr>
+    
+          <tr>
+              <td>EDT06076.1</td>
+              <td>3-oxoacyl-(acyl-carrier-protein)_synthase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001897.4">BGC0001897.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>105.4</td>
+              <td>187.0</td>
+              <td>1.48e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43514.1</td>
+              <td>Ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001409.5">BGC0001409.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>101.7</td>
+              <td>186.0</td>
+              <td>1.53e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ08916.1</td>
+              <td>3-ketoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000224.4">BGC0000224.4</a></td>
+              <td>PKS:Type II</td>
+              <td>31.0</td>
+              <td>103.7</td>
+              <td>186.0</td>
+              <td>2.36e-54</td>
+          </tr>
+    
+          <tr>
+              <td>WP_016467648.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002381.3">BGC0002381.3</a></td>
+              <td>other:other+PKS</td>
+              <td>32.0</td>
+              <td>99.5</td>
+              <td>186.0</td>
+              <td>2.74e-54</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020275095.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002012.4">BGC0002012.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.7</td>
+              <td>186.0</td>
+              <td>3.45e-54</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16177.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001063.5">BGC0001063.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>99.8</td>
+              <td>184.0</td>
+              <td>6.54e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AMX23327.1</td>
+              <td>putative_beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001500.3">BGC0001500.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>184.0</td>
+              <td>9.69e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AUI41025.1</td>
+              <td>putative_polyketide_beta-ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001512.5">BGC0001512.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>92.1</td>
+              <td>184.0</td>
+              <td>1.31e-53</td>
+          </tr>
+    
+          <tr>
+              <td>ADG86315.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000190.5">BGC0000190.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>103.7</td>
+              <td>184.0</td>
+              <td>1.77e-53</td>
+          </tr>
+    
+          <tr>
+              <td>MBA0053735.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002096.3">BGC0002096.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.5</td>
+              <td>184.0</td>
+              <td>1.78e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AEI98666.1</td>
+              <td>CtcW</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000209.5">BGC0000209.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>102.2</td>
+              <td>183.0</td>
+              <td>2.84e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AAD13536.1</td>
+              <td>B-ketoacyl-ACP_synthase_homolog</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000239.5">BGC0000239.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>99.0</td>
+              <td>182.0</td>
+              <td>1.02e-52</td>
+          </tr>
+    
+          <tr>
+              <td>QVQ68799.1</td>
+              <td>mmyP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002129.4">BGC0002129.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>181.0</td>
+              <td>1.82e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AXL88816.1</td>
+              <td>beta-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001895.4">BGC0001895.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>101.2</td>
+              <td>179.0</td>
+              <td>6.67e-52</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71148.1</td>
+              <td>Lcz31</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000237.5">BGC0000237.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>102.5</td>
+              <td>179.0</td>
+              <td>7.13e-52</td>
+          </tr>
+    
+          <tr>
+              <td>ADB23391.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001062.5">BGC0001062.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>102.2</td>
+              <td>179.0</td>
+              <td>7.46e-52</td>
+          </tr>
+    
+          <tr>
+              <td>CAL48955.1</td>
+              <td>beta-ketoacyl-ACP_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001343.3">BGC0001343.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>102.9</td>
+              <td>179.0</td>
+              <td>9.94e-52</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52681.1</td>
+              <td>putative_ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000222.5">BGC0000222.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>101.7</td>
+              <td>178.0</td>
+              <td>2.85e-51</td>
+          </tr>
+    
+          <tr>
+              <td>BAX64252.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001623.4">BGC0001623.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>101.2</td>
+              <td>177.0</td>
+              <td>2.91e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AEU17885.1</td>
+              <td>3-oxo-ACP_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001072.5">BGC0001072.5</a></td>
+              <td>PKS:Type I+saccharide+other:aminocoumarin</td>
+              <td>30.0</td>
+              <td>98.8</td>
+              <td>177.0</td>
+              <td>3.19e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AAA67515.1</td>
+              <td>tetracenomycin_polyketide_synthase_condensing_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000275.4">BGC0000275.4</a></td>
+              <td>PKS:Type II</td>
+              <td>31.0</td>
+              <td>102.7</td>
+              <td>177.0</td>
+              <td>4.26e-51</td>
+          </tr>
+    
+          <tr>
+              <td>WP_029025958.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000198.5">BGC0000198.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>102.9</td>
+              <td>177.0</td>
+              <td>7.62e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CAP12600.1</td>
+              <td>ketoacyl_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000219.4">BGC0000219.4</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>102.5</td>
+              <td>176.0</td>
+              <td>2.13e-50</td>
+          </tr>
+    
+          <tr>
+              <td>WP_054234622.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002014.3">BGC0002014.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>101.7</td>
+              <td>175.0</td>
+              <td>2.38e-50</td>
+          </tr>
+    
+          <tr>
+              <td>BBE36466.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001922.4">BGC0001922.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>103.9</td>
+              <td>175.0</td>
+              <td>3.81e-50</td>
+          </tr>
+    
+          <tr>
+              <td>QED88051.1</td>
+              <td>3-oxoacyl-ACP_synthase_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001967.4">BGC0001967.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>100.5</td>
+              <td>174.0</td>
+              <td>5.44e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21747.1</td>
+              <td>PdmA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000256.3">BGC0000256.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>102.5</td>
+              <td>174.0</td>
+              <td>6.06e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58679.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000187.5">BGC0000187.5</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>99.3</td>
+              <td>174.0</td>
+              <td>6.96e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71114.1</td>
+              <td>Lct31</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000238.5">BGC0000238.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>102.2</td>
+              <td>173.0</td>
+              <td>2.12e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30260.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000429.4">BGC0000429.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>99.8</td>
+              <td>172.0</td>
+              <td>2.77e-49</td>
+          </tr>
+    
+          <tr>
+              <td>QYA95693.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002676.2">BGC0002676.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>99.8</td>
+              <td>172.0</td>
+              <td>2.77e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CAE16563.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000196.4">BGC0000196.4</a></td>
+              <td>PKS:Type II</td>
+              <td>38.0</td>
+              <td>66.8</td>
+              <td>172.0</td>
+              <td>3.43e-49</td>
+          </tr>
+    
+          <tr>
+              <td>WP_054234628.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002014.3">BGC0002014.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>98.5</td>
+              <td>171.0</td>
+              <td>6.07e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65306.1</td>
+              <td>Cal30</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001297.4">BGC0001297.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>99.8</td>
+              <td>171.0</td>
+              <td>1.01e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AAG26879.1</td>
+              <td>PKSA_beta-ketoacylsynthase_subunit_alpha</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000272.3">BGC0000272.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>105.2</td>
+              <td>171.0</td>
+              <td>1.15e-48</td>
+          </tr>
+    
+          <tr>
+              <td>QDJ74257.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002109.3">BGC0002109.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>100.5</td>
+              <td>171.0</td>
+              <td>1.32e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CAE51174.1</td>
+              <td>RemA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000264.5">BGC0000264.5</a></td>
+              <td>PKS:Type II</td>
+              <td>30.0</td>
+              <td>104.9</td>
+              <td>170.0</td>
+              <td>2.54e-48</td>
+          </tr>
+    
+          <tr>
+              <td>QBA57748.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002377.2">BGC0002377.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>99.8</td>
+              <td>170.0</td>
+              <td>2.87e-48</td>
+          </tr>
+    
+          <tr>
+              <td>MBA5221213.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002090.3">BGC0002090.3</a></td>
+              <td>PKS:Type I+NRPS:Type I</td>
+              <td>32.0</td>
+              <td>100.7</td>
+              <td>167.0</td>
+              <td>2.72e-47</td>
+          </tr>
+    
+          <tr>
+              <td>QFF92403.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_II/polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002553.2">BGC0002553.2</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>66.8</td>
+              <td>165.0</td>
+              <td>1.24e-46</td>
+          </tr>
+    
+          <tr>
+              <td>BCN28630.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002441.2">BGC0002441.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>29.0</td>
+              <td>101.2</td>
+              <td>166.0</td>
+              <td>1.44e-46</td>
+          </tr>
+    
+          <tr>
+              <td>PVC99861.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002100.2">BGC0002100.2</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>30.0</td>
+              <td>100.7</td>
+              <td>165.0</td>
+              <td>1.85e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AAP69573.1</td>
+              <td>putative_alpha-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000226.5">BGC0000226.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>102.9</td>
+              <td>163.0</td>
+              <td>1.18e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AEW98131.1</td>
+              <td>3-oxoacyl-(acyl-carrier-protein)_synthase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002642.2">BGC0002642.2</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>98.8</td>
+              <td>162.0</td>
+              <td>1.78e-45</td>
+          </tr>
+    
+          <tr>
+              <td>BBC20646.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001917.4">BGC0001917.4</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>67.3</td>
+              <td>155.0</td>
+              <td>1.22e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AFV96139.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001064.5">BGC0001064.5</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>101.5</td>
+              <td>139.0</td>
+              <td>1.06e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ARU81119.1</td>
+              <td>CylE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001566.3">BGC0001566.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>101.5</td>
+              <td>139.0</td>
+              <td>1.06e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81234.1</td>
+              <td>type_II_beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000243.4">BGC0000243.4</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>66.6</td>
+              <td>136.0</td>
+              <td>7.69e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AMB48449.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001357.3">BGC0001357.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>63.9</td>
+              <td>134.0</td>
+              <td>3.76e-35</td>
+          </tr>
+    
+          <tr>
+              <td>UPN68082.1</td>
+              <td>chain_length_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002672.2">BGC0002672.2</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>102.0</td>
+              <td>129.0</td>
+              <td>4.14e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QCP68982.1</td>
+              <td>VatG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002296.2">BGC0002296.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>64.1</td>
+              <td>126.0</td>
+              <td>4.25e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ASA76638.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001751.3">BGC0001751.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>63.9</td>
+              <td>125.0</td>
+              <td>1.25e-31</td>
+          </tr>
+    
+          <tr>
+              <td>BAF50726.1</td>
+              <td>alpha-ketoacyl-acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001116.5">BGC0001116.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>103.7</td>
+              <td>125.0</td>
+              <td>1.35e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAS98778.1</td>
+              <td>JamG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001001.5">BGC0001001.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>63.9</td>
+              <td>122.0</td>
+              <td>1.41e-30</td>
+          </tr>
+    
+          <tr>
+              <td>BCN28639.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002441.2">BGC0002441.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>33.0</td>
+              <td>60.7</td>
+              <td>121.0</td>
+              <td>1.44e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AEE88287.1</td>
+              <td>CurC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000976.5">BGC0000976.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>63.6</td>
+              <td>121.0</td>
+              <td>2.67e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAT70098.1</td>
+              <td>CurC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001165.5">BGC0001165.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>63.6</td>
+              <td>121.0</td>
+              <td>2.67e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ04126.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000838.3">BGC0000838.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>65.6</td>
+              <td>117.0</td>
+              <td>4.21e-29</td>
+          </tr>
+    
+          <tr>
+              <td>QCT05739.1</td>
+              <td>Tri6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001983.3">BGC0001983.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>64.4</td>
+              <td>112.0</td>
+              <td>1.99e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAO39098.1</td>
+              <td>AdmD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000956.5">BGC0000956.5</a></td>
+              <td>NRPS:Type I+PKS:Type II</td>
+              <td>29.0</td>
+              <td>84.0</td>
+              <td>115.0</td>
+              <td>2.51e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAW85352.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000837.4">BGC0000837.4</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>64.1</td>
+              <td>112.0</td>
+              <td>3.25e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAN79651.1</td>
+              <td>Putative_3-oxoacyl-[ACP]_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000836.5">BGC0000836.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>65.1</td>
+              <td>107.0</td>
+              <td>1.85e-25</td>
+          </tr>
+    
+          <tr>
+              <td>QRN75753.1</td>
+              <td>Polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002114.3">BGC0002114.3</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>32.0</td>
+              <td>68.6</td>
+              <td>106.0</td>
+              <td>2.63e-24</td>
+          </tr>
+    
+          <tr>
+              <td>WP_045972729.1</td>
+              <td>beta-ketoacyl-[acyl-carrier-protein]_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002008.3">BGC0002008.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>63.6</td>
+              <td>102.0</td>
+              <td>7.63e-24</td>
+          </tr>
+    
+          <tr>
+              <td>QDJ74258.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002109.3">BGC0002109.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>60.7</td>
+              <td>102.0</td>
+              <td>9.05e-24</td>
+          </tr>
+    
+          <tr>
+              <td>QYA95692.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002676.2">BGC0002676.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>60.4</td>
+              <td>100.0</td>
+              <td>7.73e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30261.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000429.4">BGC0000429.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>60.4</td>
+              <td>99.0</td>
+              <td>1.05e-22</td>
+          </tr>
+    
+          <tr>
+              <td>QBG38768.1</td>
+              <td>Atr7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001975.4">BGC0001975.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>61.7</td>
+              <td>99.0</td>
+              <td>1.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35059.1</td>
+              <td>chain_length_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>103.2</td>
+              <td>99.0</td>
+              <td>1.53e-22</td>
+          </tr>
+    
+          <tr>
+              <td>QNH67536.1</td>
+              <td>Cip8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002108.3">BGC0002108.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>61.7</td>
+              <td>98.0</td>
+              <td>2.77e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30188.1</td>
+              <td>chain_length_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000261.5">BGC0000261.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>102.5</td>
+              <td>99.0</td>
+              <td>2.85e-22</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ07844.1</td>
+              <td>putative_chain_length_determinant_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000232.5">BGC0000232.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>102.0</td>
+              <td>97.0</td>
+              <td>6.44e-22</td>
+          </tr>
+    
+          <tr>
+              <td>OWA01597.1</td>
+              <td>ketosynthase_chain-length_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001439.5">BGC0001439.5</a></td>
+              <td>PKS+saccharide:hybrid/tailoring</td>
+              <td>25.0</td>
+              <td>101.5</td>
+              <td>97.0</td>
+              <td>6.5e-22</td>
+          </tr>
+    
+          <tr>
+              <td>OKI81340.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002478.3">BGC0002478.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>102.7</td>
+              <td>97.0</td>
+              <td>1.21e-21</td>
+          </tr>
+    
+          <tr>
+              <td>QHB92591.1</td>
+              <td>YsfD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002547.2">BGC0002547.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>61.9</td>
+              <td>96.0</td>
+              <td>2.92e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ61213.1</td>
+              <td>chain_length_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001762.3">BGC0001762.3</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>90.2</td>
+              <td>93.0</td>
+              <td>2.38e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAB36563.1</td>
+              <td>chain_length_determinant</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000234.5">BGC0000234.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>102.5</td>
+              <td>91.0</td>
+              <td>8.21e-20</td>
+          </tr>
+    
+          <tr>
+              <td>EHM27506.1</td>
+              <td>chain_length_determinant_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000235.5">BGC0000235.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>102.2</td>
+              <td>91.0</td>
+              <td>8.33e-20</td>
+          </tr>
+    
+          <tr>
+              <td>OKI59861.1</td>
+              <td>beta-ketoacyl_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002477.3">BGC0002477.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>102.2</td>
+              <td>91.0</td>
+              <td>8.33e-20</td>
+          </tr>
+    
+          <tr>
+              <td>SEG87444.1</td>
+              <td>act_minimal_PKS_chain-length_factor_(CLF/KS_beta)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002712.2">BGC0002712.2</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>101.0</td>
+              <td>91.0</td>
+              <td>1.12e-19</td>
+          </tr>
+    
+          <tr>
+              <td>DAC80076.1</td>
+              <td>PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001835.2">BGC0001835.2</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>56.5</td>
+              <td>92.0</td>
+              <td>2.36e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81729.1</td>
+              <td>putative_keto_synthase_beta_EncB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000220.4">BGC0000220.4</a></td>
+              <td>PKS:Type II</td>
+              <td>26.0</td>
+              <td>101.7</td>
+              <td>90.0</td>
+              <td>2.79e-19</td>
+          </tr>
+    
+          <tr>
+              <td>QIC03939.1</td>
+              <td>EncB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002366.2">BGC0002366.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>101.7</td>
+              <td>89.0</td>
+              <td>5.08e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85585.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000283.4">BGC0000283.4</a></td>
+              <td>other:cyclitol</td>
+              <td>26.0</td>
+              <td>108.6</td>
+              <td>88.0</td>
+              <td>1.03e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ABY21540.1</td>
+              <td>AngAIII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000018.5">BGC0000018.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>58.5</td>
+              <td>88.0</td>
+              <td>3.16e-18</td>
+          </tr>
+    
+          <tr>
+              <td>PHM26614.1</td>
+              <td>Phthiocerol_synthesis_polyketide_synthase_type_I_PpsE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001130.5">BGC0001130.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>74.0</td>
+              <td>87.0</td>
+              <td>6.74e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52178.1</td>
+              <td>ketosynthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>25.0</td>
+              <td>60.9</td>
+              <td>84.0</td>
+              <td>1.43e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAY39344.1</td>
+              <td>Beta-ketoacyl_synthase:Beta-ketoacyl_synthase:Phosphopantetheine-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002060.3">BGC0002060.3</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>26.0</td>
+              <td>89.7</td>
+              <td>86.0</td>
+              <td>2.34e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ctg3_19</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001853.3">BGC0001853.3</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>50.4</td>
+              <td>85.0</td>
+              <td>3.28e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ACZ65476.1</td>
+              <td>type_I_modular_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000140.5">BGC0000140.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>50.1</td>
+              <td>84.0</td>
+              <td>7.84e-17</td>
+          </tr>
+    
+          <tr>
+              <td>DAC80063.1</td>
+              <td>PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001836.3">BGC0001836.3</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>28.0</td>
+              <td>81.3</td>
+              <td>81.0</td>
+              <td>7.52e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ARM20284.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001523.5">BGC0001523.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>56.5</td>
+              <td>81.0</td>
+              <td>9.39e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AUO16423.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001700.5">BGC0001700.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>56.5</td>
+              <td>81.0</td>
+              <td>9.4e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ADH04682.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001344.4">BGC0001344.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>52.1</td>
+              <td>81.0</td>
+              <td>9.63e-16</td>
+          </tr>
+    
+          <tr>
+              <td>WJJ09219.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002810.2">BGC0002810.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>56.3</td>
+              <td>80.0</td>
+              <td>1.78e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AJO72737.1</td>
+              <td>Type_I_modular_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001381.5">BGC0001381.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>52.3</td>
+              <td>79.0</td>
+              <td>3.2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>mycF</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002055.3">BGC0002055.3</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>29.0</td>
+              <td>57.5</td>
+              <td>78.0</td>
+              <td>7.61e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACS20361.1</td>
+              <td>KR_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002420.3">BGC0002420.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>54.5</td>
+              <td>77.0</td>
+              <td>8.62e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59437.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001202.4">BGC0001202.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>69.3</td>
+              <td>77.0</td>
+              <td>9.29e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AHD05614.1</td>
+              <td>putative_non-ribosomal_peptide_ligase/_polyketide_synthase_hybrid</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001033.5">BGC0001033.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>31.0</td>
+              <td>52.8</td>
+              <td>77.0</td>
+              <td>9.36e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAF92595.1</td>
+              <td>ketoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000118.5">BGC0000118.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>60.4</td>
+              <td>77.0</td>
+              <td>9.9e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ24869.1</td>
+              <td>putative_ketoacyl-ACP_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000119.5">BGC0000119.5</a></td>
+              <td>PKS:Iterative type I+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>60.4</td>
+              <td>77.0</td>
+              <td>9.9e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAN93352.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000179.5">BGC0000179.5</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>26.0</td>
+              <td>90.7</td>
+              <td>77.0</td>
+              <td>9.96e-15</td>
+          </tr>
+    
+          <tr>
+              <td>QLG04866.1</td>
+              <td>PulE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002374.2">BGC0002374.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>73.0</td>
+              <td>74.0</td>
+              <td>9.83e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AGU50952.1</td>
+              <td>putative_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002417.3">BGC0002417.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>54.5</td>
+              <td>74.0</td>
+              <td>1.49e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88262.1</td>
+              <td>mixed_nonribosomal_peptide_synthetase/_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000979.3">BGC0000979.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>59.2</td>
+              <td>72.0</td>
+              <td>6.03e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88265.1</td>
+              <td>mixed_nonribosomal_peptide_synthetase/_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000980.3">BGC0000980.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>59.2</td>
+              <td>72.0</td>
+              <td>6.03e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABX60161.1</td>
+              <td>mixed_NRPS/PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000978.5">BGC0000978.5</a></td>
+              <td>NRPS:Type I+PKS:Type I+other:other</td>
+              <td>27.0</td>
+              <td>59.2</td>
+              <td>72.0</td>
+              <td>6.71e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88279.1</td>
+              <td>mixed_NRPS/PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000981.3">BGC0000981.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>59.2</td>
+              <td>72.0</td>
+              <td>6.71e-13</td>
+          </tr>
+    
+          <tr>
+              <td>MBO1319311.1</td>
+              <td>SDR_family_NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002814.2">BGC0002814.2</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>29.0</td>
+              <td>55.8</td>
+              <td>69.0</td>
+              <td>3.82e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

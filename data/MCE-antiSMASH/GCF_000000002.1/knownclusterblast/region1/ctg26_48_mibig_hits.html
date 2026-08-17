@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAG38701.1</td>
+              <td>putative_lividomycin_6&#39;-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000708.5">BGC0000708.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>103.6</td>
+              <td>167.0</td>
+              <td>2.48e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CAF32378.1</td>
+              <td>putative_paromomycin_6&#39;-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000712.5">BGC0000712.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>101.9</td>
+              <td>167.0</td>
+              <td>3.42e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33316.1</td>
+              <td>putative_bifunctional_neomycin_6&#39;-and_6&#39;&#39;&#39;-dehydrogenase,_NeoQ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000709.5">BGC0000709.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>101.0</td>
+              <td>159.0</td>
+              <td>2.58e-42</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58694.1</td>
+              <td>putative_sugar_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000711.5">BGC0000711.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>101.0</td>
+              <td>159.0</td>
+              <td>2.58e-42</td>
+          </tr>
+    
+          <tr>
+              <td>CAG77432.1</td>
+              <td>putative_hexosaminyl_6&#39;-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000694.3">BGC0000694.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>101.9</td>
+              <td>157.0</td>
+              <td>8.91e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64677.1</td>
+              <td>putative_choline_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000379.5">BGC0000379.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>106.5</td>
+              <td>150.0</td>
+              <td>4.17e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAE07079.1</td>
+              <td>possible_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000693.5">BGC0000693.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>91.8</td>
+              <td>143.0</td>
+              <td>3.25e-37</td>
+          </tr>
+    
+          <tr>
+              <td>BAD20757.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000702.5">BGC0000702.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>100.0</td>
+              <td>136.0</td>
+              <td>1.87e-34</td>
+          </tr>
+    
+          <tr>
+              <td>QEU90630.1</td>
+              <td>GMC_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000703.4">BGC0000703.4</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>100.0</td>
+              <td>136.0</td>
+              <td>1.87e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CAF60534.1</td>
+              <td>GntX_like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000704.3">BGC0000704.3</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>100.0</td>
+              <td>136.0</td>
+              <td>1.87e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31587.1</td>
+              <td>oxidoreductase;_putative_kanamycin_6&#39;-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000705.3">BGC0000705.3</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>100.0</td>
+              <td>136.0</td>
+              <td>1.87e-34</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

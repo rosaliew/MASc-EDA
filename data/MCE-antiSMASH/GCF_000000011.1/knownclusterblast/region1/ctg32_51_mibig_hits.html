@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAI70380.1</td>
+              <td>short_chain_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000896.5">BGC0000896.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>82.7</td>
+              <td>67.0</td>
+              <td>9.11e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52671.1</td>
+              <td>ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001073.5">BGC0001073.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>76.1</td>
+              <td>59.0</td>
+              <td>7.65e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64852.1</td>
+              <td>PokT2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001061.4">BGC0001061.4</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>30.0</td>
+              <td>71.4</td>
+              <td>56.0</td>
+              <td>6.09e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AEF33074.1</td>
+              <td>3-oxoacyl-[acyl-carrier_protein]_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001039.5">BGC0001039.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>77.3</td>
+              <td>53.0</td>
+              <td>6.64e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34370.1</td>
+              <td>putative_3-oxoacyl-ACP_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000242.5">BGC0000242.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>76.9</td>
+              <td>52.0</td>
+              <td>8.92e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ACX35428.1</td>
+              <td>BacC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000888.5">BGC0000888.5</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>75.7</td>
+              <td>50.0</td>
+              <td>4.23e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABS75820.1</td>
+              <td>BacC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001184.4">BGC0001184.4</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>75.7</td>
+              <td>50.0</td>
+              <td>5.71e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAP93751.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001882.3">BGC0001882.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>71.8</td>
+              <td>50.0</td>
+              <td>6.21e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ACN38371.1</td>
+              <td>short-chain_dehydrogenase/reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000714.5">BGC0000714.5</a></td>
+              <td>saccharide</td>
+              <td>22.0</td>
+              <td>82.0</td>
+              <td>49.0</td>
+              <td>9.89e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABS74183.1</td>
+              <td>YxjF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001090.5">BGC0001090.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>56.5</td>
+              <td>49.0</td>
+              <td>1.96e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69696.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001098.5">BGC0001098.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>56.5</td>
+              <td>49.0</td>
+              <td>1.96e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

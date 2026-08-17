@@ -1,0 +1,126 @@
+{
+    "version": "3",
+    "personal": {
+        "submitter_name": "hanan albataineh",
+        "submitter_email": "haalbata@go.olemiss.edu",
+        "submitter_name_secondary": "D. Cole Stevens",
+        "submitter_email_secondary": "stevens@olemiss.edu",
+        "PI_name": "D. Cole Stevens",
+        "PI_institution": "Olemiss",
+        "PI_email": "stevens@olemiss.edu"
+    },
+    "metabolomics": {
+        "project": {
+            "GNPSMassIVE_ID": "MSV000088226",
+            "MaSSIVE_URL": "https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=1f421c71039a4bcba0d806f182499985&view=advanced_view",
+            "molecular_network": "e2bf76cfa59249e3b9af434342406d72"
+        }
+    },
+    "experimental": {
+        "sample_preparation": [
+            {
+                "medium_details": {
+                    "medium_type": "liquid",
+                    "medium": "other",
+                    "Other_medium": "vy/2",
+                    "Other_medium_link": "https://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium9.pdf"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 30,
+                    "growth_duration": 300
+                },
+                "aeration": {
+                    "aeration_type": "shaking",
+                    "aeration_vessel": "Erlenmeyer flask"
+                },
+                "sample_preparation_method": "A.prim VY2 liqiud"
+            }
+        ],
+        "extraction_methods": [
+            {
+                "solvents": [
+                    {
+                        "ratio": 1,
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_17790"
+                    }
+                ],
+                "extracted_material": "cells_supernatant",
+                "resins": "xad-16",
+                "extraction_method": "Resins XAD-16"
+            }
+        ],
+        "instrumentation_methods": [
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000484"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "150 to 1200",
+                "collision_energy": "CID 35% NCE",
+                "buffering": "0.1% formic acid in water and acetonitrile",
+                "other_instrumentation": "LC–MS/MS analysis of the extracted samples was performed on an Orbitrap Fusion instrument (Thermo Scientific, San Jose, CA) controlled with Xcalibur version 2.0.7 and coupled to a Dionex Ultimate 3000 nanoUHPLC system. Samples were loaded onto a PepMap 100 C18 column (0.3 mm × 150 mm, 2 μm, Thermo Fisher Scientific). Separation of the samples was performed using mobile phase A (0.1% formic acid in water) and mobile phase B (0.1% formic acid in acetonitrile) at a rate of 6 μL/min. The samples were eluted with a gradient consisting of 5 to 60% solvent B over 15 min, ramped to 95% B over 2 min, held for 3 min, and then returned to 5% B over 3 min and held for 8 min. All data were acquired in positive ion mode. Collision-induced dissociation (CID) was used to fragment molecules, with an isolation width of 3 m/z units. The spray voltage was set to 3600 V, and the temperature of the heated capillary was set to 300 °C. In CID mode, full MS scans were acquired from m/z 150 to 1200 followed by eight subsequent MS2 scans on the top eight most abundant peaks. The orbitrap resolution for both the MS1 and MS2 scans was 120,000. The expected mass accuracy was < 3 ppm.",
+                "instrumentation_method": "orbitrapSharp"
+            }
+        ]
+    },
+    "genomes": [
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "RefSeq_accession": "NZ_JADWYI000000000.1"
+            },
+            "BioSample_accession": "SAMN16878660",
+            "genome_label": "A.prim"
+        }
+    ],
+    "genome_metabolome_links": [
+        {
+            "genome_label": "A.prim",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-1.mzML",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp"
+        },
+        {
+            "genome_label": "A.prim",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-2.mzML",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-3.mzML",
+            "genome_label": "A.prim",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp"
+        },
+        {
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-4.mzML",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp",
+            "genome_label": "A.prim"
+        },
+        {
+            "genome_label": "A.prim",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-5.mzML",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp"
+        },
+        {
+            "genome_label": "A.prim",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000088226/peak/Fraction-6-6.mzML",
+            "sample_preparation_label": "A.prim VY2 liqiud",
+            "extraction_method_label": "Resins XAD-16",
+            "instrumentation_method_label": "orbitrapSharp"
+        }
+    ],
+    "BGC_MS2_links": [],
+    "proteomes": []
+}

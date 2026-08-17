@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAB57208.1</td>
+              <td>putative_dTDP-glucose-4,6-dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000760.5">BGC0000760.5</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>82.9</td>
+              <td>398.0</td>
+              <td>9.26e-131</td>
+          </tr>
+    
+          <tr>
+              <td>AAF23989.1</td>
+              <td>WbpM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000781.3">BGC0000781.3</a></td>
+              <td>saccharide</td>
+              <td>47.0</td>
+              <td>77.7</td>
+              <td>399.0</td>
+              <td>1.09e-130</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83839.1</td>
+              <td>Gdr</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>43.0</td>
+              <td>86.2</td>
+              <td>396.0</td>
+              <td>3.77e-130</td>
+          </tr>
+    
+          <tr>
+              <td>AAK27405.1</td>
+              <td>putative_epimerase/dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000785.3">BGC0000785.3</a></td>
+              <td>saccharide</td>
+              <td>41.0</td>
+              <td>83.5</td>
+              <td>329.0</td>
+              <td>3.75e-104</td>
+          </tr>
+    
+          <tr>
+              <td>AAD05468.1</td>
+              <td>putative_epimerase/dehydratase_WbiI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000782.3">BGC0000782.3</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>83.5</td>
+              <td>324.0</td>
+              <td>3.11e-102</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64643.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000758.4">BGC0000758.4</a></td>
+              <td>saccharide:exopolysaccharide</td>
+              <td>40.0</td>
+              <td>74.5</td>
+              <td>305.0</td>
+              <td>3.79e-95</td>
+          </tr>
+    
+          <tr>
+              <td>CAI47655.1</td>
+              <td>putative_tobramycin/apramycin_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000692.5">BGC0000692.5</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>49.2</td>
+              <td>141.0</td>
+              <td>4.89e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAG26477.1</td>
+              <td>putative_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001411.3">BGC0001411.3</a></td>
+              <td>saccharide</td>
+              <td>32.0</td>
+              <td>46.5</td>
+              <td>132.0</td>
+              <td>9.95e-34</td>
+          </tr>
+    
+          <tr>
+              <td>KKY62496.1</td>
+              <td>UDP-N-acetylglucosamine_4,6-dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001747.3">BGC0001747.3</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>46.8</td>
+              <td>130.0</td>
+              <td>6.58e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74255.1</td>
+              <td>TxnB1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>50.5</td>
+              <td>74.0</td>
+              <td>9.25e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ77689.1</td>
+              <td>ChlC2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000036.5">BGC0000036.5</a></td>
+              <td>PKS:Type I+saccharide:oligosaccharide</td>
+              <td>26.0</td>
+              <td>42.3</td>
+              <td>58.0</td>
+              <td>9.73e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

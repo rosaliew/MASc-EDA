@@ -1,0 +1,40 @@
+OMETAFLOW_SERVER: http://ometaflow-launchserver:4000
+OMETALIBRARY_SERVER: http://ometalibrary-web:5000/library
+OMETAMASST_SERVER: http://ometamasst-web:5000/masst
+OMETATASK: 5d7dd02dcfa04e059be6022795cd4a36
+OMETAUSER: rosaliegwang
+clustering_tool: falcon
+create_time: 2026-06-24 20:00:05 PDT-0700
+description: Shewanella B2R08 CMN
+falcon_eps: '0.1'
+falcon_fragment_tolerance: '0.05'
+falcon_max_mz: '30000'
+falcon_min_mz: '0'
+falcon_pm_tolerance: 20 ppm
+fragment_tolerance: '0.5'
+input_libraries: /data/nf_data/server/nf_tasks/5d7dd02dcfa04e059be6022795cd4a36/input_libraries
+input_spectra: /data/nf_data/server/nf_tasks/5d7dd02dcfa04e059be6022795cd4a36/input_spectra
+library_analog_search: '0'
+library_min_cosine: '0.7'
+library_min_matched_peaks: '6'
+library_topk: '1'
+massql_filter: None
+metadata_filename: /data/nf_data/server/nf_tasks/5d7dd02dcfa04e059be6022795cd4a36/metadata_filename/MSV000090080-metadata.txt
+metadata_per_file_grouping: 'Yes'
+min_cluster_size: '2'
+min_peak_intensity: '0.0'
+networking_max_shift: '1999'
+networking_min_cosine: '0.7'
+networking_min_matched_peaks: '6'
+pm_tolerance: '2.0'
+precursor_filter: '1'
+publishdir: /data/nf_data/server/nf_tasks/5d7dd02dcfa04e059be6022795cd4a36
+redu_metadata_integration: 'No'
+similarity: gnps
+task: 5d7dd02dcfa04e059be6022795cd4a36
+topology_maxcomponent: '100'
+topology_topk: '10'
+usi: ''
+window_filter: '1'
+workflow_version: SERVER:2026.05.21;WORKFLOW:2026.06.12
+workflowname: classical_networking_workflow

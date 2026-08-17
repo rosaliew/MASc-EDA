@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>APZ78758.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001423.4">BGC0001423.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>38.0</td>
+              <td>77.2</td>
+              <td>262.0</td>
+              <td>1.05e-81</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78731.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001421.4">BGC0001421.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>37.0</td>
+              <td>82.8</td>
+              <td>261.0</td>
+              <td>4.55e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AQM37586.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001424.4">BGC0001424.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>39.0</td>
+              <td>77.4</td>
+              <td>259.0</td>
+              <td>1.73e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78771.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001425.4">BGC0001425.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>38.0</td>
+              <td>82.8</td>
+              <td>258.0</td>
+              <td>4.22e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78784.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001426.4">BGC0001426.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>38.0</td>
+              <td>82.8</td>
+              <td>258.0</td>
+              <td>5.93e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78746.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001422.4">BGC0001422.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>38.0</td>
+              <td>77.4</td>
+              <td>257.0</td>
+              <td>1.22e-79</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78797.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001427.4">BGC0001427.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>37.0</td>
+              <td>82.8</td>
+              <td>256.0</td>
+              <td>3.15e-79</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78811.1</td>
+              <td>ATP-dependent_RNA_helicase_RhlE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001428.4">BGC0001428.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>37.0</td>
+              <td>82.8</td>
+              <td>253.0</td>
+              <td>2.14e-78</td>
+          </tr>
+    
+          <tr>
+              <td>AAY39327.1</td>
+              <td>Helicase,_C-terminal:DEAD/DEAH_box_helicase,_N-terminal</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002060.3">BGC0002060.3</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>38.0</td>
+              <td>75.4</td>
+              <td>239.0</td>
+              <td>1.11e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53492.1</td>
+              <td>putative_ATP-dependent_RNA_helicase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000774.4">BGC0000774.4</a></td>
+              <td>saccharide:lipopolysaccharide</td>
+              <td>43.0</td>
+              <td>41.6</td>
+              <td>154.0</td>
+              <td>7.34e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24494.1</td>
+              <td>ATP-dependent_RNA_helicase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000806.5">BGC0000806.5</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>76.0</td>
+              <td>60.0</td>
+              <td>3.47e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

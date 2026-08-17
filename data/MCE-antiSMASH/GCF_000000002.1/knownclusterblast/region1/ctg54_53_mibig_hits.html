@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CDF96613.1</td>
+              <td>RhlB,_TDP-rhamnosyltransferase_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001149.5">BGC0001149.5</a></td>
+              <td>NRPS:Type I+saccharide:hybrid/tailoring</td>
+              <td>25.0</td>
+              <td>96.6</td>
+              <td>91.0</td>
+              <td>2.65e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAS79457.1</td>
+              <td>putative_D-allose_glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000035.5">BGC0000035.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>33.0</td>
+              <td>69.0</td>
+              <td>2.08e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABB52543.1</td>
+              <td>6-deoxy-D-allosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000047.5">BGC0000047.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>40.4</td>
+              <td>68.0</td>
+              <td>4.91e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94968.1</td>
+              <td>AlmTII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001396.5">BGC0001396.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>40.4</td>
+              <td>68.0</td>
+              <td>4.91e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QIS20455.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002816.2">BGC0002816.2</a></td>
+              <td>PKS:Modular type I</td>
+              <td>29.0</td>
+              <td>36.8</td>
+              <td>57.0</td>
+              <td>1.87e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABK58687.1</td>
+              <td>PdmQ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000256.3">BGC0000256.3</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>85.2</td>
+              <td>55.0</td>
+              <td>8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77712.1</td>
+              <td>Gtf2_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000364.4">BGC0000364.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>40.1</td>
+              <td>54.0</td>
+              <td>2.38e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ94402.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000040.5">BGC0000040.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>27.4</td>
+              <td>53.0</td>
+              <td>4.19e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77709.1</td>
+              <td>Gtf1_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000364.4">BGC0000364.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>20.4</td>
+              <td>53.0</td>
+              <td>4.23e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77689.1</td>
+              <td>Gtf1_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000363.4">BGC0000363.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>20.4</td>
+              <td>52.0</td>
+              <td>5.61e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77684.1</td>
+              <td>Gtf3_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000363.4">BGC0000363.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>30.0</td>
+              <td>51.0</td>
+              <td>1.61e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44208.1</td>
+              <td>GtfA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>20.4</td>
+              <td>51.0</td>
+              <td>1.74e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AAN05756.1</td>
+              <td>rhamnosyltransferase_RtfA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000769.3">BGC0000769.3</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>20.4</td>
+              <td>50.0</td>
+              <td>4.07e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

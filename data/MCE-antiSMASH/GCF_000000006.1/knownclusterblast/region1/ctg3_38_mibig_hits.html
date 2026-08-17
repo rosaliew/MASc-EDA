@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABI91455.1</td>
+              <td>transcriptional_regulator,_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001094.5">BGC0001094.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>37.0</td>
+              <td>98.7</td>
+              <td>119.0</td>
+              <td>1.17e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABC34774.1</td>
+              <td>autoinducer-binding_transcriptional_regulator,_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000961.5">BGC0000961.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>94.8</td>
+              <td>106.0</td>
+              <td>6.48e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CAD70192.1</td>
+              <td>putative_HTH_LUXR_domain-containing_transcription_activator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001047.4">BGC0001047.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>49.0</td>
+              <td>42.6</td>
+              <td>64.0</td>
+              <td>1.12e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAC41336.1</td>
+              <td>transcription_regulator_like_protein_EpsA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000761.5">BGC0000761.5</a></td>
+              <td>saccharide</td>
+              <td>39.0</td>
+              <td>34.8</td>
+              <td>47.0</td>
+              <td>1.56e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

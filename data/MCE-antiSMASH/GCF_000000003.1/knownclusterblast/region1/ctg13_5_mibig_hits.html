@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFO89680.1</td>
+              <td>putative_ferrichrome_transport_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002694.2">BGC0002694.2</a></td>
+              <td>other:other</td>
+              <td>99.0</td>
+              <td>100.0</td>
+              <td>492.0</td>
+              <td>5.87e-179</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50192.1</td>
+              <td>putative_ferric_siderophore_ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000410.5">BGC0000410.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>45.0</td>
+              <td>96.4</td>
+              <td>212.0</td>
+              <td>2.6e-68</td>
+          </tr>
+    
+          <tr>
+              <td>BAC87901.1</td>
+              <td>probable_ferric_acinetobactin_transport_system_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000294.5">BGC0000294.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>92.9</td>
+              <td>205.0</td>
+              <td>1.2e-65</td>
+          </tr>
+    
+          <tr>
+              <td>WP_006051173.1</td>
+              <td>ATP-binding_cassette_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001999.3">BGC0001999.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>94.8</td>
+              <td>175.0</td>
+              <td>7.92e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AXF14777.1</td>
+              <td>iron-hydroxamate_transporter_ATP-binding_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002563.3">BGC0002563.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>94.8</td>
+              <td>171.0</td>
+              <td>4.72e-52</td>
+          </tr>
+    
+          <tr>
+              <td>FNF07_04290</td>
+              <td>ATP-binding_cassette_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002329.2">BGC0002329.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>87.7</td>
+              <td>171.0</td>
+              <td>4.85e-52</td>
+          </tr>
+    
+          <tr>
+              <td>KJY94245.1</td>
+              <td>iron-hydroxamate_transporter_ATP-binding_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002691.2">BGC0002691.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>169.0</td>
+              <td>1.6e-51</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ83030.1</td>
+              <td>ATP-binding_cassette_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002564.3">BGC0002564.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>94.8</td>
+              <td>167.0</td>
+              <td>9.05e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AAK95839.1</td>
+              <td>ABC-transport_protein_PhuC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002495.2">BGC0002495.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>92.9</td>
+              <td>166.0</td>
+              <td>2.54e-50</td>
+          </tr>
+    
+          <tr>
+              <td>BAD02214.1</td>
+              <td>ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002682.2">BGC0002682.2</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>95.6</td>
+              <td>160.0</td>
+              <td>3.26e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ59906.1</td>
+              <td>enterobactin-iron_transport_system_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002680.2">BGC0002680.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>94.4</td>
+              <td>160.0</td>
+              <td>4.33e-48</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72347.1</td>
+              <td>ATP-binding_protein_of_iron(III)_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>37.0</td>
+              <td>100.0</td>
+              <td>160.0</td>
+              <td>7.54e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CBG75495.1</td>
+              <td>putative_siderophore_transport_system_ATP-binding_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000423.5">BGC0000423.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>91.3</td>
+              <td>160.0</td>
+              <td>1.7e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ABM30208.1</td>
+              <td>PvuE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000947.5">BGC0000947.5</a></td>
+              <td>other:other</td>
+              <td>38.0</td>
+              <td>99.6</td>
+              <td>158.0</td>
+              <td>2.51e-47</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202948.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>90.9</td>
+              <td>159.0</td>
+              <td>4.17e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AGE11895.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000366.5">BGC0000366.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>90.9</td>
+              <td>155.0</td>
+              <td>5.34e-46</td>
+          </tr>
+    
+          <tr>
+              <td>RUP78896.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002073.3">BGC0002073.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>88.9</td>
+              <td>155.0</td>
+              <td>7.72e-46</td>
+          </tr>
+    
+          <tr>
+              <td>MBX9445648.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002414.3">BGC0002414.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>88.1</td>
+              <td>152.0</td>
+              <td>5.9e-45</td>
+          </tr>
+    
+          <tr>
+              <td>ACU36655.1</td>
+              <td>ABC_transporter_related</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000392.5">BGC0000392.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>95.2</td>
+              <td>150.0</td>
+              <td>2.1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>CAB53325.1</td>
+              <td>putative_iron-siderophore_ABC-transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000325.5">BGC0000325.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>88.5</td>
+              <td>150.0</td>
+              <td>5.83e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AGI92076.1</td>
+              <td>Iron(III)_dicitrate_transport_system_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002115.3">BGC0002115.3</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>41.0</td>
+              <td>98.8</td>
+              <td>146.0</td>
+              <td>2.01e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AAD48883.1</td>
+              <td>ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002494.3">BGC0002494.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>85.3</td>
+              <td>143.0</td>
+              <td>3.18e-41</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29817.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001870.3">BGC0001870.3</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>90.9</td>
+              <td>139.0</td>
+              <td>5.64e-40</td>
+          </tr>
+    
+          <tr>
+              <td>EET76299.1</td>
+              <td>ABC_transporter,_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002685.2">BGC0002685.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>89.3</td>
+              <td>138.0</td>
+              <td>1.96e-39</td>
+          </tr>
+    
+          <tr>
+              <td>DSB67_23670</td>
+              <td>Fe(3+)-dicitrate_ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002415.2">BGC0002415.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>43.3</td>
+              <td>80.0</td>
+              <td>1.28e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

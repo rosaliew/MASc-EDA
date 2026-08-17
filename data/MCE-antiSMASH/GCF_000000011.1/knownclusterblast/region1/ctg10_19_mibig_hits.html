@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SCF06541.1</td>
+              <td>Phosphomannomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002435.3">BGC0002435.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>101.1</td>
+              <td>145.0</td>
+              <td>5.22e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90889.1</td>
+              <td>phosphomannomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000787.3">BGC0000787.3</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>95.1</td>
+              <td>112.0</td>
+              <td>1.09e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AAG41691.1</td>
+              <td>phosphomannomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000788.3">BGC0000788.3</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>95.5</td>
+              <td>112.0</td>
+              <td>2.06e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AAC77847.1</td>
+              <td>phosphomannomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000799.5">BGC0000799.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>99.6</td>
+              <td>110.0</td>
+              <td>4.94e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAD19799.1</td>
+              <td>putative_phosphomannomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000777.3">BGC0000777.3</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>99.6</td>
+              <td>108.0</td>
+              <td>3.05e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AAC27539.1</td>
+              <td>ManB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000773.3">BGC0000773.3</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>99.4</td>
+              <td>107.0</td>
+              <td>9.93e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83843.1</td>
+              <td>Pgm</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>96.0</td>
+              <td>92.0</td>
+              <td>1.1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAA27610.1</td>
+              <td>phosphomannomutase/phosphoglucomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000774.4">BGC0000774.4</a></td>
+              <td>saccharide:lipopolysaccharide</td>
+              <td>25.0</td>
+              <td>94.7</td>
+              <td>89.0</td>
+              <td>1.46e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,203 @@
+{
+    "version": "3",
+    "personal": {
+        "submitter_name": "cole stevens",
+        "submitter_orcid": "https://orcid.org/0000-0001-6668-9419",
+        "submitter_email": "stevens@olemiss.edu",
+        "submitter_name_secondary": "andrew ahearne",
+        "submitter_email_secondary": "aahearne@go.olemiss.edu",
+        "PI_name": "cole stevens",
+        "PI_institution": "University of Mississippi",
+        "PI_email": "stevens@olemiss.edu"
+    },
+    "metabolomics": {
+        "project": {
+            "GNPSMassIVE_ID": "MSV000087996",
+            "MaSSIVE_URL": "https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=d04d3be7444648f7a1404c8ceda16830&view=advanced_view",
+            "molecular_network": "fa39505b732940178a07363124f63340"
+        }
+    },
+    "experimental": {
+        "sample_preparation": [
+            {
+                "medium_details": {
+                    "medium_type": "solid",
+                    "medium": "other",
+                    "Other_medium": "VY/2",
+                    "Other_medium_link": "https://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium9.pdf"
+                },
+                "growth_parameters": {
+                    "growth_temperature": 30,
+                    "growth_phase_OD": "stationary",
+                    "growth_duration": 336
+                },
+                "aeration": {
+                    "aeration_type": "not shaking"
+                },
+                "sample_preparation_method": "VY/2"
+            }
+        ],
+        "extraction_methods": [
+            {
+                "solvents": [
+                    {
+                        "ratio": 1,
+                        "solvent": "http://purl.obolibrary.org/obo/CHEBI_27750"
+                    }
+                ],
+                "extracted_material": "cells_supernatant",
+                "extraction_method": "EtOAc"
+            }
+        ],
+        "instrumentation_methods": [
+            {
+                "instrumentation": {
+                    "instrument": "http://purl.obolibrary.org/obo/MS_1000484"
+                },
+                "column": "Reverse Phase",
+                "mode": "http://purl.obolibrary.org/obo/MS_1000130",
+                "ionization": {
+                    "ionization_type": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                "range": "150-1500",
+                "collision_energy": "35% NCE",
+                "buffering": "water + 0.1% formic acid and acetonitrile + 0.1% formic acid",
+                "other_instrumentation": "5 to 60% solvent B over 15 min, ramped to 95% B over 2 min, held for 3 min, and then returned to 5% B over 3 min and held for 8 min",
+                "instrumentation_method": "standard"
+            }
+        ]
+    },
+    "genomes": [
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "MPIN00000000.1"
+            },
+            "BioSample_accession": "SAMN06011414",
+            "genome_label": "C. ferrugineus",
+            "publications": "28183768"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "POI00000000.1"
+            },
+            "BioSample_accession": "SAMN06020410",
+            "publications": "28232451",
+            "genome_label": "A. sp. CbG35"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "RefSeq_accession": "NZ_JADWYI000000000.1"
+            },
+            "BioSample_accession": "SAMN16878660",
+            "genome_label": "A. primigenium",
+            "publications": "34202719"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "JAFIMU000000000.1"
+            },
+            "BioSample_accession": "SAMN17960305",
+            "publications": "34202719",
+            "genome_label": "C. macrosporus"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "AFIMS000000000.1"
+            },
+            "BioSample_accession": "SAMN17960307",
+            "genome_label": "C. sp. NCSPR001",
+            "publications": "34202719"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "JAFIMT000000000.1"
+            },
+            "BioSample_accession": "SAMN17960306",
+            "genome_label": "C. exiguus NCCRE002",
+            "publications": "34202719"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "CP071090.1"
+            },
+            "publications": "34202719",
+            "BioSample_accession": "SAMN17960309",
+            "genome_label": "P. sp. SCPEA002"
+        },
+        {
+            "genome_ID": {
+                "genome_type": "genome",
+                "GenBank_accession": "CP071091.1"
+            },
+            "publications": "34202719",
+            "BioSample_accession": "SAMN17960308",
+            "genome_label": "M. sp. SCHIC003"
+        }
+    ],
+    "genome_metabolome_links": [
+        {
+            "genome_label": "C. ferrugineus",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/20191112_C_fe_20%DMSO-1.mzML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "A. sp. CbG35",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/20190210-AspCg35_DMSO-1.mzML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "A. primigenium",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/20190819_A_prim_only_VY2-1.mzML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "C. macrosporus",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/9-13-2020-Condrococcus_macrosporus_Con-1.mzXML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "C. sp. NCSPR001",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/01-08-2021-Spy-Spruce1-1.mzXML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "C. exiguus NCCRE002",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/01-08-2021-NCCrepe2-1.mzXML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "P. sp. SCPEA002",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/01-08-2021-SCPeach2-1.mzXML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        },
+        {
+            "genome_label": "M. sp. SCHIC003",
+            "metabolomics_file": "ftp://massive.ucsd.edu/MSV000087996//peak/01-08-2021-SCHickory3-1.mzXML",
+            "sample_preparation_label": "VY/2",
+            "extraction_method_label": "EtOAc",
+            "instrumentation_method_label": "standard"
+        }
+    ],
+    "proteomes": []
+}
