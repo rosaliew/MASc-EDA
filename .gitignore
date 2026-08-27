@@ -75,3 +75,28 @@ venv/
 .idea/
 *:Zone.Identifier
 *Zone.Identifier*
+
+# GNPS task result files cached by scripts/build_ground_truth.py --resolve-gnps
+data/PoDP/gnps_cache/
+
+# MIBiG release bundle, re-downloaded on demand by build_ground_truth.py
+data/MiBIG_4.0/
+
+# Staged genome re-downloads (large; reproducible from refetch_plan.csv)
+data/PoDP/genome_refetch/*.gbk
+
+# --- Pipeline output: regenerable, keyed to directory name at any depth -----
+# antiSMASH, BiG-SCAPE and GNPS job results are outputs of a recorded input +
+# a recorded tool version. Tracking them costs hundreds of MB and gains nothing
+# the scripts cannot rebuild. GitHub also hard-rejects any single file >100 MB,
+# and gnps_function/ contains one at 102 MB.
+*_antiSMASH/
+antismash/
+bigscape_results/
+gnps_function/
+MCE_GNPS/
+MCE_GNPS_indiv/
+
+# Published supplements: re-downloadable from the paper, not our data.
+# The .xlsx IS kept -- the NPOmix validation table is joined against in code.
+data/NPOmix_inputs/*.pdf
