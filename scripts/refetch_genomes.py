@@ -46,9 +46,23 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GROUND_TRUTH = ROOT / "data" / "PoDP" / "ground_truth.csv"
+STRAIN_PAIRINGS = ROOT / "data" / "PoDP" / "strain_pairings.csv"
 PAIRED_DATA = ROOT / "data" / "PoDP" / "ground_truth_paired_data"
 STAGING = ROOT / "data" / "PoDP" / "genome_refetch"
-PLAN_CSV = STAGING / "refetch_plan.csv"
+REPORTS = ROOT / "data" / "PoDP" / "reports"
+
+
+#: one plan per scope, so a narrow run cannot overwrite a broader run's audit trail
+def plan_path(scope: str) -> Path:
+    """Plans live with the reports, not in staging.
+
+    Staging is disposable -- once everything is promoted the tree is deleted --
+    but the plan is the provenance record for every genome: which route
+    resolved it, whether the strain verified, and why anything was held back.
+    That has to outlive the .gbk files it describes.
+    """
+    REPORTS.mkdir(parents=True, exist_ok=True)
+    return REPORTS / f"refetch_plan_{scope}.csv"
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 #: NCBI allows 3 requests/second without an API key; stay comfortably under it.
@@ -189,12 +203,38 @@ def scale_check(path: Path) -> tuple[str, int, int]:
 # --------------------------------------------------------------------------
 
 def broken_records(rows: list[dict]) -> dict[tuple[str, str], dict]:
-    """{(study_id, accession): row} for every genome that is not usable."""
+    """{(study_id, accession): row} for every genome that is not usable.
+
+    Deduplicated on (study, accession): one genome record is fetched once even
+    when several links or pairings cite it.
+    """
     out: dict[tuple[str, str], dict] = {}
     for row in rows:
         if row["genome_accession"] and row["status_genome"] != "sequence_ok":
             out.setdefault((row["study_id"], row["genome_accession"]), row)
     return out
+
+
+def load_sources(ground_truth: Path, pairings: Path, scope: str) -> list[dict]:
+    """Rows to consider, from ground_truth.csv and/or strain_pairings.csv.
+
+    ``linked`` covers only genomes a ground-truth link cites -- enough to score
+    the links. ``all`` adds every genome its study declares, which is what a
+    per-project Metcalf run actually needs, since the statistic works across the
+    whole strain axis rather than the linked strains alone.
+    """
+    rows: list[dict] = []
+    if scope in ("linked", "all"):
+        with ground_truth.open(newline="", encoding="utf-8") as handle:
+            rows.extend(csv.DictReader(handle))
+    if scope == "all":
+        studies = {r["study_id"] for r in rows}
+        with pairings.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                # only studies that actually hold ground truth are worth fetching
+                if row["study_id"] in studies:
+                    rows.append(row)
+    return rows
 
 
 def plan_one(study: str, accession: str, row: dict) -> dict:
@@ -410,18 +450,23 @@ def main() -> int:
                         help="copy validated downloads into the paired-data tree")
     parser.add_argument("--limit", type=int, help="stop after N records (for testing)")
     parser.add_argument("--ground-truth", type=Path, default=GROUND_TRUTH)
+    parser.add_argument("--pairings", type=Path, default=STRAIN_PAIRINGS)
+    parser.add_argument("--scope", choices=("linked", "all"), default="linked",
+                        help="'linked': genomes cited by a ground-truth link. "
+                             "'all': every genome declared by those studies.")
     parser.add_argument("--staging", type=Path, default=STAGING)
     args = parser.parse_args()
 
     if not any((args.plan, args.download, args.promote)):
         parser.error("choose --plan, --download or --promote")
 
-    with args.ground_truth.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle))
+    rows = load_sources(args.ground_truth, args.pairings, args.scope)
     broken = broken_records(rows)
+    print(f"scope: {args.scope}")
     print(f"genome records needing attention: {len(broken)}")
 
-    if args.plan or not PLAN_CSV.exists():
+    plan_csv = plan_path(args.scope)
+    if args.plan or not plan_csv.exists():
         plan: list[dict] = []
         for index, ((study, accession), row) in enumerate(sorted(broken.items()), 1):
             if args.limit and index > args.limit:
@@ -435,8 +480,8 @@ def main() -> int:
             print(f"\n!! {rejected} label-matched record(s) are the WRONG STRAIN "
                   f"and will not be promoted")
         flagged = flag_collisions(plan)
-        write_csv(PLAN_CSV, plan)
-        print(f"\nplan written: {PLAN_CSV}")
+        write_csv(plan_csv, plan)
+        print(f"\nplan written: {plan_csv}")
         summarise(plan, "route", "routes resolved")
         if flagged:
             print(f"\n!! {flagged} record(s) share a resolved assembly with another "
@@ -446,7 +491,7 @@ def main() -> int:
                     print(f"   {entry['genome_accession']:<20} {entry['resolved_assembly']:<18}"
                           f"also claimed by {entry['collision']}")
     else:
-        with PLAN_CSV.open(newline="", encoding="utf-8") as handle:
+        with plan_csv.open(newline="", encoding="utf-8") as handle:
             plan = list(csv.DictReader(handle))
 
     if args.download:
@@ -456,7 +501,7 @@ def main() -> int:
             results.append(result)
             print(f"  [{index:>2}/{len(plan)}] {result['genome_accession']:<22}"
                   f"{result['new_status']:<28}{result['bytes']}")
-        write_csv(PLAN_CSV, results)
+        write_csv(plan_csv, results)
         summarise(results, "new_status", "download outcome")
         summarise(results, "scale", "record scale")
         plan = results
@@ -464,7 +509,7 @@ def main() -> int:
     if args.promote:
         for entry in plan:
             entry["promoted"] = promote_one(entry, args.staging, PAIRED_DATA)
-        write_csv(PLAN_CSV, plan)
+        write_csv(plan_csv, plan)
         summarise(plan, "promoted", "promotion outcome")
 
     return 0

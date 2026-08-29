@@ -65,10 +65,11 @@ ROOT = Path(__file__).resolve().parent.parent
 PODP_DIR = ROOT / "data" / "PoDP" / "json_descriptors"
 DOWNLOAD_DIR = ROOT / "data" / "PoDP" / "ground_truth_paired_data"
 MIBIG_VERSION = "4.0"
-#: Cached, gitignored, and re-downloaded on demand -- this is a derived artifact,
-#: not project data, so deleting it must never break the build.
-MIBIG_CACHE = ROOT / "data" / "PoDP" / "mibig_cache"
-MIBIG_DIR = MIBIG_CACHE / f"mibig_json_{MIBIG_VERSION}"
+#: Gitignored and re-downloaded on demand -- a released reference set is a derived
+#: artifact reproducible from one URL, not project data, so deleting it must never
+#: break the build and it does not belong in version control.
+MIBIG_CACHE = ROOT / "data"
+MIBIG_DIR = MIBIG_CACHE / f"MiBIG_{MIBIG_VERSION}"
 #: MIBiG 3.1, as shipped by NPLinker's own downloader. Kept only so
 #: --migration-report can diff the two releases.
 MIBIG_31_DIR = (
@@ -184,7 +185,7 @@ def ensure_mibig(version: str, cache: Path) -> Path:
     Same bundle URL NPLinker itself uses. Kept out of git: a 15 MB reference set
     is reproducible from one URL, so it is cached rather than vendored.
     """
-    target = cache / f"mibig_json_{version}"
+    target = cache / f"MiBIG_{version}"
     if target.is_dir() and any(target.glob("BGC*.json")):
         return target
 
@@ -200,7 +201,11 @@ def ensure_mibig(version: str, cache: Path) -> Path:
     with tarfile.open(fileobj=io.BytesIO(payload)) as archive:
         archive.extractall(cache)
 
-    # bundles extract either as mibig_json_<version>/ or as a bare pile of files
+    # the bundle extracts as mibig_json_<version>/ (or a bare pile of files);
+    # normalise either onto the folder name this project uses
+    extracted = cache / f"mibig_json_{version}"
+    if extracted.is_dir() and not target.is_dir():
+        extracted.rename(target)
     if not target.is_dir():
         target.mkdir(parents=True, exist_ok=True)
         for path in cache.glob("BGC*.json"):
@@ -1315,7 +1320,9 @@ def main() -> int:
     write_csv(args.out_dir / "ground_truth.csv", link_rows)
     write_csv(args.out_dir / "strain_pairings.csv", pairing_rows)
     if report:
-        write_csv(args.out_dir / "mibig_migration_report.csv", report)
+        migration_path = args.out_dir / "reports" / "mibig_migration_report.csv"
+        migration_path.parent.mkdir(parents=True, exist_ok=True)
+        write_csv(migration_path, report)
         print(f"wrote mibig_migration_report.csv ({len(report)} accessions)")
     print(f"\nwrote ground_truth.csv    ({len(link_rows)} rows)")
     print(f"wrote strain_pairings.csv ({len(pairing_rows)} rows)")

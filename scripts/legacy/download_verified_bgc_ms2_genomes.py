@@ -24,13 +24,13 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.podp_online_file_locator import collect_verified_bgc_ms2_genome_manifest
 
-OUT_ROOT = ROOT / "data" / "PoDP" / "verified_bgc_ms2_downloads"
+OUT_ROOT = ROOT / "data" / "PoDP" / "ground_truth_paired_data"
 PODP_DIR = ROOT / "data" / "PoDP" / "json_descriptors"
 LINK_MANIFEST_PATH = OUT_ROOT / "genome_ms2_link_manifest.csv"
 

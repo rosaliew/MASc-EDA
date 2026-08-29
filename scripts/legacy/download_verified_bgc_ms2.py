@@ -17,14 +17,14 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.podp_online_file_locator import collect_verified_bgc_ms2_manifest, is_verified_bgc_ms2_link
 
-DEFAULT_MANIFEST = ROOT / "data" / "PoDP" / "verified_bgc_ms2_manifest.json"
-OUT_ROOT = ROOT / "data" / "PoDP" / "verified_bgc_ms2_downloads"
+DEFAULT_MANIFEST = ROOT / "data" / "PoDP" / "legacy" / "verified_bgc_ms2_manifest.json"
+OUT_ROOT = ROOT / "data" / "PoDP" / "ground_truth_paired_data"
 
 
 def safe_filename(value: str) -> str:
