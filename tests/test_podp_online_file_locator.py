@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from scripts.podp_online_file_locator import (
+from scripts.podp.podp_online_file_locator import (
     build_download_plan,
     collect_verified_bgc_ms2_genome_links,
     collect_verified_bgc_ms2_links,

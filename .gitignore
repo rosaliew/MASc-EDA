@@ -104,3 +104,18 @@ data/NPOmix_inputs/*.pdf
 # --- Local tool / editor state ----------------------------------------------
 # Machine-specific: absolute interpreter paths and per-machine permissions.
 .claude/settings.local.json
+
+# --- Archived / retired artifacts -------------------------------------------
+# Superseded CSVs, notebooks and scripts are moved aside rather than deleted so
+# a number in an old draft can still be traced. They are deliberately NOT
+# tracked: they encode definitions we have since replaced, and keeping them in
+# git invites someone re-deriving a stale count from them. Keyed to directory
+# name at any depth so it catches archive/ nested under results/, notebooks/ etc.
+archive/
+.archive/
+_archived/
+
+# --- Large regenerable data ---------------------------------------------------
+# Downloaded/derived genome and MS2 sample files, dominated by files >50MB.
+# Re-downloadable from data/raw + the accessions recorded in results/podp/.
+data/processed/

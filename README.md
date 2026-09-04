@@ -19,11 +19,11 @@ tests/       unit tests
 
 ### The main artifact
 
-`data/PoDP/ground_truth.csv` — **115 BGC↔MS2 links across 63 columns**, built from 76
+`results/podp/podp_bgc_ms2_links.csv` — **115 BGC↔MS2 links across 63 columns**, built from 76
 PoDP JSON descriptors. Links are tiered by evidence strength, with InChIKey comparison
 (not string matching) as the authoritative structural check.
 
-Its companion `data/PoDP/strain_pairings.csv` holds 4,966 strain↔file rows. These record
+Its companion `results/podp/podp_genome_metabolome_pairs.csv` holds 4,966 genome↔metabolome file-pair rows. These record
 *declared co-origin only* and are **not** ground truth — see `data/PoDP/README.md`.
 
 ## Datasets
@@ -78,3 +78,56 @@ Everything excluded is either re-downloadable from a recorded accession or rebui
 the scripts above from a recorded input and tool version. `data/PoDP/reports/refetch_plan_all.csv`
 is the provenance record for every genome: which route resolved it, whether the strain
 verified, and why anything was held back.
+
+
+# data/PoDP layout
+
+```
+podp_bgc_ms2_links.csv            115 BGC<->MS2 links, 63 cols. UNFILTERED source (gold+silver+bronze).
+podp_genome_metabolome_pairs.csv  4,966 declared genome<->metabolome pairs. Co-origin only, NOT validated.
+curated_ground_truth_links.csv      64 curated experimentally-validated links (the evaluation set).
+curated_paired_dataset.csv       3,585 curated pairs (53 validated_pairs + 3,532 unvalidated_pairs).
+
+json_descriptors/         77 PoDP descriptors, verbatim. The source of truth.
+ground_truth_paired_data/ downloaded genomes + MS2 runs, one folder per study_id.
+                          *.gbk.stub = a broken file kept beside its replacement.
+gnps_cache/               15 GNPS tasks: clusterinfo.tsv, params.tsv, summary.tsv.
+antismash/                antiSMASH output (one study so far).
+
+reports/                  derived diagnostics -- regenerable, safe to delete.
+legacy/                   superseded artifacts kept for provenance.
+```
+
+## reports/
+
+| file | written by |
+|---|---|
+| `mibig_migration_report.csv` | `build_ground_truth.py --mibig-migration` |
+| `refetch_plan_all.csv` | `refetch_genomes.py --scope all --plan` |
+| `jgi_worklist_297c364c.csv` | ad hoc; the JGI-only genomes |
+| `nplinker_podp_screen.csv` | `screen_nplinker_podp.py` |
+| `unavailable_data_inventory.csv` / `.md` | `unavailable_inventory.py` |
+
+`refetch_plan_all.csv` is the **provenance record for every genome**: which route
+resolved it, whether the strain verified, and why anything was held back. The
+`genome_refetch/` staging tree it describes was deleted on 2026-08-27 once
+everything was promoted -- 226 of its 250 files were byte-identical duplicates of
+promoted files, and the other 24 were quarantined (wrong strain, metagenome-scale,
+no sequence). All 24 remain listed in this CSV and are re-downloadable with
+`refetch_genomes.py --scope all --download`.
+
+## legacy/
+
+`verified_bgc_ms2_manifest.json` and `verified_bgc_ms2_genome_manifest.json`,
+superseded by `podp_bgc_ms2_links.csv`. Verified 2026-08-27: all 67 links in both
+appear in `podp_bgc_ms2_links.csv`, matched on project + MS2 scan + run URL. The two
+scripts that wrote them are in `scripts/legacy/`.
+
+## gnps_cache/ is more useful than it looks
+
+`gnps_cache/<task>/summary.tsv` is **byte-identical** to the `file_mappings.tsv`
+that NPLinker's `arrange_gnps()` extracts from a GNPS task archive (verified by
+md5 on task `c22f44b14a3d450eb836d607cb9521bb`). Its columns after the first six
+are strain names -- it is a spectrum x strain occurrence matrix. All 15 cached
+tasks are exactly the 15 that `nplinker_podp_screen.csv` covers, so the GNPS
+download step is already done locally.
