@@ -1,11 +1,24 @@
 # MASc-EDA
 
-Exploratory data analysis for a MASc thesis on linking bacterial biosynthetic gene
-clusters (BGCs) to the metabolites they produce.
+Curation of the publicly available data for a machine-learning problem: linking
+bacterial biosynthetic gene clusters (BGCs) to the metabolites they produce.
 
-The work here builds and interrogates the **evaluation data** that a genome–metabolome
-linking tool is scored against — chiefly a ground-truth table of BGC↔MS2 links derived
-from the [Paired omics Data Platform](https://pairedomicsdata.bioinformatics.nl/) (PoDP).
+**This repository is the dataset, not an evaluation of any one tool.** Its job is to
+survey what exists across the published record and is readily machine-usable for that
+problem — curated pairs of **GBK + mzML/mzXML**, together with the scripts that
+locate, download and verify them — drawn from the
+[Paired omics Data Platform](https://pairedomicsdata.bioinformatics.nl/) (PoDP).
+
+The curated pairs are intended to outlive any single experiment: they are used to
+benchmark NPLinker2 (in the sibling `NPLinker-Benchmarking` repo), will be used to
+benchmark **other linking models**, and are the training data for models developed
+later in this thesis. That is why curation and its download scripts live here, on
+their own, rather than inside a tool evaluation.
+
+Because curation is about what is *currently known*, filtering runs against the most
+up-to-date BGC records — **MIBiG 4.0**. A tool being benchmarked may prepare its own
+references at a different version from inside its own pipeline; that is the tool's
+business and is not reconciled here.
 
 ## Contents
 
