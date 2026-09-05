@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build tiered ground-truth tables from the PoDP JSON descriptors.
 
-Emits three CSVs into data/PoDP/:
+Emits three CSVs into results/podp/:
 
 - ``podp_bgc_ms2_links.csv``           one row per BGC-MS2 link, BGC <-> spectrum.
   All 115 links, tiered gold/silver/bronze. The unfiltered SOURCE table --
@@ -54,6 +54,7 @@ import re
 import sys
 from collections import Counter
 from difflib import SequenceMatcher
+import os
 from pathlib import Path
 from typing import Any
 
@@ -66,19 +67,50 @@ from scripts.podp.podp_online_file_locator import (  # noqa: E402
 )
 
 ROOT = Path(__file__).resolve().parents[2]  # repo root (this file is scripts/podp/*)
-PODP_DIR = ROOT / "data" / "PoDP" / "json_descriptors"
-DOWNLOAD_DIR = ROOT / "data" / "PoDP" / "ground_truth_paired_data"
+
+
+def _resolve(*candidates: Path) -> Path:
+    """First candidate that exists, else the first (so errors name the wanted path).
+
+    The 2026-09 reorg moved data/ into raw/processed/external but updated only
+    two scripts, leaving the rest pointing at a data/PoDP/ that no longer
+    exists. Candidate lists mean a later move does not break this again: add the
+    new path at the front, keep the old one behind it.
+    """
+    for c in candidates:
+        if c.exists():
+            return c
+    return candidates[0]
+
+
+#: 76 PoDP JSON descriptors. Was data/PoDP/json_descriptors/ before the reorg.
+PODP_DIR = _resolve(
+    ROOT / "data" / "raw" / "podp_database",
+    ROOT / "data" / "PoDP" / "json_descriptors",
+)
+#: Downloaded genomes + MS2 runs, one folder per study_id.
+DOWNLOAD_DIR = _resolve(
+    ROOT / "data" / "processed" / "podp_ground_truth_paired_data",
+    ROOT / "data" / "PoDP" / "ground_truth_paired_data",
+)
 MIBIG_VERSION = "4.0"
 #: Gitignored and re-downloaded on demand -- a released reference set is a derived
 #: artifact reproducible from one URL, not project data, so deleting it must never
 #: break the build and it does not belong in version control.
-MIBIG_CACHE = ROOT / "data"
-MIBIG_DIR = MIBIG_CACHE / f"MiBIG_{MIBIG_VERSION}"
+MIBIG_DIR = _resolve(
+    ROOT / "data" / "external" / f"MiBIG_{MIBIG_VERSION}",
+    ROOT / "data" / f"MiBIG_{MIBIG_VERSION}",
+)
+MIBIG_CACHE = MIBIG_DIR.parent
 #: MIBiG 3.1, as shipped by NPLinker's own downloader. Kept only so
 #: --migration-report can diff the two releases.
-MIBIG_31_DIR = (
-    Path("/home/rosaliewang/projects/NPLinker-Application")
-    / "nplinker-dev" / "podp_exercise" / "mibig"
+#: Lives in the sibling benchmark repo, which was renamed NPLinker-Application ->
+#: NPLinker-Benchmarking and restructured. Only --migration-report needs it, so a
+#: miss is not fatal; override with $NPLINKER_REPO.
+MIBIG_31_DIR = _resolve(
+    Path(os.environ.get("NPLINKER_REPO", ROOT.parent / "NPLinker-Benchmarking"))
+    / "nplinker-reference" / "podp_exercise" / "mibig",
+    ROOT.parent / "NPLinker-Application" / "nplinker-dev" / "podp_exercise" / "mibig",
 )
 OUT_DIR = ROOT / "results" / "podp"
 
@@ -1225,7 +1257,7 @@ def main() -> int:
                         help="MIBiG 3.1 tree, used only by --migration-report")
     parser.add_argument("--resolve-gnps", action="store_true",
                         help="resolve molecular-family links to genomes via the "
-                             "GNPS task (network; cached under data/PoDP/gnps_cache)")
+                             "GNPS task (network; cached under results/podp/gnps_cache)")
     parser.add_argument("--podp-dir", type=Path, default=PODP_DIR)
     parser.add_argument("--mibig-dir", type=Path, default=MIBIG_DIR)
     parser.add_argument("--download-dir", type=Path, default=DOWNLOAD_DIR)

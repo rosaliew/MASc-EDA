@@ -10,17 +10,30 @@ from the [Paired omics Data Platform](https://pairedomicsdata.bioinformatics.nl/
 ## Contents
 
 ```
-data/        inputs and derived tables (see data/PoDP/README.md)
-notebooks/   analysis notebooks, named <topic>-<YYYY-MM>-<subject>.ipynb
-scripts/     reproducible pipeline steps (see scripts/legacy/README.md)
-results/     figures and exported tables
-tests/       unit tests
+data/raw/podp_database/                   76 PoDP JSON descriptors -- the source of truth
+data/processed/podp_ground_truth_paired_data/   downloaded genomes + MS2 runs, one dir per study
+data/external/                            MiBIG_4.0, NPOmix_inputs (gitignored, re-downloadable)
+data/interim/                             MCE GNPS + antiSMASH working data
+notebooks/{podp,mce}/                     analysis notebooks
+scripts/{podp,mce}/                       reproducible pipeline steps
+results/{podp,mce}/                       the exported tables and figures
+tests/                                    unit tests
 ```
+
+Restructured 2026-09 from a single `data/PoDP/` tree. Scripts resolve data
+through candidate lists that try the current path first and the pre-reorg path
+behind it, so both layouts work; when moving something, add the new path to the
+front of the list rather than replacing the entry.
 
 ### The main artifact
 
-`results/podp/podp_bgc_ms2_links.csv` — **115 BGC↔MS2 links across 63 columns**, built from 76
-PoDP JSON descriptors. Links are tiered by evidence strength, with InChIKey comparison
+`results/podp/curated_ground_truth_links.csv` — **the 64 curated experimentally-validated
+links**. This is the evaluation set the benchmark scores against, and it is consumed
+downstream by the sibling `NPLinker-Benchmarking` repo, which vendors a copy at a pinned
+commit of this one (see its `data/external/podp-ground-truth/SOURCE.md`).
+
+Its unfiltered source `results/podp/podp_bgc_ms2_links.csv` — **115 BGC↔MS2 links across
+63 columns**, built from 76 PoDP JSON descriptors. Links are tiered by evidence strength, with InChIKey comparison
 (not string matching) as the authoritative structural check.
 
 Its companion `results/podp/podp_genome_metabolome_pairs.csv` holds 4,966 genome↔metabolome file-pair rows. These record
@@ -30,29 +43,36 @@ Its companion `results/podp/podp_genome_metabolome_pairs.csv` holds 4,966 genome
 
 | directory | what it is |
 |---|---|
-| `data/PoDP/` | PoDP descriptors, downloaded paired data, and the ground-truth tables |
-| `data/MicroChemEco/` | in-house MicroChemEco GNPS and antiSMASH runs |
-| `data/NPOmix_inputs/` | NPOmix validation set, for comparison against a published method |
-| `data/MiBIG_4.0/` | MIBiG 4.0 reference bundle (gitignored; re-downloaded on demand) |
+| `data/raw/podp_database/` | the 76 PoDP JSON descriptors, verbatim |
+| `data/processed/podp_ground_truth_paired_data/` | downloaded genomes + MS2 runs |
+| `data/interim/MCE_*/` | in-house MicroChemEco GNPS and antiSMASH runs |
+| `data/external/NPOmix_inputs/` | NPOmix validation set, for comparison against a published method |
+| `data/external/MiBIG_4.0/` | MIBiG 4.0 reference bundle (gitignored; re-downloaded on demand) |
 
 ## Pipeline
 
 ```bash
+# Run from the repo root, as modules -- the scripts import each other by package
+# path, so `python scripts/podp/build_ground_truth.py` fails on ModuleNotFoundError.
+
 # Build the ground-truth tables from the PoDP descriptors
-python scripts/build_ground_truth.py
+python -m scripts.podp.build_ground_truth
 
 # Preview without writing, or diff MIBiG 3.1 -> 4.0
-python scripts/build_ground_truth.py --dry-run
-python scripts/build_ground_truth.py --migration-report
+python -m scripts.podp.build_ground_truth --dry-run
+python -m scripts.podp.build_ground_truth --migration-report
+
+# Build the two curated datasets and assert every headline count
+python -m scripts.podp.build_curated_datasets --check
 
 # Genome recovery: plan routes, fetch, then promote verified records
-python scripts/refetch_genomes.py --scope all --plan
-python scripts/refetch_genomes.py --scope all --download
-python scripts/refetch_genomes.py --promote
+python -m scripts.podp.refetch_genomes --scope all --plan
+python -m scripts.podp.refetch_genomes --scope all --download
+python -m scripts.podp.refetch_genomes --promote
 
 # Diagnostics
-python scripts/screen_nplinker_podp.py     # pre-flight screen for NPLinker's PoDP mode
-python scripts/unavailable_inventory.py    # what we cannot obtain, and why
+python -m scripts.podp.screen_nplinker_podp   # pre-flight screen for NPLinker's PoDP mode
+python -m scripts.podp.unavailable_inventory  # what we cannot obtain, and why
 ```
 
 The `msms*.py` scripts are a separate, numbered MS/MS cleaning and EDA sequence; run
